@@ -41,7 +41,7 @@ describe("navegação da página inicial", () => {
 });
 
 describe("carrossel de destaques", () => {
-  it("avança automaticamente quando visível e permite pausar e retomar", async () => {
+  it("avança com o cursor sobre a foto, mas pausa sobre um link ou pelo controle", async () => {
     vi.useFakeTimers();
     vi.stubGlobal("IntersectionObserver", class {
       constructor(private readonly callback: IntersectionObserverCallback) {}
@@ -55,15 +55,22 @@ describe("carrossel de destaques", () => {
 
     const { unmount } = render(<HeroCarousel />);
     try {
-      await act(() => vi.advanceTimersByTimeAsync(8500));
+      fireEvent.pointerOver(screen.getByRole("img", { name: "Serginho Barbosa cantando no palco sob luz roxa" }), { pointerType: "mouse" });
+      await act(() => vi.advanceTimersByTimeAsync(4000));
       expect(screen.getByRole("heading", { level: 2, name: "Brilho Novo" })).toBeVisible();
+      expect(screen.getByRole("img", { name: "Capa do álbum Brilho Novo" })).toHaveAttribute("width", "1200");
+
+      fireEvent.pointerOver(screen.getByRole("link", { name: "Conhecer o álbum" }), { pointerType: "mouse" });
+      await act(() => vi.advanceTimersByTimeAsync(4000));
+      expect(screen.getByRole("heading", { level: 2, name: "Brilho Novo" })).toBeVisible();
+      fireEvent.pointerOver(screen.getByRole("img", { name: "Capa do álbum Brilho Novo" }), { pointerType: "mouse" });
 
       fireEvent.click(screen.getByRole("button", { name: "Pausar destaques" }));
-      await act(() => vi.advanceTimersByTimeAsync(8500));
+      await act(() => vi.advanceTimersByTimeAsync(4000));
       expect(screen.getByRole("heading", { level: 2, name: "Brilho Novo" })).toBeVisible();
 
       fireEvent.click(screen.getByRole("button", { name: "Reproduzir destaques" }));
-      await act(() => vi.advanceTimersByTimeAsync(8500));
+      await act(() => vi.advanceTimersByTimeAsync(4000));
       expect(screen.getByRole("heading", { level: 2, name: "Serginho no YouTube" })).toBeVisible();
     } finally {
       unmount();

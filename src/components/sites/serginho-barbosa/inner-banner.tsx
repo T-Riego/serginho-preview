@@ -11,8 +11,7 @@ type BannerMedia = {
   alt: string;
   position?: string;
   mobilePosition?: string;
-  fit?: "contain";
-};
+} & ({ fit?: "cover" } | { fit: "contain"; width: number; height: number });
 
 const bannerImages = {
   biografia: {
@@ -61,6 +60,9 @@ export function InnerBanner({ title, page, media, children }: {
     "--sb-banner-position": image.position ?? "center",
     "--sb-banner-position-mobile": image.mobilePosition ?? image.position ?? "center",
   } as CSSProperties;
+  const sizing = image.fit === "contain"
+    ? { width: image.width, height: image.height, className: "sb-cover-finish" }
+    : { fill: true };
 
   return (
     <div className="sb-inner-banner" data-fit={image.fit ?? "cover"}>
@@ -69,7 +71,7 @@ export function InnerBanner({ title, page, media, children }: {
           <Image
             src={image.src}
             alt={image.alt}
-            fill
+            {...sizing}
             loading="eager"
             sizes={image.fit === "contain" ? "(max-width: 720px) 50vw, 340px" : "(max-width: 720px) 100vw, 62vw"}
           />

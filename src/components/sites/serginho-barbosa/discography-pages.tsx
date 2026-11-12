@@ -15,6 +15,16 @@ export const discographyCategories = (navigation.find(({ label }) => label === "
     return { label, href: `${discographyRoot}/${path}`, slug, id };
   });
 
+function albumBanner(album: DiscographyAlbum) {
+  return {
+    src: album.cover,
+    alt: `Capa de ${album.title}`,
+    fit: "contain" as const,
+    width: album.coverWidth,
+    height: album.coverHeight,
+  };
+}
+
 export function DiscographyListing({
   category,
 }: {
@@ -33,7 +43,7 @@ export function DiscographyListing({
       <InnerBanner
         title={category?.label ?? "Discografias"}
         page="discografias"
-        media={featured && { src: featured.cover, alt: `Capa de ${featured.title}`, fit: "contain" }}
+        media={featured && albumBanner(featured)}
       >
         <BannerLinks items={discographyCategories} activeHref={category?.href} />
       </InnerBanner>
@@ -45,7 +55,7 @@ export function DiscographyListing({
 export function DiscographyDetail({ album }: { album: DiscographyAlbum }) {
   return (
     <main>
-      <InnerBanner title={album.title} page="discografias" media={{ src: album.cover, alt: `Capa de ${album.title}`, fit: "contain" }} />
+      <InnerBanner title={album.title} page="discografias" media={albumBanner(album)} />
       <div className={styles.detail}>
         <article className={`sb-container ${styles.detailLayout}`}>
           {album.slug === "brilho-novo" ? <DiscographyZoomCover album={album} /> : (

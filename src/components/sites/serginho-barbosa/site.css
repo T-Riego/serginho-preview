@@ -357,10 +357,20 @@ body {
   max-height: calc(100% - 4rem);
   aspect-ratio: 1;
 }
-.sb-hero-stage:is([data-visual="record"], [data-visual="radio"]) .sb-hero-image img {
+.sb-cover-finish {
+  border-radius: clamp(10px, 1.4vw, 16px);
+  box-shadow: 0 8px 18px #100a1552, 0 2px 5px #100a1526;
+}
+.sb-hero-stage[data-visual="record"] .sb-hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sb-hero-stage[data-visual="record"] .sb-hero-image img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
   object-fit: contain;
-  object-position: center;
-  filter: drop-shadow(0 16px 30px #100a15a6);
 }
 .sb-hero-stage[data-visual="radio"] .sb-hero-image {
   width: min(65%, 370px);
@@ -374,7 +384,6 @@ body {
   object-position: left center;
   transform: scale(1.55);
   transform-origin: 40% center;
-  filter: none;
 }
 .sb-home-hero-content { padding-block: clamp(3.25rem, 5.7vw, 6.3rem); }
 .sb-artist-role {
@@ -497,23 +506,19 @@ body {
   content: "";
 }
 .sb-inner-banner[data-fit="contain"] { background: radial-gradient(ellipse at 78% 52%, #523044, var(--sb-dark) 57%); }
-.sb-inner-banner[data-fit="contain"] .sb-inner-banner-media {
-  display: grid;
-  width: 44%;
-  place-items: center;
-}
+.sb-inner-banner[data-fit="contain"] .sb-inner-banner-media { width: 44%; }
 .sb-inner-banner[data-fit="contain"] .sb-inner-banner-media::after { display: none; }
 .sb-inner-banner[data-fit="contain"] .sb-inner-banner-image {
-  position: relative;
-  inset: auto;
-  width: min(82%, 340px);
-  height: 79%;
-  max-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .sb-inner-banner[data-fit="contain"] .sb-inner-banner-image img {
+  width: auto;
+  height: auto;
+  max-width: min(82%, 340px);
+  max-height: min(79%, 340px);
   object-fit: contain;
-  object-position: center;
-  filter: drop-shadow(0 14px 25px #100a1580);
 }
 .sb-inner-title { color: var(--sb-on-dark); overflow-wrap: anywhere; }
 .sb-breadcrumbs ol {
@@ -748,7 +753,7 @@ body {
     background: radial-gradient(ellipse at 50% 10%, #523044, var(--sb-dark) 70%);
   }
   .sb-inner-banner[data-fit="contain"] .sb-inner-banner-media { width: 100%; margin-bottom: 0; }
-  .sb-inner-banner[data-fit="contain"] .sb-inner-banner-image { height: 80%; }
+  .sb-inner-banner[data-fit="contain"] .sb-inner-banner-image img { max-height: 80%; }
   .sb-inner-banner .sb-banner-links { margin-top: 1.15rem; }
 }
 

@@ -1,0 +1,903 @@
+{
+  "albums": [
+    {
+      "label": "Banda Circo dos Amores - Carnaval",
+      "slug": "banda-circo-dos-amores-carnaval",
+      "id": "12",
+      "photos": [
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095227.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095227_400.webp",
+          "caption": "Banda",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095303.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095303_400.webp",
+          "caption": "Apoiadores",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095312.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095312_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095319.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095319_400.webp",
+          "caption": "Paulo - Voz",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095326.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095326_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095341.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095341_400.webp",
+          "caption": "Anderson - Baixo",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095348.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095348_400.webp",
+          "caption": "Rosane - Voz",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095354.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095354_400.webp",
+          "caption": "Jair - Trombone",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095401.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095401_400.webp",
+          "caption": "Cyan - TRombone",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095408.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095408_400.webp",
+          "caption": "Rafael - Guitarras",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095415.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095415_400.webp",
+          "caption": "Welington - TRompete",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095421.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095421_400.webp",
+          "caption": "Irmãos",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095429.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095429_400.webp",
+          "caption": "Jair Junior - TRompete",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095437.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095437_400.webp",
+          "caption": "Colaboradora",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095444.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095444_400.webp",
+          "caption": "Venilton - Bateria",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095451.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095451_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095458.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095458_400.webp",
+          "caption": "Venilton- Bateria",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095505.webp",
+          "thumbnail": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095505_400.webp",
+          "caption": "Juvenal - Percursão",
+          "width": 400,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "label": "Semi Final Concurso Marchinhas Mestre Jonas 2019",
+      "slug": "semi-final-concurso-marchinhas-mestre-jonas-2019",
+      "id": "11",
+      "photos": [
+        {
+          "src": "gallery-albums/full/Semi-Final--Concurso--Marchinh-20190226192141.webp",
+          "thumbnail": "gallery-albums/thumbs/Semi-Final--Concurso--Marchinh-20190226192141_400.webp",
+          "width": 960,
+          "height": 641
+        },
+        {
+          "src": "gallery-albums/full/Semi-Final--Concurso--Marchinh-20190226192148.webp",
+          "thumbnail": "gallery-albums/thumbs/Semi-Final--Concurso--Marchinh-20190226192148_400.webp",
+          "width": 960,
+          "height": 641
+        }
+      ]
+    },
+    {
+      "label": "Bloquinho ESMUKids - Contagem",
+      "slug": "bloquinho-esmukids-contagem",
+      "id": "10",
+      "photos": [
+        {
+          "src": "gallery-albums/full/Bloquinho-ESMUKids---Contagem-20190215104903.webp",
+          "thumbnail": "gallery-albums/thumbs/Bloquinho-ESMUKids---Contagem-20190215104903_400.webp",
+          "width": 960,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "label": "Lançamento CD Circo dos Amores 2019",
+      "slug": "lancamento-cd-circo-dos-amores-2019",
+      "id": "5",
+      "photos": [
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114346.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114346_400.webp",
+          "caption": "Lançamento CD Circo Dos amores.",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114117.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114117_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114152.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114152_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114208.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114208_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114217.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114217_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114226.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114226_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114246.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114246_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114256.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114256_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114309.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114309_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114317.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114317_400.webp",
+          "width": 853,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114327.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114327_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114425.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114425_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114433.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114433_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114444.webp",
+          "thumbnail": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114444_400.webp",
+          "width": 1280,
+          "height": 853
+        }
+      ]
+    },
+    {
+      "label": "Ensaio Fotográfico - Palhaço dos Amores.",
+      "slug": "ensaio-fotografico-palhaco-dos-amores",
+      "id": "7",
+      "photos": [
+        {
+          "src": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220136.webp",
+          "thumbnail": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220136_400.webp",
+          "width": 482,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220213.webp",
+          "thumbnail": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220213_400.webp",
+          "width": 399,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220239.webp",
+          "thumbnail": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220239_400.webp",
+          "width": 756,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220310.webp",
+          "thumbnail": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220310_400.webp",
+          "width": 501,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220334.webp",
+          "thumbnail": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220334_400.webp",
+          "width": 900,
+          "height": 411
+        },
+        {
+          "src": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220417.webp",
+          "thumbnail": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220417_400.webp",
+          "width": 399,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220449.webp",
+          "thumbnail": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220449_400.webp",
+          "width": 378,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220531.webp",
+          "thumbnail": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220531_400.webp",
+          "width": 570,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220605.webp",
+          "thumbnail": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220605_400.webp",
+          "width": 460,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "label": "Carnaval",
+      "slug": "carnaval",
+      "id": "4",
+      "photos": [
+        {
+          "src": "gallery-albums/full/Carnaval-20190117222234.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117222234_400.webp",
+          "caption": "Foto: Mateus Machado Brandão",
+          "width": 963,
+          "height": 1200
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117222256.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117222256_400.webp",
+          "caption": "Foto: Mateus Machado Brandão",
+          "width": 1200,
+          "height": 953
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117222304.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117222304_400.webp",
+          "caption": "Foto: Mateus Machado Brandão",
+          "width": 996,
+          "height": 1300
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231211.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231211_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231229.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231229_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231237.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231237_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231245.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231245_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231252.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231252_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231300.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231300_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231306.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231306_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231314.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231314_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231322.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231322_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231329.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231329_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231336.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231336_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231344.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231344_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231351.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231351_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231358.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231358_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231405.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231405_400.webp",
+          "width": 1200,
+          "height": 799
+        },
+        {
+          "src": "gallery-albums/full/Carnaval-20190117231413.webp",
+          "thumbnail": "gallery-albums/thumbs/Carnaval-20190117231413_400.webp",
+          "width": 1200,
+          "height": 799
+        }
+      ]
+    },
+    {
+      "label": "Circuito VDL - Lançamento Voz Companheira",
+      "slug": "circuito-vdl-lancamento-voz-companheira",
+      "id": "9",
+      "photos": [
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184218.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184218_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184603.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184603_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207185601.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207185601_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207185801.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207185801_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184315.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184315_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184424.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184424_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184430.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184430_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184434.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184434_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184440.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184440_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184445.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184445_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184520.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184520_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184526.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184526_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184531.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184531_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184558.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184558_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184754.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184754_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184759.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184759_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184803.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184803_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184809.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184809_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184813.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184813_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184818.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184818_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184823.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184823_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184859.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184859_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184828.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184828_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184833.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184833_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184838.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184838_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184843.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184843_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184848.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184848_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184853.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184853_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207185505.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207185505_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207185627.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207185627_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207185738.webp",
+          "thumbnail": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207185738_400.webp",
+          "width": 400,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "label": "Julifest 2018",
+      "slug": "julifest-2018",
+      "id": "8",
+      "photos": [
+        {
+          "src": "gallery/Julifest-2018-20190206225457.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225457_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery/Julifest-2018-20190206225801.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225801_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery/Julifest-2018-20190206225542.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225542_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery/Julifest-2018-20190206225859.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225859_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery/Julifest-2018-20190206225909.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225909_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225550.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225550_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225634.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225634_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206230029.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206230029_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225707.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225707_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225733.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225733_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225904.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225904_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225915.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225915_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225921.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225921_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225927.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225927_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225932.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225932_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225537.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225537_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225938.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225938_400.webp",
+          "width": 400,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225943.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225943_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225949.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225949_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206225957.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206225957_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206230003.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206230003_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206230008.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206230008_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206230112.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206230112_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206230204.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206230204_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206230210.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206230210_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206230216.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206230216_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206230222.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206230222_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206230227.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206230227_400.webp",
+          "width": 900,
+          "height": 600
+        },
+        {
+          "src": "gallery-albums/full/Julifest-2018-20190206230328.webp",
+          "thumbnail": "gallery-albums/thumbs/Julifest-2018-20190206230328_400.webp",
+          "width": 900,
+          "height": 600
+        }
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "title": "QUE PASSA? - SALSA",
+      "id": "f0b2aUc_yFo"
+    },
+    {
+      "title": "Entre Aspas (Clipe Oficial)",
+      "id": "9VARiy46ywM"
+    },
+    {
+      "title": "LUIZA E JULIANA",
+      "id": "yODbZLsgRWo"
+    },
+    {
+      "title": "BRILHO NOVO (FEAT) EZEKIEL",
+      "id": "0B9LhS4pa-4"
+    },
+    {
+      "title": "CAMINHO",
+      "id": "_Jou5h-7ndM"
+    },
+    {
+      "title": "JULIFEST 2022 - SHOW \"CAMINHOS BRILHO NOVO\", AO VIVO",
+      "id": "dbpqoQoFrJE"
+    },
+    {
+      "title": "DVD - SHOW \"CAMINHOS BRILHO NOVO\"",
+      "id": "F5I2loKD-AE"
+    },
+    {
+      "title": "CIRCO DOS AMORES",
+      "id": "EM-mMv1MDEk"
+    },
+    {
+      "title": "\"CARNAVAL É AQUI NO CIRCO DOS AMORES\"",
+      "id": "2KStrI0P9DI"
+    },
+    {
+      "title": "CARNAVAL É AQUI - FREVO MINEIRO",
+      "id": "Uxk3xLHLC24"
+    },
+    {
+      "title": "FREVO MULHER - JULIFEST 2018",
+      "id": "DJ37tfw8Rc0"
+    },
+    {
+      "title": "CARNAVAL É AQUI",
+      "id": "0zWwE66epLc"
+    },
+    {
+      "title": "JULIFEST 2018 - ITABIRITO - MG",
+      "id": "q2V1s14BdgU"
+    },
+    {
+      "title": "BOLERO",
+      "id": "E1uft-uN4Js"
+    },
+    {
+      "title": "UNICO BLUE",
+      "id": "bpe-8zqO6MA"
+    },
+    {
+      "title": "AS ROSAS NÃO FALAM",
+      "id": "JsnJ4BEOISs"
+    },
+    {
+      "title": "PORTO SOLIDÃO",
+      "id": "dWogVyvdhC0"
+    },
+    {
+      "title": "PROGRAMA VIOLA BRASIL - TOCANDO EM FRENTE",
+      "id": "elPnct7lG74"
+    },
+    {
+      "title": "ROMARIA",
+      "id": "cMly_B5s3ec"
+    },
+    {
+      "title": "ROMARIA - JULIFET 2018 - COM CHICO LOBO",
+      "id": "8wkAN3C_Yuo"
+    },
+    {
+      "title": "TRISTEZA DO JECA - COM CHICO LOBO",
+      "id": "3h0FlQHvaz0"
+    }
+  ]
+}

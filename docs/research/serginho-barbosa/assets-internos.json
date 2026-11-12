@@ -1,0 +1,1784 @@
+[
+  {
+    "path": "banners/biografia.png",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/9ce608783bc19e3ccb1bb1831898cf8d-20231002133431.png",
+    "width": 1513,
+    "height": 347
+  },
+  {
+    "path": "banners/carnaval.png",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/61abb66fa83b9db214d4f3d728c9a2af-20231003164037.png",
+    "width": 1513,
+    "height": 347
+  },
+  {
+    "path": "banners/contatos.png",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/0555b1bbaaeb59e4a723f3f4d212deab-20231002133752.png",
+    "width": 1513,
+    "height": 347
+  },
+  {
+    "path": "banners/discografias.png",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/5510076ba3a3dce82bea516e21208562-20231002133633.png",
+    "width": 1513,
+    "height": 347
+  },
+  {
+    "path": "banners/galeria-de-fotos.png",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/632fef8f87863cadeda38d12834147f8-20231002133641.png",
+    "width": 1513,
+    "height": 347
+  },
+  {
+    "path": "banners/videos.png",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/73f244f6dd26e0ec19c7d8a5b2d7ecbb-20231003164024.png",
+    "width": 1513,
+    "height": 347
+  },
+  {
+    "path": "discography/album-arrow.png",
+    "source": "https://constru.site/components/modelos-CMS/9/images/seta-black.png",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "path": "discography/branco-verde-vermelho-e-preto.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Branco-Verde-Vermelho-e-Pret-20190117214153.webp",
+    "width": 400,
+    "height": 401
+  },
+  {
+    "path": "discography/brilho-novo.png",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Brilho-Novo-20231003150428.png",
+    "width": 1200,
+    "height": 1200
+  },
+  {
+    "path": "discography/circo-dos-amores.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circo-dos-Amores-20190117203143.webp",
+    "width": 500,
+    "height": 427
+  },
+  {
+    "path": "discography/coletanea.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Coletanea-20190117213333.webp",
+    "width": 500,
+    "height": 427
+  },
+  {
+    "path": "discography/studio-sonarte.jpg",
+    "source": "https://www.galaxcms.com.br/imgs_redactor/2578/files/Studio%20Sonarte%20-%20Logo%20Preta%20-%20Foto%202.jpg",
+    "width": 1600,
+    "height": 916
+  },
+  {
+    "path": "discography/trajetoria-400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Trajetoria-20190117214602_400.webp",
+    "width": 400,
+    "height": 404
+  },
+  {
+    "path": "discography/trajetoria.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Trajetoria-20190117214602.webp",
+    "width": 599,
+    "height": 605
+  },
+  {
+    "path": "discography/uma-historia-de-amor-400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Uma-Historia-de-Amor-20190117211206_400.webp",
+    "width": 400,
+    "height": 342
+  },
+  {
+    "path": "discography/uma-historia-de-amor.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Uma-Historia-de-Amor-20190117211206.webp",
+    "width": 500,
+    "height": 427
+  },
+  {
+    "path": "discography/verde-rosa-branco-e-alegria-400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Verde-Rosa-Branco-e-Alegria-20190117213820_400.webp",
+    "width": 394,
+    "height": 400
+  },
+  {
+    "path": "discography/verde-rosa-branco-e-alegria.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Verde-Rosa-Branco-e-Alegria-20190117213820.webp",
+    "width": 926,
+    "height": 941
+  },
+  {
+    "path": "discography/voz-companheira-400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Voz-Companheira-20190117212125_400.webp",
+    "width": 468,
+    "height": 400
+  },
+  {
+    "path": "discography/voz-companheira-producoes.png",
+    "source": "https://www.galaxcms.com.br/imgs_redactor/2578/files/Voz%20Companheira%20Produes.png",
+    "width": 504,
+    "height": 152
+  },
+  {
+    "path": "discography/voz-companheira-producoes.webp",
+    "source": "https://galaxcms-client-files.s3.amazonaws.com/2578/Voz%20Companheira%20Produes.webp",
+    "width": 504,
+    "height": 152
+  },
+  {
+    "path": "discography/voz-companheira.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Voz-Companheira-20190117212125.webp",
+    "width": 500,
+    "height": 427
+  },
+  {
+    "path": "editorial/biografia-carnaval.webp",
+    "source": "https://galaxcms-client-files.s3.amazonaws.com/2578/Carnaval-min.webp",
+    "width": 4369,
+    "height": 2913
+  },
+  {
+    "path": "editorial/biografia-evento.webp",
+    "source": "https://galaxcms-client-files.s3.amazonaws.com/2578/Serginho Barbosa - Evento-71 (2).webp",
+    "width": 4703,
+    "height": 3135
+  },
+  {
+    "path": "editorial/biografia-retrato.webp",
+    "source": "https://galaxcms-client-files.s3.amazonaws.com/2578/serginho-6.webp",
+    "width": 2738,
+    "height": 1825
+  },
+  {
+    "path": "editorial/biografia-show.webp",
+    "source": "https://galaxcms-client-files.s3.amazonaws.com/2578/Serginho Barbosa - Evento-50.webp",
+    "width": 3448,
+    "height": 2299
+  },
+  {
+    "path": "editorial/carnaval-banda.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231211.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "editorial/carnaval-circo.webp",
+    "source": "https://galaxcms-client-files.s3.amazonaws.com/2578/credito-SandersonPereira-4780.webp",
+    "width": 1600,
+    "height": 1067
+  },
+  {
+    "path": "editorial/carnaval-final.webp",
+    "source": "https://galaxcms-client-files.s3.amazonaws.com/2578/Design sem nome (3).webp",
+    "width": 1513,
+    "height": 685
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095227.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095227.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095303.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095303.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095312.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095312.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095319.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095319.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095326.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095326.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095341.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095341.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095348.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095348.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095354.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095354.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095401.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095401.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095408.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095408.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095415.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095415.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095421.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095421.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095429.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095429.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095437.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095437.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095444.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095444.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095451.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095451.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095458.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095458.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Banda-Circo-dos-Amores---Carna-20190227095505.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095505.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Bloquinho-ESMUKids---Contagem-20190215104903.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Bloquinho-ESMUKids---Contagem-20190215104903.webp",
+    "width": 960,
+    "height": 960
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117222234.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117222234.webp",
+    "width": 963,
+    "height": 1200
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117222256.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117222256.webp",
+    "width": 1200,
+    "height": 953
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117222304.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117222304.webp",
+    "width": 996,
+    "height": 1300
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231211.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231211.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231229.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231229.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231237.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231237.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231245.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231245.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231252.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231252.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231300.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231300.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231306.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231306.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231314.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231314.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231322.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231322.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231329.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231329.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231336.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231336.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231344.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231344.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231351.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231351.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231358.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231358.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231405.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231405.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Carnaval-20190117231413.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231413.webp",
+    "width": 1200,
+    "height": 799
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184218.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184218.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184315.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184315.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184424.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184424.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184430.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184430.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184434.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184434.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184440.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184440.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184445.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184445.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184520.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184520.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184526.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184526.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184531.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184531.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184558.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184558.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184603.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184603.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184754.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184754.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184759.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184759.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184803.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184803.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184809.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184809.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184813.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184813.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184818.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184818.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184823.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184823.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184828.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184828.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184833.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184833.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184838.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184838.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184843.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184843.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184848.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184848.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184853.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184853.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207184859.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184859.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207185505.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207185505.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207185601.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207185601.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207185627.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207185627.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207185738.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207185738.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Circuito-VDL---Lancamento-Voz--20190207185801.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207185801.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220136.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220136.webp",
+    "width": 482,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220213.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220213.webp",
+    "width": 399,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220239.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220239.webp",
+    "width": 756,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220310.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220310.webp",
+    "width": 501,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220334.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220334.webp",
+    "width": 900,
+    "height": 411
+  },
+  {
+    "path": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220417.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220417.webp",
+    "width": 399,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220449.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220449.webp",
+    "width": 378,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220531.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220531.webp",
+    "width": 570,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Ensaio-Fotografico---Palhaco-d-20190206220605.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220605.webp",
+    "width": 460,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225537.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225537.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225550.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225550.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225634.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225634.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225707.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225707.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225733.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225733.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225904.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225904.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225915.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225915.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225921.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225921.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225927.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225927.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225932.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225932.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225938.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225938.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225943.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225943.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225949.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225949.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206225957.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225957.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206230003.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230003.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206230008.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230008.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206230029.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230029.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206230112.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230112.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206230204.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230204.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206230210.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230210.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206230216.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230216.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206230222.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230222.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206230227.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230227.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Julifest-2018-20190206230328.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230328.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114117.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114117.webp",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114152.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114152.webp",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114208.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114208.webp",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114217.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114217.webp",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114226.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114226.webp",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114246.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114246.webp",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114256.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114256.webp",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114309.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114309.webp",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114317.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114317.webp",
+    "width": 853,
+    "height": 1280
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114327.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114327.webp",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114346.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114346.webp",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114425.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114425.webp",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114433.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114433.webp",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "path": "gallery-albums/full/Lancamento-CD-Circo-dos--Amore-20190205114444.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114444.webp",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "path": "gallery-albums/full/Semi-Final--Concurso--Marchinh-20190226192141.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Semi-Final--Concurso--Marchinh-20190226192141.webp",
+    "width": 960,
+    "height": 641
+  },
+  {
+    "path": "gallery-albums/full/Semi-Final--Concurso--Marchinh-20190226192148.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Semi-Final--Concurso--Marchinh-20190226192148.webp",
+    "width": 960,
+    "height": 641
+  },
+  {
+    "path": "gallery-albums/plus-sign.png",
+    "source": "https://constru.site/components/modelos-CMS/9/images/plus-sign.png",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095227_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095227_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095303_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095303_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095312_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095312_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095319_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095319_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095326_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095326_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095341_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095341_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095348_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095348_400.webp",
+    "width": 267,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095354_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095354_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095401_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095401_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095408_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095408_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095415_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095415_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095421_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095421_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095429_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095429_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095437_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095437_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095444_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095444_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095451_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095451_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095458_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095458_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Banda-Circo-dos-Amores---Carna-20190227095505_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Banda-Circo-dos-Amores---Carna-20190227095505_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Bloquinho-ESMUKids---Contagem-20190215104903_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Bloquinho-ESMUKids---Contagem-20190215104903_400.webp",
+    "width": 400,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117222234_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117222234_400.webp",
+    "width": 321,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117222256_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117222256_400.webp",
+    "width": 400,
+    "height": 318
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117222304_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117222304_400.webp",
+    "width": 306,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231211_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231211_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231229_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231229_400.webp",
+    "width": 400,
+    "height": 266
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231237_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231237_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231245_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231245_400.webp",
+    "width": 400,
+    "height": 266
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231252_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231252_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231300_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231300_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231306_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231306_400.webp",
+    "width": 400,
+    "height": 266
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231314_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231314_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231322_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231322_400.webp",
+    "width": 400,
+    "height": 266
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231329_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231329_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231336_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231336_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231344_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231344_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231351_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231351_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231358_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231358_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231405_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231405_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Carnaval-20190117231413_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Carnaval-20190117231413_400.webp",
+    "width": 400,
+    "height": 266
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184218_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184218_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184315_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184315_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184424_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184424_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184430_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184430_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184434_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184434_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184440_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184440_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184445_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184445_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184520_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184520_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184526_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184526_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184531_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184531_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184558_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184558_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184603_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184603_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184754_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184754_400.webp",
+    "width": 267,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184759_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184759_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184803_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184803_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184809_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184809_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184813_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184813_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184818_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184818_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184823_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184823_400.webp",
+    "width": 267,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184828_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184828_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184833_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184833_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184838_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184838_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184843_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184843_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184848_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184848_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184853_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184853_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207184859_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207184859_400.webp",
+    "width": 267,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207185505_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207185505_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207185601_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207185601_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207185627_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207185627_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207185738_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207185738_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Circuito-VDL---Lancamento-Voz--20190207185801_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Circuito-VDL---Lancamento-Voz--20190207185801_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220136_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220136_400.webp",
+    "width": 321,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220213_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220213_400.webp",
+    "width": 400,
+    "height": 602
+  },
+  {
+    "path": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220239_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220239_400.webp",
+    "width": 400,
+    "height": 317
+  },
+  {
+    "path": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220310_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220310_400.webp",
+    "width": 400,
+    "height": 479
+  },
+  {
+    "path": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220334_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220334_400.webp",
+    "width": 700,
+    "height": 320
+  },
+  {
+    "path": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220417_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220417_400.webp",
+    "width": 400,
+    "height": 602
+  },
+  {
+    "path": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220449_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220449_400.webp",
+    "width": 252,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220531_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220531_400.webp",
+    "width": 400,
+    "height": 421
+  },
+  {
+    "path": "gallery-albums/thumbs/Ensaio-Fotografico---Palhaco-d-20190206220605_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Ensaio-Fotografico---Palhaco-d-20190206220605_400.webp",
+    "width": 400,
+    "height": 522
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225457_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225457_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225537_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225537_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225542_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225542_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225550_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225550_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225634_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225634_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225707_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225707_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225733_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225733_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225801_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225801_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225859_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225859_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225904_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225904_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225909_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225909_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225915_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225915_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225921_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225921_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225927_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225927_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225932_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225932_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225938_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225938_400.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225943_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225943_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225949_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225949_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206225957_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225957_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206230003_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230003_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206230008_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230008_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206230029_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230029_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206230112_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230112_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206230204_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230204_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206230210_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230210_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206230216_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230216_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206230222_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230222_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206230227_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230227_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Julifest-2018-20190206230328_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206230328_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114117_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114117_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114152_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114152_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114208_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114208_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114217_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114217_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114226_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114226_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114246_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114246_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114256_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114256_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114309_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114309_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114317_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114317_400.webp",
+    "width": 267,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114327_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114327_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114346_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114346_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114425_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114425_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114433_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114433_400.webp",
+    "width": 601,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Lancamento-CD-Circo-dos--Amore-20190205114444_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Lancamento-CD-Circo-dos--Amore-20190205114444_400.webp",
+    "width": 400,
+    "height": 267
+  },
+  {
+    "path": "gallery-albums/thumbs/Semi-Final--Concurso--Marchinh-20190226192141_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Semi-Final--Concurso--Marchinh-20190226192141_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery-albums/thumbs/Semi-Final--Concurso--Marchinh-20190226192148_400.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Semi-Final--Concurso--Marchinh-20190226192148_400.webp",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "path": "gallery/Julifest-2018-20190206225457.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225457.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery/Julifest-2018-20190206225542.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225542.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery/Julifest-2018-20190206225801.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225801.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "gallery/Julifest-2018-20190206225859.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225859.webp",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "path": "gallery/Julifest-2018-20190206225909.webp",
+    "source": "https://d4polyhz8pjtz.cloudfront.net/2578/Julifest-2018-20190206225909.webp",
+    "width": 900,
+    "height": 600
+  },
+  {
+    "path": "videos/0B9LhS4pa-4.jpg",
+    "source": "https://i3.ytimg.com/vi/0B9LhS4pa-4/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/0zWwE66epLc.jpg",
+    "source": "https://i3.ytimg.com/vi/0zWwE66epLc/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/2KStrI0P9DI.jpg",
+    "source": "https://i3.ytimg.com/vi/2KStrI0P9DI/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/3h0FlQHvaz0.jpg",
+    "source": "https://i3.ytimg.com/vi/3h0FlQHvaz0/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/8wkAN3C_Yuo.jpg",
+    "source": "https://i3.ytimg.com/vi/8wkAN3C_Yuo/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/9VARiy46ywM.jpg",
+    "source": "https://i3.ytimg.com/vi/9VARiy46ywM/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/DJ37tfw8Rc0.jpg",
+    "source": "https://i3.ytimg.com/vi/DJ37tfw8Rc0/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/E1uft-uN4Js.jpg",
+    "source": "https://i3.ytimg.com/vi/E1uft-uN4Js/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/EM-mMv1MDEk.jpg",
+    "source": "https://i3.ytimg.com/vi/EM-mMv1MDEk/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/F5I2loKD-AE.jpg",
+    "source": "https://i3.ytimg.com/vi/F5I2loKD-AE/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/JsnJ4BEOISs.jpg",
+    "source": "https://i3.ytimg.com/vi/JsnJ4BEOISs/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/Uxk3xLHLC24.jpg",
+    "source": "https://i3.ytimg.com/vi/Uxk3xLHLC24/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/_Jou5h-7ndM.jpg",
+    "source": "https://i3.ytimg.com/vi/_Jou5h-7ndM/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/bpe-8zqO6MA.jpg",
+    "source": "https://i3.ytimg.com/vi/bpe-8zqO6MA/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/cMly_B5s3ec.jpg",
+    "source": "https://i3.ytimg.com/vi/cMly_B5s3ec/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/dWogVyvdhC0.jpg",
+    "source": "https://i3.ytimg.com/vi/dWogVyvdhC0/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/dbpqoQoFrJE.jpg",
+    "source": "https://i3.ytimg.com/vi/dbpqoQoFrJE/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/elPnct7lG74.jpg",
+    "source": "https://i3.ytimg.com/vi/elPnct7lG74/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/f0b2aUc_yFo.jpg",
+    "source": "https://i3.ytimg.com/vi/f0b2aUc_yFo/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/q2V1s14BdgU.jpg",
+    "source": "https://i3.ytimg.com/vi/q2V1s14BdgU/0.jpg",
+    "width": 480,
+    "height": 360
+  },
+  {
+    "path": "videos/yODbZLsgRWo.jpg",
+    "source": "https://i3.ytimg.com/vi/yODbZLsgRWo/0.jpg",
+    "width": 480,
+    "height": 360
+  }
+]

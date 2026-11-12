@@ -1,0 +1,286 @@
+.section {
+  padding: 40px 0;
+}
+
+.videos {
+  background-color: var(--sb-red);
+}
+
+.videoGrid,
+.galleryGrid {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.videoTile,
+.photoTile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  min-width: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.videoTile {
+  height: 246px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.videoTile:first-child {
+  height: 300px;
+}
+
+.videoLibrary {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 0;
+  margin-top: 0;
+}
+
+.videoLibrary .videoTile {
+  width: 96%;
+  justify-self: center;
+}
+
+.videoLibrary .videoTile:first-child {
+  grid-column: span 2;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+}
+
+.photoTile {
+  height: 300px;
+  background-size: cover;
+}
+
+.photoCaption,
+.videoCaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 100px 20px 40px;
+  background: linear-gradient(transparent, #000);
+}
+
+.videoTile:not(:first-child) .videoCaption {
+  padding: 60px 20px 20px;
+}
+
+.videoTitle {
+  display: block;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.videoTile:not(:first-child) .videoTitle {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.tileAction {
+  display: table;
+  border-bottom: 2px solid currentColor;
+  opacity: 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transform: translateY(16px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.videoTile:not(:first-child) .tileAction {
+  border-bottom-width: 1px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.videoTile:is(:hover, :focus-visible) .tileAction,
+.photoTile:is(:hover, :focus-visible) .tileAction {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.play {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: url("/sites/serginho-barbosa/videos/play.png") no-repeat 5% 50%;
+  transition: background-color 300ms ease;
+}
+
+.videoTile:not(:first-child) .play {
+  background-position: 6% 50%;
+  background-size: 45px;
+}
+
+.videoTile:hover .play {
+  background-color: rgb(255 29 88 / 30%);
+}
+
+.actions {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  background: rgb(0 0 0 / 90%);
+}
+
+.lightbox {
+  position: fixed;
+  z-index: 2001;
+  inset: 0;
+  width: min(940px, 96vw, 154vh);
+  height: fit-content;
+  margin: auto;
+  color: #fff;
+}
+
+.lightbox iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+}
+
+.close {
+  position: fixed;
+  top: 22px;
+  right: 16px;
+  display: grid;
+  width: 36px;
+  height: 32px;
+  cursor: pointer;
+  place-items: center;
+}
+
+.youtubeLink {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 6px;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+@media (min-width: 480px) {
+  .videoGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0;
+  }
+
+  .videoTile {
+    width: 96%;
+    justify-self: center;
+  }
+
+  .videoTile:first-child {
+    grid-column: span 2;
+    width: 100%;
+  }
+
+  .photoTile {
+    height: 500px;
+  }
+
+  .photoTile:first-child {
+    height: 650px;
+  }
+
+  .actions {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .videoTile:not(:first-child) {
+    width: 98%;
+  }
+
+  .videoTile:first-child {
+    height: 400px;
+  }
+
+  .photoCaption,
+  .videoCaption {
+    padding-inline: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section {
+    padding-bottom: 60px;
+  }
+
+  .videoGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 246px);
+    gap: 8px 0;
+  }
+
+  .videoTile {
+    width: 98%;
+    justify-self: start;
+  }
+
+  .videoTile:first-child {
+    grid-row: span 2;
+    width: 98%;
+    height: 500px;
+  }
+
+  .videoLibrary {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 247px 257px;
+    grid-auto-rows: 257px;
+    row-gap: 8px;
+  }
+
+  .videoLibrary .videoTile {
+    width: 98%;
+    justify-self: start;
+  }
+
+  .videoLibrary .videoTile:first-child {
+    width: 98%;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 320px);
+    gap: 10px 0;
+  }
+
+  .photoTile {
+    width: 98%;
+    height: 320px;
+  }
+
+  .photoTile:first-child {
+    grid-row: span 2;
+    height: 650px;
+  }
+}
+
+@media (max-width: 479px) {
+  .videoLibrary .videoTile {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tileAction,
+  .play {
+    transition: none;
+  }
+}

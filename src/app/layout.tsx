@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { SiteHeader } from "@/components/sites/serginho-barbosa/home-controls";
+import { FloatingContacts } from "@/components/sites/serginho-barbosa/home-sections";
+import { SiteFooter } from "@/components/sites/serginho-barbosa/lower-sections";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "@/components/sites/serginho-barbosa/site.css";
 
 export const metadata: Metadata = {
-  title: "Website Clone",
-  description: "Pixel-perfect website clone",
+  title: "Serginho Barbosa | Voz Companheira, Boleros e Circo dos Amores",
+  description: "Discografias, vídeos, biografia e projetos de Serginho Barbosa, cantor e compositor de Itabirito, Minas Gerais.",
+  icons: { icon: "/sites/serginho-barbosa/favicon.webp" },
 };
 
 export default function RootLayout({
@@ -23,11 +17,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="pt-BR">
+      <body>
+        <div className="sb-site">
+          <SiteHeader />
+          {children}
+          <SiteFooter />
+          <FloatingContacts />
+        </div>
+      </body>
     </html>
   );
 }

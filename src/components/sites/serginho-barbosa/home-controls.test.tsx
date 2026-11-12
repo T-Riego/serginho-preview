@@ -55,7 +55,7 @@ describe("carrossel de destaques", () => {
 
     const { unmount } = render(<HeroCarousel />);
     try {
-      fireEvent.pointerOver(screen.getByRole("img", { name: "Serginho Barbosa cantando no palco sob luz roxa" }), { pointerType: "mouse" });
+      fireEvent.pointerOver(screen.getByRole("button", { name: "Pausar destaques pela foto" }), { pointerType: "mouse" });
       await act(() => vi.advanceTimersByTimeAsync(4000));
       expect(screen.getByRole("heading", { level: 2, name: "Brilho Novo" })).toBeVisible();
       expect(screen.getByRole("img", { name: "Capa do álbum Brilho Novo" })).toHaveAttribute("width", "1200");
@@ -63,7 +63,7 @@ describe("carrossel de destaques", () => {
       fireEvent.pointerOver(screen.getByRole("link", { name: "Conhecer o álbum" }), { pointerType: "mouse" });
       await act(() => vi.advanceTimersByTimeAsync(4000));
       expect(screen.getByRole("heading", { level: 2, name: "Brilho Novo" })).toBeVisible();
-      fireEvent.pointerOver(screen.getByRole("img", { name: "Capa do álbum Brilho Novo" }), { pointerType: "mouse" });
+      fireEvent.pointerOver(screen.getByRole("button", { name: "Pausar destaques pela foto" }), { pointerType: "mouse" });
 
       fireEvent.click(screen.getByRole("button", { name: "Pausar destaques" }));
       await act(() => vi.advanceTimersByTimeAsync(4000));
@@ -77,6 +77,33 @@ describe("carrossel de destaques", () => {
       vi.unstubAllGlobals();
       vi.useRealTimers();
     }
+  });
+
+  it("pausa e retoma ao acionar a foto, usando o mesmo estado da barra", async () => {
+    const user = userEvent.setup();
+    render(<HeroCarousel />);
+
+    await user.click(screen.getByRole("button", { name: "Pausar destaques pela foto" }));
+    expect(screen.getByRole("button", { name: "Reproduzir destaques" })).toBeVisible();
+
+    await user.click(screen.getByRole("button", { name: "Reproduzir destaques pela foto" }));
+    expect(screen.getByRole("button", { name: "Pausar destaques" })).toBeVisible();
+  });
+
+  it("avança com um gesto lateral e retoma só com um novo toque", () => {
+    render(<HeroCarousel />);
+    const photo = screen.getByRole("button", { name: "Pausar destaques pela foto" });
+    fireEvent.touchStart(photo, { touches: [{ clientX: 200, clientY: 100 }] });
+    fireEvent.touchEnd(photo, { changedTouches: [{ clientX: 120, clientY: 100 }] });
+    fireEvent.click(photo, { detail: 1 });
+
+    expect(screen.getByRole("button", { name: "Mostrar Brilho Novo" })).toHaveAttribute("aria-current", "true");
+    expect(photo).toHaveAccessibleName("Reproduzir destaques pela foto");
+
+    fireEvent.touchStart(photo, { touches: [{ clientX: 120, clientY: 100 }] });
+    fireEvent.touchEnd(photo, { changedTouches: [{ clientX: 120, clientY: 100 }] });
+    fireEvent.click(photo, { detail: 1 });
+    expect(photo).toHaveAccessibleName("Pausar destaques pela foto");
   });
 
   it("navega pelas setas e indicadores e volta ao início ao avançar do último", async () => {

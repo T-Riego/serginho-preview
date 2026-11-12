@@ -119,6 +119,7 @@ export function HeroCarousel() {
   const region = useRef<HTMLElement>(null);
   const rail = useRef<HTMLDivElement>(null);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
+  const ignorePhotoClick = useRef(false);
   const [index, setIndex] = useState(0);
   const [play, setPlay] = useState<boolean | null>(null);
   const [inView, setInView] = useState(false);
@@ -129,6 +130,7 @@ export function HeroCarousel() {
     () => false,
   );
   const playing = play ?? !reducedMotion;
+  const playbackLabel = playing ? "Pausar destaques" : "Reproduzir destaques";
   const slide = slides[index];
   const imageSizing = slide.visual === "record"
     ? { width: slide.width, height: slide.height, className: "sb-cover-finish" }
@@ -176,6 +178,10 @@ export function HeroCarousel() {
     setIndex((next + slides.length) % slides.length);
   }
 
+  function togglePlayback() {
+    setPlay(!playing);
+  }
+
   function endSwipe(event: TouchEvent) {
     const start = touchStart.current;
     const touch = event.changedTouches[0];
@@ -184,6 +190,7 @@ export function HeroCarousel() {
     const dx = touch.clientX - start.x;
     const dy = touch.clientY - start.y;
     if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy)) {
+      ignorePhotoClick.current = true;
       show(index + (dx < 0 ? 1 : -1));
     }
   }
@@ -196,11 +203,13 @@ export function HeroCarousel() {
       aria-roledescription="carrossel"
       onPointerOver={(event) => {
         if (event.pointerType === "mouse" && event.target instanceof Element) {
-          setHovered(Boolean(event.target.closest("a, button")));
+          setHovered(Boolean(event.target.closest("a, button:not(.sb-hero-photo-toggle)")));
         }
       }}
       onPointerLeave={() => setHovered(false)}
-      onFocusCapture={(event) => { if (event.target.matches(":focus-visible")) setPlay(false); }}
+      onFocusCapture={(event) => {
+        if (event.target.matches(":focus-visible:not(.sb-hero-photo-toggle)")) setPlay(false);
+      }}
     >
       <div className="sb-hero-toolbar" onKeyDown={(event) => {
         if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
@@ -210,7 +219,7 @@ export function HeroCarousel() {
       }}>
         <div className="sb-container sb-hero-toolbar-inner">
           <div className="sb-hero-transport" role="group" aria-label="Controles dos destaques">
-            <button type="button" aria-label={playing ? "Pausar destaques" : "Reproduzir destaques"} onClick={() => setPlay(!playing)}>
+            <button type="button" aria-label={playbackLabel} onClick={togglePlayback}>
               {playing ? <Pause size={17} aria-hidden="true" /> : <Play size={17} aria-hidden="true" />}
             </button>
             <button type="button" aria-label="Destaque anterior" onClick={() => show(index - 1)}><ChevronLeft size={20} aria-hidden="true" /></button>
@@ -233,14 +242,15 @@ export function HeroCarousel() {
         aria-live={playing ? "off" : "polite"}
         onTouchStart={(event) => {
           const touch = event.touches[0];
+          ignorePhotoClick.current = false;
           touchStart.current = { x: touch.clientX, y: touch.clientY };
         }}
         onTouchEnd={endSwipe}
         onTouchCancel={() => { touchStart.current = null; }}
       >
-        <div key={slide.label} className="sb-hero-slide" role="group" aria-roledescription="destaque" aria-label={`${index + 1} de ${slides.length}`}>
+        <div className="sb-hero-slide" role="group" aria-roledescription="destaque" aria-label={`${index + 1} de ${slides.length}`}>
           <div className="sb-home-hero-photo">
-            <div className="sb-hero-image">
+            <div key={slide.label} className="sb-hero-image">
               <Image
                 src={`${assetRoot}/${slide.image}`}
                 alt={slide.alt}
@@ -250,8 +260,24 @@ export function HeroCarousel() {
                 fetchPriority={opening ? "high" : undefined}
               />
             </div>
+            <button
+              type="button"
+              className="sb-hero-photo-toggle"
+              aria-label={`${playbackLabel} pela foto`}
+              onPointerDown={(event) => {
+                if (event.pointerType === "mouse") ignorePhotoClick.current = false;
+              }}
+              onClick={(event) => {
+                if (!ignorePhotoClick.current || event.detail === 0) togglePlayback();
+                ignorePhotoClick.current = false;
+              }}
+            >
+              <span className="sb-hero-photo-toggle-icon" aria-hidden="true">
+                {playing ? <Pause size={18} /> : <Play size={18} />}
+              </span>
+            </button>
           </div>
-          <div className="sb-container sb-home-hero-content">
+          <div key={slide.label} className="sb-container sb-home-hero-content">
             <p className="sb-artist-role">{slide.category}</p>
             <Title className="sb-hero-title">{slide.heading}{"accent" in slide && <> <em>{slide.accent}</em></>}</Title>
             <p className="sb-hero-description">{slide.description}</p>

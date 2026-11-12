@@ -14,8 +14,8 @@ export default function ContactsPage() {
       <InnerBanner title="Contatos" page="contatos" />
       <section className="sb-section">
         <div className={`sb-container ${styles.contactLayout}`}>
-          <div>
-            <h2 className={styles.contactTitle}>Preencha os campos abaixo e envie sua mensagem:</h2>
+          <div className={styles.contactPanel}>
+            <h2 className={styles.contactTitle}>Envie sua mensagem</h2>
             <ContactForm />
           </div>
           <aside className={styles.contactSidebar}>

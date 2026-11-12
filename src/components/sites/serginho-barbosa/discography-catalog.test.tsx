@@ -12,7 +12,7 @@ describe("busca na discografia", () => {
     render(<DiscographyCatalog albums={albums} search="  HISTORIA  " path="/discografias" />);
 
     expect(screen.getByRole("search")).toHaveAttribute("action", "/discografias");
-    expect(screen.getByRole("textbox", { name: "Buscar produto" })).toHaveValue("HISTORIA");
+    expect(screen.getByRole("textbox", { name: "Buscar álbum" })).toHaveValue("HISTORIA");
     expect(screen.getByRole("link", { name: /Uma História de Amor/ })).toHaveAttribute(
       "href",
       "/discografias/uma-historia-de-amor/5",

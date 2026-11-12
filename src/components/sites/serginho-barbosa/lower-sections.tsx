@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { type FormEvent, useState } from "react";
 import { currentNavigation, navigation, officialSite, spotify, telephone, whatsapp } from "./site-content";
+import { SiteInput, SiteTextarea } from "./site-fields";
 import styles from "./lower-sections.module.css";
 
 const youtube = "https://www.youtube.com/channel/UCgokYREGN6KlYcu2rk3NzcQ";
@@ -22,8 +23,8 @@ const questions = [
     question: "Como faço para adquirir a discografia do Serginho?",
     answer: (
       <>
-        <p>Você pode conferir todos os projetos do Serginho nas mídias sociais: <a className={styles.musicLink} href={spotify} target="_blank" rel="noreferrer">Spotify</a> e <a className={styles.videoLink} href={youtube} target="_blank" rel="noreferrer">YouTube</a>.</p>
-        <p>Mas se preferir, pode adquirir um pen drive com toda sua discografia. Basta chamar o Serginho no <a className={styles.musicLink} href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a> e pedir por mais informações.</p>
+        <p>Você pode conferir todos os projetos do Serginho nas mídias sociais: <a href={spotify} target="_blank" rel="noreferrer">Spotify</a> e <a href={youtube} target="_blank" rel="noreferrer">YouTube</a>.</p>
+        <p>Mas se preferir, pode adquirir um pen drive com toda sua discografia. Basta chamar o Serginho no <a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a> e pedir por mais informações.</p>
       </>
     ),
   },
@@ -48,7 +49,7 @@ const questions = [
   {
     question: "Como conhecer a discografia do Serginho?",
     answer: (
-      <p>Serginho tem 8 projetos discográficos disponíveis no site oficial, canal de <a className={styles.videoLink} href={youtube} target="_blank" rel="noreferrer">YouTube</a> e no <a className={styles.musicLink} href={spotify} target="_blank" rel="noreferrer">Spotify</a>.</p>
+      <p>Serginho tem 8 projetos discográficos disponíveis no site oficial, canal de <a href={youtube} target="_blank" rel="noreferrer">YouTube</a> e no <a href={spotify} target="_blank" rel="noreferrer">Spotify</a>.</p>
     ),
   },
   {
@@ -56,20 +57,20 @@ const questions = [
     answer: (
       <>
         <p>Suas músicas ganham destaque nas Rádios, especificamente na <a href="https://www.radiovozcompanheira.com.br/" target="_blank" rel="noreferrer">Web Radio Voz Companheira</a> e em programas de rádio apresentados pelo próprio cantor.</p>
-        <p>Mas se quiser uma coletânea completa com a discografia do Serginho, você pode contatá-lo no <a className={styles.musicLink} href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a> e fazer a compra de um pen drive com os arquivos em formato mp3.</p>
+        <p>Mas se quiser uma coletânea completa com a discografia do Serginho, você pode contatá-lo no <a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a> e fazer a compra de um pen drive com os arquivos em formato mp3.</p>
       </>
     ),
   },
   {
     question: "Quais tipos de música o Serginho Barbosa canta em seu show?",
     answer: (
-      <p>Serginho se destaca na Música Popular Brasileira, música regional e <a className={styles.videoLink} href={spotify} target="_blank" rel="noreferrer">suas músicas autorais</a>, representativas da sua rica discografia.</p>
+      <p>Serginho se destaca na Música Popular Brasileira, música regional e <a href={spotify} target="_blank" rel="noreferrer">suas músicas autorais</a>, representativas da sua rica discografia.</p>
     ),
   },
   {
     question: "Como faço para contratar o show ao vivo do Serginho Barbosa?",
     answer: (
-      <p>É simples. Basta visitar o site oficial de Serginho Barbosa, ou contatá-lo pelas mídias digitais ou através do <a className={styles.musicLink} href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>.</p>
+      <p>É simples. Basta visitar o site oficial de Serginho Barbosa, ou contatá-lo pelas mídias digitais ou através do <a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>.</p>
     ),
   },
 ];
@@ -78,13 +79,11 @@ const socialLinks = [
   {
     title: "Facebook",
     href: "https://www.facebook.com/SerginhoBarbosaOficial/",
-    className: styles.facebook,
     icon: <path fill="currentColor" d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.9 3.78-3.9 1.1 0 2.25.2 2.25.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z" />,
   },
   {
     title: "Instagram",
     href: "https://www.instagram.com/serginhobarbosa_vozcompanheira",
-    className: styles.instagram,
     icon: (
       <>
         <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="2" />
@@ -96,7 +95,6 @@ const socialLinks = [
   {
     title: "YouTube",
     href: youtube,
-    className: styles.youtube,
     icon: <path fill="currentColor" fillRule="evenodd" d="M22.4 6.1c-.25-.94-.99-1.68-1.93-1.93C18.77 3.7 12 3.7 12 3.7s-6.77 0-8.47.47A2.74 2.74 0 0 0 1.6 6.1C1.13 7.8 1.13 12 1.13 12s0 4.2.47 5.9c.25.94.99 1.68 1.93 1.93C5.23 20.3 12 20.3 12 20.3s6.77 0 8.47-.47a2.74 2.74 0 0 0 1.93-1.93c.47-1.7.47-5.9.47-5.9s0-4.2-.47-5.9ZM9.8 15.56V8.44l5.9 3.56-5.9 3.56Z" />,
   },
 ];
@@ -112,8 +110,8 @@ export function WhatsappIcon() {
 export function SiteSocialLinks() {
   return (
     <div className={styles.socialLinks}>
-      {socialLinks.map(({ title, href, className, icon }) => (
-        <a aria-label={title} className={className} href={href} key={title} target="_blank" rel="noreferrer">
+      {socialLinks.map(({ title, href, icon }) => (
+        <a aria-label={title} href={href} key={title} target="_blank" rel="noreferrer">
           <svg aria-hidden="true" viewBox="0 0 24 24" width="23" height="23">{icon}</svg>
         </a>
       ))}
@@ -131,26 +129,36 @@ function BudgetForm() {
 
   return (
     <section className={styles.budget} aria-labelledby="budget-title">
-      <div className="sb-container">
-        <h2 className="sb-heading" id="budget-title">Orçamento Rápido</h2>
+      <div className={`sb-container ${styles.budgetLayout}`}>
+        <div>
+          <h2 className="sb-heading" id="budget-title">Orçamento Rápido</h2>
+          <p className={styles.budgetIntro}>Conte um pouco sobre o seu evento para preparar o contato.</p>
+          <Link className="sb-text-link" href="/contatos">Outras formas de contato</Link>
+        </div>
         <form aria-labelledby="budget-title" className={styles.budgetForm} method="post" onSubmit={handleSubmit} onInput={() => setSubmitted(false)}>
           <div className={styles.budgetFields}>
             <div>
               <label htmlFor="budget-name">Nome*</label>
-              <input id="budget-name" autoComplete="name" required />
-              <label htmlFor="budget-phone">Telefone*</label>
-              <input id="budget-phone" type="tel" autoComplete="tel" required />
-              <label htmlFor="budget-details">Detalhes*</label>
-              <textarea id="budget-details" required />
+              <SiteInput id="budget-name" autoComplete="name" required />
             </div>
             <div>
               <label htmlFor="budget-email">E-mail*</label>
-              <input id="budget-email" type="email" autoComplete="email" required />
+              <SiteInput id="budget-email" type="email" autoComplete="email" required />
+            </div>
+            <div>
+              <label htmlFor="budget-phone">Telefone*</label>
+              <SiteInput id="budget-phone" type="tel" autoComplete="tel" required />
+            </div>
+            <div>
               <label htmlFor="budget-subject">Assunto</label>
-              <input id="budget-subject" />
+              <SiteInput id="budget-subject" />
+            </div>
+            <div className={styles.budgetMessage}>
+              <label htmlFor="budget-details">Detalhes*</label>
+              <SiteTextarea id="budget-details" required />
             </div>
           </div>
-          <button className={styles.budgetButton} type="submit">Enviar</button>
+          <button className={`sb-button ${styles.budgetButton}`} type="submit">Enviar</button>
           {submitted && (
             <p className={styles.formStatus} role="status">
               Formulário validado nesta prévia. <Link href="/contatos">Acessar Contatos</Link> para preparar sua mensagem.
@@ -172,12 +180,12 @@ function Newsletter({ footer = false }: { footer?: boolean }) {
 
   return (
     <div className={footer ? styles.footerNewsletter : styles.newsletterPanel}>
-      <h2 className={styles.newsletterTitle}>Cadastre-se e receba nossas novidades!</h2>
+      <h2 className={styles.newsletterTitle}>Receba as novidades</h2>
       <form aria-label={footer ? "Cadastro de novidades no rodapé" : "Cadastro de novidades"} method="post" onSubmit={handleSubmit} onInput={() => setSubmitted(false)}>
         <div className={styles.newsletterFields}>
-          <input aria-label="Nome" placeholder={footer ? "Nome*" : "Nome"} autoComplete="name" required />
-          <input aria-label="E-mail" placeholder={footer ? "E-mail*" : "E-mail"} type="email" autoComplete="email" required />
-          <button className={styles.newsletterButton} type="submit">Cadastre-se</button>
+          <SiteInput aria-label="Nome" placeholder="Nome" autoComplete="name" required />
+          <SiteInput aria-label="E-mail" placeholder="E-mail" type="email" autoComplete="email" required />
+          <button className="sb-button" type="submit">Cadastre-se</button>
         </div>
         {submitted && (
           <p className={styles.formStatus} role="status">
@@ -192,7 +200,7 @@ function Newsletter({ footer = false }: { footer?: boolean }) {
 function FrequentlyAskedQuestions() {
   return (
     <section className={styles.faq} aria-labelledby="faq-title">
-      <div className="sb-container">
+      <div className={`sb-container ${styles.faqLayout}`}>
         <h2 className="sb-heading" id="faq-title">Perguntas frequentes</h2>
         <div className={styles.questions}>
           {questions.map(({ question, answer }) => (
@@ -215,6 +223,13 @@ export function SiteFooter() {
   return (
     <footer className={styles.footer}>
       <div className={`sb-container ${styles.footerColumns}`}>
+        <div className={styles.footerIdentity}>
+          <Link href="/" className={styles.footerArtist}>Serginho <em>Barbosa</em></Link>
+          <div className={styles.socialBlock}>
+            <h2 className="sr-only">Redes sociais</h2>
+            <SiteSocialLinks />
+          </div>
+        </div>
         <nav className={styles.footerBlock} aria-label="Acesso rápido">
           <h2>Acesso Rápido</h2>
           {navigation.map(({ label, href }) => (
@@ -228,10 +243,6 @@ export function SiteFooter() {
               <a href={telephone} aria-label="Ligar para Serginho Barbosa"><Phone aria-hidden="true" size={14} fill="currentColor" /> (31) 9.9378-9787</a>
               <a href={whatsapp} target="_blank" rel="noreferrer" aria-label="WhatsApp de Serginho Barbosa"><WhatsappIcon /> (31) 9.9378-9787</a>
             </div>
-          </div>
-          <div className={`${styles.footerBlock} ${styles.socialBlock}`}>
-            <h2>Redes Sociais</h2>
-            <SiteSocialLinks />
           </div>
         </div>
         <Newsletter footer />

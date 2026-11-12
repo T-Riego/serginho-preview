@@ -24,7 +24,7 @@ export function GalleryPage({ album, activeHref }: { album?: Album; activeHref?:
 
   return (
     <main>
-      <InnerBanner title="Galeria de Fotos" page="galeria-de-fotos">
+      <InnerBanner title={album?.label ?? "Galeria de Fotos"} page="galeria-de-fotos">
         <BannerLinks items={albumLinks} activeHref={activeHref} />
       </InnerBanner>
       <section className={styles.galleryContent} aria-label={current.label}>
@@ -39,7 +39,7 @@ export function GalleryPage({ album, activeHref }: { album?: Album; activeHref?:
 export function VideoPage() {
   return (
     <main>
-      <InnerBanner title="Videos" page="videos" />
+      <InnerBanner title="Vídeos" page="videos" />
       <section className={styles.videoContent} aria-label="Biblioteca de vídeos">
         <div className="sb-container">
           <VideoGrid videos={data.videos} library />

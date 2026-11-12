@@ -38,7 +38,7 @@ export function DiscographyListing({
 
   return (
     <main>
-      <InnerBanner title="Discografias" page="discografias">
+      <InnerBanner title={category?.label ?? "Discografias"} page="discografias">
         <BannerLinks items={discographyCategories} activeHref={category?.href} />
       </InnerBanner>
       <DiscographyCatalog albums={albums} path={path} search={search} />
@@ -51,7 +51,7 @@ export function DiscographyDetail({ album }: { album: DiscographyAlbum }) {
     <main>
       <InnerBanner title={album.title} page="discografias" />
       <div className={styles.detail}>
-        <article className="sb-container">
+        <article className={`sb-container ${styles.detailLayout}`}>
           {album.slug === "brilho-novo" ? <DiscographyZoomCover album={album} /> : (
             <figure className={styles.detailCover}>
               <Image
@@ -63,7 +63,7 @@ export function DiscographyDetail({ album }: { album: DiscographyAlbum }) {
               />
             </figure>
           )}
-          {discographyContent[album.slug]}
+          <div className={styles.detailCopy}>{discographyContent[album.slug]}</div>
         </article>
       </div>
     </main>

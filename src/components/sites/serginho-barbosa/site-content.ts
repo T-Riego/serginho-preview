@@ -31,7 +31,7 @@ export const navigation = [
   { label: "Biografia", href: "/biografia" },
   { label: "Carnaval", href: "/carnaval" },
   { label: "Discografias", href: "/discografias", children: discographies },
-  { label: "Videos", href: "/videos" },
+  { label: "Vídeos", href: "/videos" },
   { label: "Galeria de Fotos", href: "/galeria-de-fotos", children: galleries },
   { label: "Contatos", href: "/contatos" },
 ];

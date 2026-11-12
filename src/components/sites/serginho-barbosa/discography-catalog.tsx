@@ -1,6 +1,8 @@
 import { Search } from "lucide-react";
 import Form from "next/form";
 import Link from "next/link";
+import { AlbumCard } from "./album-card";
+import { SiteInput } from "./site-fields";
 import styles from "./discography.module.css";
 
 type AlbumCard = {
@@ -30,28 +32,23 @@ export function DiscographyCatalog({
     <section className={styles.catalog} aria-label="Catálogo de álbuns">
       <div className="sb-container">
         <Form action={path} scroll={false} role="search" aria-label="Buscar na discografia" className={styles.search}>
-          <input
+          <Search className={styles.searchIcon} size={19} aria-hidden="true" />
+          <SiteInput
             type="text"
             name="search"
-            aria-label="Buscar produto"
-            placeholder="Buscar produto"
+            aria-label="Buscar álbum"
+            placeholder="Buscar álbum"
             defaultValue={query}
             key={query}
             maxLength={256}
           />
-          <button type="submit" aria-label="Buscar"><Search size={19} strokeWidth={3} /></button>
+          <button type="submit" className="sb-button">Buscar</button>
         </Form>
         {results.length ? (
-          <ul className={styles.albums} role="list">
+          <ul className="sb-albums" role="list">
             {results.map(({ title, href, cover }) => (
               <li key={href}>
-                <Link href={href} className={styles.card}>
-                  <div className={styles.cardCover} style={{ backgroundImage: `url(${cover})` }} />
-                  <div className={styles.cardText}>
-                    <h2>{title}</h2>
-                    <span className={styles.cardDetails}>Mais detalhes</span>
-                  </div>
-                </Link>
+                <AlbumCard href={href} title={title} cover={cover} heading="h2" />
               </li>
             ))}
           </ul>

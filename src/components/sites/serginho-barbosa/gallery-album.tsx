@@ -1,7 +1,7 @@
 "use client";
 
 import { Dialog } from "@base-ui/react/dialog";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2, X } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import styles from "./media-pages.module.css";
@@ -52,7 +52,7 @@ export function GalleryAlbum({ title, photos }: { title: string; photos: readonl
             }}
           >
             <Image src={`${assetRoot}/${photo.thumbnail}`} alt="" fill sizes="(min-width: 992px) 22vw, 90vw" unoptimized />
-            <span aria-hidden="true" className={styles.photoZoom} />
+            <span aria-hidden="true" className={styles.photoZoom}><Maximize2 size={17} /></span>
           </button>
         ))}
       </div>

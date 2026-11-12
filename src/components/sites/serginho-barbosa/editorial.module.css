@@ -1,242 +1,130 @@
 .biography article,
 .carnival article {
   display: flow-root;
+  max-width: 1050px;
+  color: var(--sb-ink);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.72;
   overflow-wrap: anywhere;
 }
-
-.biography article {
-  padding-left: 10px;
-  text-align: justify;
-}
-
-.carnival article {
-  padding-left: 10px;
-  font-size: 18px;
-}
-
-.biography p,
-.carnival p {
-  margin-bottom: 10px;
-}
-
-.biography ul,
-.carnival ul {
-  margin: 0 0 10px;
-  padding-left: 40px;
+.biography p, .carnival p { margin-bottom: 1rem; }
+.biography p:last-child, .carnival p:last-child { margin-bottom: 0; }
+.biography ul, .carnival ul {
+  margin: .35rem 0 1.3rem;
+  padding-left: 1.5rem;
   list-style: disc;
 }
-
-.biography ul {
-  list-style-type: circle;
-}
-
-.biography a {
-  color: #e1003a;
+.biography li, .carnival li { margin-bottom: .36rem; }
+.biography a, .carnival a {
+  color: var(--sb-red);
+  font-weight: 600;
   text-decoration: underline;
+  text-underline-offset: .18em;
 }
-
-.bioLabel {
-  font-size: 18px;
-}
-
+.bioLabel { font-size: 1.15rem; }
 .articleTitle {
-  text-align: center;
+  margin-bottom: 1.45rem;
+  font: 400 clamp(2.4rem, 5vw, 4rem) / 1 var(--sb-display);
 }
-
 .bioShow,
 .bioPortrait,
-.carnavalStage {
-  float: right;
-  height: auto;
-  margin: 2px 2px 2px 24px;
-}
-
+.carnavalStage,
 .bioCarnaval,
 .carnavalBand {
-  float: left;
+  width: 46%;
   height: auto;
-  margin: 2px 24px 2px 2px;
+  border-radius: var(--sb-radius-lg);
 }
-
-.bioShow {
-  width: 46.46%;
+.bioShow, .bioPortrait, .carnavalStage {
+  float: right;
+  margin: 0 0 1.35rem clamp(1.4rem, 4vw, 3rem);
 }
-
-.bioCarnaval {
-  width: 53.86%;
-}
-
-.bioPortrait,
-.carnavalStage {
-  width: 49.31%;
-}
-
-.carnavalBand {
-  width: 53.35%;
-}
-
-.bioFigure,
-.carnavalFigure {
-  margin-block: .9em;
-}
-
-.bioFigure {
-  width: 65.78%;
+.bioCarnaval, .carnavalBand {
   float: left;
-  margin-top: 0;
-  margin-right: 24px;
+  margin: .25rem clamp(1.4rem, 4vw, 3rem) 1.35rem 0;
 }
-
-.carnavalFigure {
-  width: 47.1%;
-  clear: both;
-  margin-inline: auto;
-}
-
-.bioFinal,
-.carnavalFinal {
-  width: 100%;
-  height: auto;
-}
-
+.bioFigure, .carnavalFigure { clear: both; margin-block: 1.7rem; }
+.bioFinal, .carnavalFinal { width: 100%; height: auto; border-radius: var(--sb-radius-lg); }
+.carnavalFigure { max-width: 570px; }
 .spotify {
   display: block;
   max-width: 100%;
+  clear: both;
+  margin-block: 1.5rem;
   border: 0;
-  border-radius: 12px;
+  border-radius: var(--sb-radius);
 }
 
 .contactLayout {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
   align-items: start;
+  gap: clamp(1.25rem, 4vw, 3.2rem);
 }
-
+.contactPanel,
+.contactSidebar {
+  padding: clamp(1.2rem, 4vw, 2.25rem);
+  border: 1px solid var(--sb-border);
+  border-radius: var(--sb-radius-lg);
+  background: var(--sb-panel);
+}
 .contactTitle {
-  color: var(--sb-red);
-  font-size: 20px;
-  font-weight: 400;
+  color: var(--sb-ink);
+  font: 400 clamp(2.15rem, 4vw, 3.6rem) / 1 var(--sb-display);
 }
-
-.contactForm {
-  margin-top: 50px;
-}
-
+.contactForm { margin-top: 1.45rem; }
 .contactFields {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  row-gap: 14px;
+  gap: 1rem 1.1rem;
 }
-
 .contactFields label {
   display: block;
-  margin-bottom: 2px;
-  color: var(--sb-heading-red);
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.contactFields input,
-.contactFields textarea {
-  display: block;
-  width: 98%;
-  padding: 10px 12px;
-  border: 1px solid rgb(0 0 0 / 22%);
-  background: white;
+  margin-bottom: .3rem;
   color: var(--sb-ink);
-  font-size: 14px;
-  line-height: 20px;
+  font-size: .9rem;
+  font-weight: 600;
 }
-
-.contactMessage {
-  grid-column: 1 / -1;
-}
-
-.contactFields textarea {
-  min-height: 110px;
-  resize: vertical;
-}
-
-.contactSubmit {
-  margin-top: 10px;
-  cursor: pointer;
-}
-
+.contactMessage { grid-column: 1 / -1; }
+.contactSubmit { margin-top: 1.15rem; }
 .contactStatus {
-  margin-top: 12px;
-  font-size: 14px;
+  margin-top: .85rem;
+  padding: .7rem .9rem;
+  border: 1px solid var(--sb-border);
+  border-radius: 9px;
+  background: var(--sb-paper);
+  font-size: .92rem;
 }
-
-.contactStatus a {
-  color: #e1003a;
-  text-decoration: underline;
-}
-
-.contactSidebar {
-  width: 92%;
-  margin-left: auto;
-  padding: 40px 0 40px 40px;
-  border-left: 1px solid rgb(17 17 17 / 17%);
-}
-
+.contactStatus a { color: var(--sb-red); font-weight: 600; text-decoration: underline; }
 .contactSidebar h2 {
-  margin-bottom: 10px;
-  color: #000;
-  font-size: 16px;
+  margin-bottom: .6rem;
+  color: var(--sb-ink);
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
-
 .contactLink {
   display: flex;
+  min-height: 44px;
   align-items: center;
-  gap: 6px;
-  margin-bottom: 5px;
+  gap: .6rem;
+  color: var(--sb-muted);
+  font-size: .98rem;
   overflow-wrap: anywhere;
-  font-size: 15px;
-  line-height: 28px;
-  transition: opacity .3s ease;
 }
+.contactLink:hover { color: var(--sb-red); }
+.contactLink svg { flex: none; color: var(--sb-red); }
+.contactSocial { margin-top: 1.05rem; padding-top: 1rem; border-top: 1px solid var(--sb-border); }
 
-.contactLink:hover {
-  opacity: .5;
+@media (max-width: 800px) {
+  .contactLayout { grid-template-columns: minmax(0, 1fr); }
 }
-
-.contactLink svg {
-  flex: none;
-  color: var(--sb-red);
-}
-
-.contactSocial {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid rgb(17 17 17 / 17%);
-}
-
-@media (max-width: 991px) {
-  .contactLayout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .contactSidebar {
+@media (max-width: 650px) {
+  .bioShow, .bioPortrait, .carnavalStage, .bioCarnaval, .carnavalBand {
+    float: none;
     width: 100%;
-    margin-top: 20px;
-    padding: 20px 0;
-    border-top: 1px solid rgb(17 17 17 / 17%);
-    border-left: 0;
+    margin: 0 0 1rem;
   }
 }
-
-@media (max-width: 479px) {
-  .contactFields {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .contactSubmit {
-    padding-block: 8px;
-  }
+@media (max-width: 470px) {
+  .contactFields { grid-template-columns: minmax(0, 1fr); }
 }

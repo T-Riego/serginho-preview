@@ -1,3 +1,4 @@
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { VideoGrid } from "./video-grid";
 import styles from "./media-sections.module.css";
@@ -22,13 +23,13 @@ const galleryPhotos = [
 
 export function VideosSection() {
   return (
-    <section className={`${styles.section} ${styles.videos}`} aria-labelledby="videos-heading">
+    <section className={`sb-section sb-on-dark ${styles.videos}`} aria-labelledby="videos-heading">
       <div className="sb-container">
-        <h2 className="sb-heading sb-heading-light" id="videos-heading">Videos</h2>
-        <VideoGrid videos={featuredVideos} />
-        <div className={styles.actions}>
-          <Link className="sb-button sb-button-dark" href="/videos">ver todos</Link>
+        <div className="sb-section-heading">
+          <h2 className="sb-heading sb-heading-light" id="videos-heading">Vídeos</h2>
+          <Link className="sb-button sb-button-outline" href="/videos">Ver todos <ArrowRight size={17} aria-hidden="true" /></Link>
         </div>
+        <VideoGrid videos={featuredVideos} />
       </div>
     </section>
   );
@@ -36,9 +37,12 @@ export function VideosSection() {
 
 export function GallerySection() {
   return (
-    <section className={styles.section} aria-labelledby="gallery-heading">
+    <section className="sb-section" aria-labelledby="gallery-heading">
       <div className="sb-container">
-        <h2 className="sb-heading" id="gallery-heading">Galeria de Fotos</h2>
+        <div className="sb-section-heading">
+          <h2 className="sb-heading" id="gallery-heading">Galeria de Fotos</h2>
+          <Link className="sb-button sb-button-outline" href="/galeria-de-fotos">Ver galeria <ArrowRight size={17} aria-hidden="true" /></Link>
+        </div>
         <div className={styles.galleryGrid}>
           {galleryPhotos.map((photo, index) => (
             <Link
@@ -48,14 +52,9 @@ export function GallerySection() {
               aria-label={`Veja as fotos do Julifest 2018, foto ${index + 1}`}
               style={{ backgroundImage: `url(/sites/serginho-barbosa/gallery/${photo})` }}
             >
-              <span className={styles.photoCaption}>
-                <span className={styles.tileAction}>Veja as fotos</span>
-              </span>
+              <span className={styles.photoAction}><ArrowUpRight size={20} aria-hidden="true" /></span>
             </Link>
           ))}
-        </div>
-        <div className={styles.actions}>
-          <Link className="sb-button" href={galleryUrl}>ver todos</Link>
         </div>
       </div>
     </section>

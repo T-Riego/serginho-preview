@@ -1,7 +1,7 @@
 "use client";
 
 import { Dialog } from "@base-ui/react/dialog";
-import { ChevronDown, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -18,21 +18,10 @@ function Brand({ onClick }: { onClick?: () => void }) {
 
 export function SiteHeader() {
   const pathname = usePathname() ?? "/";
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    function updateHeader() {
-      setScrolled(window.scrollY > 105);
-    }
-
-    updateHeader();
-    window.addEventListener("scroll", updateHeader, { passive: true });
-    return () => window.removeEventListener("scroll", updateHeader);
-  }, []);
-
   return (
-    <header className="sb-header" data-home={pathname === "/"} data-scrolled={scrolled}>
+    <header className="sb-header">
       <div className="sb-container sb-header-inner">
         <Brand />
         <nav className="sb-desktop-nav" aria-label="Navegação principal">
@@ -54,7 +43,7 @@ export function SiteHeader() {
         </nav>
         <Dialog.Root open={menuOpen} onOpenChange={setMenuOpen}>
           <Dialog.Trigger className="sb-menu-trigger" aria-label="Abrir menu">
-            <span /><span /><span />
+            <Menu size={19} aria-hidden="true" /> Menu
           </Dialog.Trigger>
           <Dialog.Portal>
             <Dialog.Backdrop className="sb-menu-backdrop" />
@@ -94,21 +83,31 @@ type CarouselView = { index: number; previous: number | null; direction: 1 | -1 
 const slideCount = heroSlides.length;
 
 export function HeroCarousel() {
+  const carousel = useRef<HTMLElement>(null);
   const [view, setView] = useState<CarouselView>({ index: 0, previous: null, direction: 1 });
+  const [inView, setInView] = useState(false);
   const [paused, setPaused] = useState(false);
   const [manual, setManual] = useState(false);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const suppressClick = useRef(false);
 
   useEffect(() => {
-    if (manual || paused || window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+    const region = carousel.current;
+    if (!region || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold: .25 });
+    observer.observe(region);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!inView || manual || paused || window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
     const timer = window.setInterval(() => {
       if (document.hidden) return;
       setView(({ index }) => ({ index: (index + 1) % slideCount, previous: index, direction: 1 }));
     }, 3000);
 
     return () => window.clearInterval(timer);
-  }, [manual, paused]);
+  }, [inView, manual, paused]);
 
   function show(index: number, direction: 1 | -1) {
     setManual(true);
@@ -123,6 +122,7 @@ export function HeroCarousel() {
 
   return (
     <section
+      ref={carousel}
       className="sb-hero"
       aria-label="Destaques"
       data-direction={view.direction}
@@ -168,11 +168,11 @@ export function HeroCarousel() {
       )}
       <div key={view.index} className={`sb-slide${view.previous === null ? "" : " sb-slide-entering"}`}>
         {slide.href ? (
-          <a href={slide.href}>
-            <Image src={`${assetRoot}/${slide.image}`} alt={slide.label} fill unoptimized loading="eager" />
-          </a>
+          <Link href={slide.href}>
+            <Image src={`${assetRoot}/${slide.image}`} alt={slide.label} fill unoptimized />
+          </Link>
         ) : (
-          <Image src={`${assetRoot}/${slide.image}`} alt={slide.label} fill unoptimized loading="eager" />
+          <Image src={`${assetRoot}/${slide.image}`} alt={slide.label} fill unoptimized />
         )}
       </div>
       <button className="sb-hero-arrow sb-hero-prev" type="button" aria-label="Destaque anterior" onClick={() => step(-1)}><ChevronLeft size={24} /></button>

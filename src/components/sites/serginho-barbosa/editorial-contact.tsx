@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { contactEmail } from "./site-content";
+import { SiteInput, SiteTextarea } from "./site-fields";
 import styles from "./editorial.module.css";
 
 function formatPhone(value: string) {
@@ -47,15 +48,15 @@ export function ContactForm() {
       <div className={styles.contactFields}>
         <div>
           <label htmlFor="contact-name">Nome*</label>
-          <input id="contact-name" name="name" autoComplete="name" maxLength={256} required />
+          <SiteInput id="contact-name" name="name" autoComplete="name" maxLength={256} required />
         </div>
         <div>
           <label htmlFor="contact-email">E-mail*</label>
-          <input id="contact-email" name="email" type="email" autoComplete="email" maxLength={256} required />
+          <SiteInput id="contact-email" name="email" type="email" autoComplete="email" maxLength={256} required />
         </div>
         <div>
           <label htmlFor="contact-phone">Telefone*</label>
-          <input
+          <SiteInput
             id="contact-phone"
             name="phone"
             type="tel"
@@ -68,11 +69,11 @@ export function ContactForm() {
         </div>
         <div>
           <label htmlFor="contact-subject">Assunto*</label>
-          <input id="contact-subject" name="subject" maxLength={256} required />
+          <SiteInput id="contact-subject" name="subject" maxLength={256} required />
         </div>
         <div className={styles.contactMessage}>
           <label htmlFor="contact-message">Mensagem*</label>
-          <textarea id="contact-message" name="message" required />
+          <SiteTextarea id="contact-message" name="message" required />
         </div>
       </div>
       <button type="submit" className={`sb-button ${styles.contactSubmit}`}>Enviar</button>

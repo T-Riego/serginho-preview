@@ -1,7 +1,7 @@
 "use client";
 
 import { Dialog } from "@base-ui/react/dialog";
-import { X } from "lucide-react";
+import { Play, X } from "lucide-react";
 import styles from "./media-sections.module.css";
 
 type Video = {
@@ -11,7 +11,7 @@ type Video = {
 
 export function VideoGrid({ videos, library = false }: { videos: readonly Video[]; library?: boolean }) {
   return (
-    <div className={library ? `${styles.videoGrid} ${styles.videoLibrary}` : styles.videoGrid}>
+    <div className={styles.videoGrid}>
       {videos.map(({ id, title }) => (
         <Dialog.Root key={id}>
           <Dialog.Trigger
@@ -19,10 +19,9 @@ export function VideoGrid({ videos, library = false }: { videos: readonly Video[
             aria-label={`Assistir vídeo: ${title}`}
             style={{ backgroundImage: `url(/sites/serginho-barbosa/videos/${id}.jpg)` }}
           >
-            <span className={styles.play} aria-hidden="true" />
+            <span className={styles.play} aria-hidden="true"><Play size={18} fill="currentColor" /></span>
             <span className={styles.videoCaption}>
               <span className={styles.videoTitle}>{title}</span>
-              <span className={styles.tileAction}>Assistir vídeo</span>
             </span>
           </Dialog.Trigger>
           <Dialog.Portal>

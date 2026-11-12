@@ -38,7 +38,7 @@ As 29 páginas internas usam o mesmo cabeçalho, rodapé, contatos flutuantes, t
 
 ## Implementação e comparação
 
-- `src/app/layout.tsx` compartilha a navegação. `inner-banner.tsx` aplica o banner original de cada seção e `inner-banner-links.tsx` renderiza a lista de categorias que se recolhe no celular.
+- `src/app/layout.tsx` compartilha a navegação. `inner-banner.tsx` aplica fotos ou capas do acervo conforme a seção, a categoria ou o álbum. `inner-banner-links.tsx` renderiza a lista de categorias que se recolhe no celular.
 - `editorial-content.tsx` contém os artigos de Biografia e Carnaval. `editorial-contact.tsx` valida os campos e prepara um rascunho para o aplicativo de e-mail.
 - `discography-*` contém catálogo, busca local, categorias e oito detalhes. A busca ignora diferenças de acentuação e mantém o termo na URL.
 - `media-pages.tsx` reúne 21 vídeos e oito álbuns com 123 fotos. `gallery-album.tsx` renderiza o visualizador local com miniaturas, setas, gesto e Escape.

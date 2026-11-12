@@ -1,4 +1,4 @@
-import { HeroCarousel } from "@/components/sites/serginho-barbosa/home-controls";
+import { HeroCarousel } from "@/components/sites/serginho-barbosa/hero-carousel";
 import { ArtistStory, Discographies } from "@/components/sites/serginho-barbosa/home-sections";
 import { LowerSections } from "@/components/sites/serginho-barbosa/lower-sections";
 import { GallerySection, VideosSection } from "@/components/sites/serginho-barbosa/media-sections";
@@ -6,7 +6,6 @@ import { GallerySection, VideosSection } from "@/components/sites/serginho-barbo
 export default function Home() {
   return (
     <main>
-      <h1 className="sr-only">Serginho Barbosa</h1>
       <HeroCarousel />
       <Discographies />
       <ArtistStory story="biografia" />

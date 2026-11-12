@@ -7,6 +7,8 @@ type AlbumPageProps = {
   params: Promise<{ slug: string; id: string }>;
 };
 
+export const dynamicParams = false;
+
 async function getAlbum(params: AlbumPageProps["params"]) {
   const { slug, id } = await params;
   const album = discographyAlbums.find((entry) => entry.slug === slug && entry.id === id);

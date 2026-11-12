@@ -1,6 +1,12 @@
+"use client";
+
 import { Search } from "lucide-react";
 import Form from "next/form";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
+import { AlbumCard } from "./album-card";
+import { SiteInput } from "./site-fields";
 import styles from "./discography.module.css";
 
 type AlbumCard = {
@@ -13,15 +19,25 @@ function normalizeSearch(text: string) {
   return text.normalize("NFD").replace(/\p{M}/gu, "").toLocaleLowerCase("pt-BR");
 }
 
-export function DiscographyCatalog({
-  albums,
-  search = "",
-  path,
-}: {
+type CatalogProps = {
   albums: readonly AlbumCard[];
-  search?: string;
   path: string;
-}) {
+};
+
+export function DiscographyCatalog(props: CatalogProps) {
+  return (
+    <Suspense fallback={<CatalogContent {...props} search="" />}>
+      <CatalogFromUrl {...props} />
+    </Suspense>
+  );
+}
+
+function CatalogFromUrl(props: CatalogProps) {
+  const search = useSearchParams().get("search") ?? "";
+  return <CatalogContent {...props} search={search} />;
+}
+
+function CatalogContent({ albums, path, search }: CatalogProps & { search: string }) {
   const query = search.trim().slice(0, 256);
   const normalizedQuery = normalizeSearch(query);
   const results = albums.filter(({ title }) => normalizeSearch(title).includes(normalizedQuery));
@@ -30,28 +46,23 @@ export function DiscographyCatalog({
     <section className={styles.catalog} aria-label="Catálogo de álbuns">
       <div className="sb-container">
         <Form action={path} scroll={false} role="search" aria-label="Buscar na discografia" className={styles.search}>
-          <input
+          <Search className={styles.searchIcon} size={19} aria-hidden="true" />
+          <SiteInput
             type="text"
             name="search"
-            aria-label="Buscar produto"
-            placeholder="Buscar produto"
+            aria-label="Buscar álbum"
+            placeholder="Buscar álbum"
             defaultValue={query}
             key={query}
             maxLength={256}
           />
-          <button type="submit" aria-label="Buscar"><Search size={19} strokeWidth={3} /></button>
+          <button type="submit" className="sb-button">Buscar</button>
         </Form>
         {results.length ? (
-          <ul className={styles.albums} role="list">
+          <ul className="sb-albums" role="list">
             {results.map(({ title, href, cover }) => (
               <li key={href}>
-                <Link href={href} className={styles.card}>
-                  <div className={styles.cardCover} style={{ backgroundImage: `url(${cover})` }} />
-                  <div className={styles.cardText}>
-                    <h2>{title}</h2>
-                    <span className={styles.cardDetails}>Mais detalhes</span>
-                  </div>
-                </Link>
+                <AlbumCard href={href} title={title} cover={cover} heading="h2" />
               </li>
             ))}
           </ul>

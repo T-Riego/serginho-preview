@@ -4,6 +4,13 @@ import { describe, expect, it } from "vitest";
 import { LowerSections, SiteFooter } from "./lower-sections";
 
 describe("seções de contato", () => {
+  it("exibe o crédito de desenvolvimento com o link no nome", () => {
+    render(<SiteFooter />);
+    const credit = screen.getByRole("link", { name: "RiegosDev" });
+    expect(credit).toHaveAttribute("href", "https://riegosdev.cloud");
+    expect(credit.parentElement).toHaveTextContent("Desenvolvido por RiegosDev - Sites sob medida.");
+  });
+
   it("expande e recolhe cada resposta de forma independente", async () => {
     const user = userEvent.setup();
     render(<LowerSections />);

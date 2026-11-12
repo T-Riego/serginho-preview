@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import type { DiscographyAlbum } from "./discography-data";
+import { assetRoot } from "./site-content";
 import styles from "./discography.module.css";
 
 function SpotifyAlbum({ title, src, href }: { title: string; src: string; href: string }) {
@@ -35,7 +36,7 @@ export const discographyContent: Record<DiscographyAlbum["slug"], ReactNode> = {
       <p className={styles.largeCopy}>{"Serginho Barbosa convidou um time de arranjadores e participações especiais para marcar o CD comemorativo. Dulu Luciano, Warley Machado e Nadilson Assunção dividem os arranjos e a parte instrumental em várias faixas. Vários convidados especiais complementam a ficha técnica. Entre eles, estão os cantores Soninha Gargíulo (que faz duo com Serginho Barbosa na faixa-título e assina o texto de apresentação) e Ubiraney Silva (vocais). Entre os músicos, participam do projeto Delano Macedo (guitarra) e Eder Izidoro (contrabaixo). O projeto foi gravado no estúdio WM Produções, com a técnica de Gleiston Machado. A programação visual é assinada por Rafael Bastos."}</p>
       <div className={styles.copySpacer} aria-hidden="true" />
       <p className={styles.largeCopy}>{"O cantor prepara vários eventos para marcar o lançamento do disco, como shows, participações em eventos musicais e divulgação dos meios de comunicação. Voz companheira contou com o apoio cultural da Lei Municipal de Incentivo à Cultura de Itabirito."}</p>
-      <p className={styles.credit}><Image src="/sites/serginho-barbosa/discography/voz-companheira-producoes.png" alt="Voz Companheira Produções" width={262} height={79} unoptimized /></p>
+      <p className={styles.credit}><Image src={`${assetRoot}/discography/voz-companheira-producoes.png`} alt="Voz Companheira Produções" width={262} height={79} unoptimized /></p>
       <div className={styles.copySpacer} aria-hidden="true" />
     </>
   ),
@@ -68,8 +69,8 @@ export const discographyContent: Record<DiscographyAlbum["slug"], ReactNode> = {
       <div className={styles.copySpacer} aria-hidden="true" />
       <p className={styles.largeCopy}>{"O Projeto ? Bolero, Arte e Dança tem a responsabilidade de envolver os participantes em se manifestar de diversas formas o envolvimento com a dança. A Dança de Salão é socialmente como forma de entretenimento e integração social. As influências desse ritmo com nascimento em Cuba se espalhou pela Europa. A Espanha teve sua adesão juntamente com o México. Chegando ao Brasil na década de 60 formando um público fiel até invadir as academias de dança de salão até os dias de hoje, nos anos 60 o baile tornou-se mais presente de forma social e entretenimento."}</p>
       <div className={styles.copySpacer} aria-hidden="true" />
-      <p className={styles.credit}><em><Image src="/sites/serginho-barbosa/discography/studio-sonarte.jpg" alt="Studio Sonarte" width={131} height={75} unoptimized /></em></p>
-      <p className={styles.credit}><em><Image src="/sites/serginho-barbosa/discography/voz-companheira-producoes.png" alt="Voz Companheira Produções" width={208} height={63} unoptimized /></em></p>
+      <p className={styles.credit}><em><Image src={`${assetRoot}/discography/studio-sonarte.jpg`} alt="Studio Sonarte" width={131} height={75} unoptimized /></em></p>
+      <p className={styles.credit}><em><Image src={`${assetRoot}/discography/voz-companheira-producoes.png`} alt="Voz Companheira Produções" width={208} height={63} unoptimized /></em></p>
     </>
   ),
   "trajetoria": (
@@ -107,7 +108,7 @@ export const discographyContent: Record<DiscographyAlbum["slug"], ReactNode> = {
       <div className={styles.copySpacer} aria-hidden="true" />
       <p className={styles.largeCopy}>{"A unidade do trabalho é o respeito à história musical de Minas Gerais, que por vezes deixa muitos artistas relegados ao esquecimento, principalmente aqueles que surgiram numa época em que fazer o registro fonográfico era difícil e extremamente dispendioso. Com essas versões, pelo menos este time de autores ganha um sopro de revitalização e pode ser conhecido pelas novas gerações."}</p>
       <div className={styles.copySpacer} aria-hidden="true" />
-      <p className={styles.credit}><Image src="/sites/serginho-barbosa/discography/voz-companheira-producoes.webp" alt="Voz Companheira Produções" width={225} height={68} unoptimized /></p>
+      <p className={styles.credit}><Image src={`${assetRoot}/discography/voz-companheira-producoes.webp`} alt="Voz Companheira Produções" width={225} height={68} unoptimized /></p>
       <div className={styles.copySpacer} aria-hidden="true" />
     </>
   ),

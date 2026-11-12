@@ -15,19 +15,10 @@ export const discographyCategories = (navigation.find(({ label }) => label === "
     return { label, href: `${discographyRoot}/${path}`, slug, id };
   });
 
-export type DiscographySearchParams = Promise<{ search?: string | string[] }>;
-
-export async function readDiscographySearch(params: DiscographySearchParams) {
-  const { search } = await params;
-  return Array.isArray(search) ? search[0] : search;
-}
-
 export function DiscographyListing({
   category,
-  search,
 }: {
   category?: (typeof discographyCategories)[number];
-  search?: string;
 }) {
   const albums = category
     ? discographyAlbums
@@ -35,13 +26,18 @@ export function DiscographyListing({
       .sort((first, second) => first.title.localeCompare(second.title, "pt-BR"))
     : discographyAlbums;
   const path = category?.href ?? discographyRoot;
+  const featured = category ? albums[0] : undefined;
 
   return (
     <main>
-      <InnerBanner title="Discografias" page="discografias">
+      <InnerBanner
+        title={category?.label ?? "Discografias"}
+        page="discografias"
+        media={featured && { src: featured.cover, alt: `Capa de ${featured.title}`, fit: "contain" }}
+      >
         <BannerLinks items={discographyCategories} activeHref={category?.href} />
       </InnerBanner>
-      <DiscographyCatalog albums={albums} path={path} search={search} />
+      <DiscographyCatalog albums={albums} path={path} />
     </main>
   );
 }
@@ -49,9 +45,9 @@ export function DiscographyListing({
 export function DiscographyDetail({ album }: { album: DiscographyAlbum }) {
   return (
     <main>
-      <InnerBanner title={album.title} page="discografias" />
+      <InnerBanner title={album.title} page="discografias" media={{ src: album.cover, alt: `Capa de ${album.title}`, fit: "contain" }} />
       <div className={styles.detail}>
-        <article className="sb-container">
+        <article className={`sb-container ${styles.detailLayout}`}>
           {album.slug === "brilho-novo" ? <DiscographyZoomCover album={album} /> : (
             <figure className={styles.detailCover}>
               <Image
@@ -63,7 +59,7 @@ export function DiscographyDetail({ album }: { album: DiscographyAlbum }) {
               />
             </figure>
           )}
-          {discographyContent[album.slug]}
+          <div className={styles.detailCopy}>{discographyContent[album.slug]}</div>
         </article>
       </div>
     </main>

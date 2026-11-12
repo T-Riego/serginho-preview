@@ -28,6 +28,8 @@ const slides = [
     category: "Discografia",
     description: "Um disco nascido durante a pandemia que celebra mais de 35 anos de carreira.",
     image: "discography/brilho-novo.png",
+    width: 1200,
+    height: 1200,
     thumb: "brilho-novo.webp",
     alt: "Capa do álbum Brilho Novo",
     visual: "record",
@@ -63,6 +65,8 @@ const slides = [
     category: "Boleros",
     description: "Serginho interpreta clássicos do bolero em um disco dedicado ao gênero.",
     image: "discography/uma-historia-de-amor.webp",
+    width: 500,
+    height: 427,
     thumb: "boleros.webp",
     alt: "Capa do álbum Boleros, Uma História de Amor",
     visual: "record",
@@ -90,6 +94,8 @@ const slides = [
     category: "Discografia",
     description: "O álbum reúne marchinhas, sambas-enredo e outras canções do carnaval de Itabirito.",
     image: "discography/circo-dos-amores.webp",
+    width: 500,
+    height: 427,
     thumb: "circo.webp",
     alt: "Capa do álbum Circo dos Amores",
     visual: "record",
@@ -101,7 +107,7 @@ const slides = [
 ] as const;
 
 const motionPreference = "(prefers-reduced-motion: reduce)";
-const rotationDelay = 8500;
+const rotationDelay = 4000;
 
 function subscribeToMotion(callback: () => void) {
   const query = window.matchMedia?.(motionPreference);
@@ -124,6 +130,9 @@ export function HeroCarousel() {
   );
   const playing = play ?? !reducedMotion;
   const slide = slides[index];
+  const imageSizing = slide.visual === "record"
+    ? { width: slide.width, height: slide.height, className: "sb-cover-finish" }
+    : { fill: true };
   const opening = index === 0;
   const Title = opening ? "h1" : "h2";
 
@@ -185,7 +194,11 @@ export function HeroCarousel() {
       className="sb-home-hero"
       aria-label="Destaques de Serginho Barbosa"
       aria-roledescription="carrossel"
-      onPointerEnter={(event) => { if (event.pointerType === "mouse") setHovered(true); }}
+      onPointerOver={(event) => {
+        if (event.pointerType === "mouse" && event.target instanceof Element) {
+          setHovered(Boolean(event.target.closest("a, button")));
+        }
+      }}
       onPointerLeave={() => setHovered(false)}
       onFocusCapture={(event) => { if (event.target.matches(":focus-visible")) setPlay(false); }}
     >
@@ -231,7 +244,7 @@ export function HeroCarousel() {
               <Image
                 src={`${assetRoot}/${slide.image}`}
                 alt={slide.alt}
-                fill
+                {...imageSizing}
                 sizes={slide.visual === "radio" ? "(max-width: 720px) 900px, 1500px" : slide.visual === "record" ? "(max-width: 720px) 70vw, 420px" : "(max-width: 720px) 100vw, 73vw"}
                 loading="eager"
                 fetchPriority={opening ? "high" : undefined}

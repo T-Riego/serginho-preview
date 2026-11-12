@@ -22,3 +22,17 @@ it("usa imagens do acervo diferentes em Vídeos e Contatos", () => {
     "src", expect.stringContaining("20190206225457.webp"),
   );
 });
+
+it("renderiza a capa com dimensões próprias para preservar sua proporção", () => {
+  render(<InnerBanner title="Circo dos Amores" page="discografias" media={{
+    src: "/capa.webp",
+    alt: "Capa de Circo dos Amores",
+    fit: "contain",
+    width: 500,
+    height: 427,
+  }} />);
+
+  const cover = screen.getByRole("img", { name: "Capa de Circo dos Amores" });
+  expect(cover).toHaveAttribute("width", "500");
+  expect(cover).toHaveAttribute("height", "427");
+});

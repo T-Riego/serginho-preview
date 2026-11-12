@@ -163,7 +163,7 @@
 }
 .copyright > div { display: flex; align-items: center; gap: .875rem; }
 .copyright img { flex: none; height: auto; }
-.copyrightOwner::after { content: " · "; white-space: pre; }
+.copyrightOwner::after { content: " ·"; white-space: pre; }
 .copyright a {
   color: var(--sb-on-dark);
   font-weight: 600;

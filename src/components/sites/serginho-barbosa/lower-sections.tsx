@@ -250,7 +250,7 @@ export function SiteFooter() {
         <div className="sb-container">
           <Image src={`${assetRoot}/riegosdev.svg`} alt="" width={107} height={18} unoptimized />
           <span>
-            <span className={styles.copyrightOwner}>© 2026 · Serginho Barbosa</span>
+            <span className={styles.copyrightOwner}>© 2026 · Serginho Barbosa</span>{" "}
             Desenvolvido por <a href="https://riegosdev.cloud" target="_blank" rel="noreferrer">RiegosDev</a> - Sites sob medida.
           </span>
         </div>

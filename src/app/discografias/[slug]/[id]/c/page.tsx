@@ -3,14 +3,17 @@ import { notFound } from "next/navigation";
 import {
   discographyCategories,
   DiscographyListing,
-  readDiscographySearch,
-  type DiscographySearchParams,
 } from "@/components/sites/serginho-barbosa/discography-pages";
 
 type CategoryPageProps = {
   params: Promise<{ slug: string; id: string }>;
-  searchParams: DiscographySearchParams;
 };
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return discographyCategories.map(({ slug, id }) => ({ slug, id }));
+}
 
 async function getCategory(params: CategoryPageProps["params"]) {
   const { slug, id } = await params;
@@ -23,7 +26,6 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   return { title: (await getCategory(params)).label };
 }
 
-export default async function CategoryPage({ params, searchParams }: CategoryPageProps) {
-  const [category, search] = await Promise.all([getCategory(params), readDiscographySearch(searchParams)]);
-  return <DiscographyListing category={category} search={search} />;
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  return <DiscographyListing category={await getCategory(params)} />;
 }

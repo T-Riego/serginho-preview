@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { DiscographyCatalog } from "./discography-catalog";
 
 const albums = [
@@ -7,9 +7,15 @@ const albums = [
   { title: "Brilho Novo", href: "/discografias/brilho-novo/11", cover: "/brilho.webp" },
 ];
 
+const navigation = vi.hoisted(() => ({ search: "" }));
+vi.mock("next/navigation", () => ({
+  useSearchParams: () => new URLSearchParams(navigation.search),
+}));
+
 describe("busca na discografia", () => {
   it("busca sem distinguir acentos e mantém o link local do álbum", () => {
-    render(<DiscographyCatalog albums={albums} search="  HISTORIA  " path="/discografias" />);
+    navigation.search = "search=++HISTORIA++";
+    render(<DiscographyCatalog albums={albums} path="/discografias" />);
 
     expect(screen.getByRole("search")).toHaveAttribute("action", "/discografias");
     expect(screen.getByRole("textbox", { name: "Buscar álbum" })).toHaveValue("HISTORIA");
@@ -22,7 +28,8 @@ describe("busca na discografia", () => {
 
   it("oferece limpar a busca na categoria atual quando não encontra álbuns", () => {
     const path = "/discografias/boleros/5/c";
-    render(<DiscographyCatalog albums={albums} search="desconhecido" path={path} />);
+    navigation.search = "search=desconhecido";
+    render(<DiscographyCatalog albums={albums} path={path} />);
 
     expect(screen.getByRole("status")).toHaveTextContent("Nenhum álbum encontrado");
     expect(screen.getByRole("link", { name: "Limpar busca" })).toHaveAttribute("href", path);

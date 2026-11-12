@@ -2,6 +2,8 @@
 
 import { Dialog } from "@base-ui/react/dialog";
 import { Play, X } from "lucide-react";
+import { VideoCarousel } from "./video-carousel";
+import { assetRoot } from "./site-content";
 import styles from "./media-sections.module.css";
 
 type Video = {
@@ -10,46 +12,48 @@ type Video = {
 };
 
 export function VideoGrid({ videos, library = false }: { videos: readonly Video[]; library?: boolean }) {
-  return (
-    <div className={styles.videoGrid}>
-      {videos.map(({ id, title }) => (
-        <Dialog.Root key={id}>
-          <Dialog.Trigger
-            className={styles.videoTile}
-            aria-label={`Assistir vídeo: ${title}`}
-            style={{ backgroundImage: `url(/sites/serginho-barbosa/videos/${id}.jpg)` }}
+  const tiles = videos.map(({ id, title }) => (
+    <Dialog.Root key={id}>
+      <Dialog.Trigger
+        className={styles.videoTile}
+        aria-label={`Assistir vídeo: ${title}`}
+        style={{ backgroundImage: `url(${assetRoot}/videos/${id}.jpg)` }}
+      >
+        <span className={styles.play} aria-hidden="true"><Play size={18} fill="currentColor" /></span>
+        <span className={styles.videoCaption}>
+          <span className={styles.videoTitle}>{title}</span>
+        </span>
+      </Dialog.Trigger>
+      <Dialog.Portal>
+        <Dialog.Backdrop className={styles.backdrop} />
+        <Dialog.Popup className={styles.lightbox}>
+          <Dialog.Title className="sr-only">{title}</Dialog.Title>
+          <Dialog.Close className={styles.close} aria-label="Fechar vídeo">
+            <X size={22} aria-hidden="true" />
+          </Dialog.Close>
+          <iframe
+            src={`https://www.youtube.com/embed/${id}${library ? "?autoplay=1" : ""}`}
+            title={title}
+            referrerPolicy="origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+          <a
+            className={styles.youtubeLink}
+            href={`https://www.youtube.com/watch?v=${id}`}
+            target="_blank"
+            rel="noreferrer"
           >
-            <span className={styles.play} aria-hidden="true"><Play size={18} fill="currentColor" /></span>
-            <span className={styles.videoCaption}>
-              <span className={styles.videoTitle}>{title}</span>
-            </span>
-          </Dialog.Trigger>
-          <Dialog.Portal>
-            <Dialog.Backdrop className={styles.backdrop} />
-            <Dialog.Popup className={styles.lightbox}>
-              <Dialog.Title className="sr-only">{title}</Dialog.Title>
-              <Dialog.Close className={styles.close} aria-label="Fechar vídeo">
-                <X size={22} aria-hidden="true" />
-              </Dialog.Close>
-              <iframe
-                src={`https://www.youtube.com/embed/${id}${library ? "?autoplay=1" : ""}`}
-                title={title}
-                referrerPolicy="origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-              <a
-                className={styles.youtubeLink}
-                href={`https://www.youtube.com/watch?v=${id}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Assistir no YouTube
-              </a>
-            </Dialog.Popup>
-          </Dialog.Portal>
-        </Dialog.Root>
-      ))}
-    </div>
+            Assistir no YouTube
+          </a>
+        </Dialog.Popup>
+      </Dialog.Portal>
+    </Dialog.Root>
+  ));
+
+  return library ? (
+    <div className={styles.videoGrid}>{tiles}</div>
+  ) : (
+    <VideoCarousel>{tiles}</VideoCarousel>
   );
 }

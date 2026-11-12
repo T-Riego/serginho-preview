@@ -5,12 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { type FormEvent, useState } from "react";
-import { currentNavigation, navigation, officialSite, spotify, telephone, whatsapp } from "./site-content";
+import { assetRoot, currentNavigation, navigation, officialSite, spotify, telephone, whatsapp } from "./site-content";
 import { SiteInput, SiteTextarea } from "./site-fields";
 import styles from "./lower-sections.module.css";
 
 const youtube = "https://www.youtube.com/channel/UCgokYREGN6KlYcu2rk3NzcQ";
-const construsite = "https://www.google.com/search?q=Construsite";
 
 const questions = [
   {
@@ -249,9 +248,10 @@ export function SiteFooter() {
       </div>
       <div className={styles.copyright}>
         <div className="sb-container">
-          <Image src="/sites/serginho-barbosa/construsite.png" alt="Logo Construsite Brasil" width={40} height={25} unoptimized />
+          <Image src={`${assetRoot}/riegosdev.svg`} alt="" width={107} height={18} unoptimized />
           <span>
-            © 2026 - Serginho Barbosa - Desenvolvido por <a href={construsite} target="_blank" rel="sponsored noreferrer">Construsite Brasil</a> - <a href={construsite} target="_blank" rel="sponsored noreferrer">Criação de Sites</a>
+            <span className={styles.copyrightOwner}>© 2026 · Serginho Barbosa</span>
+            Desenvolvido por <a href="https://riegosdev.cloud" target="_blank" rel="noreferrer">RiegosDev</a> - Sites sob medida.
           </span>
         </div>
       </div>

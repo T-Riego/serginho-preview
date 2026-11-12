@@ -23,7 +23,7 @@
   cursor: pointer;
   text-align: left;
 }
-.videoTile:first-child, .photoTile:first-child { grid-column: 1 / -1; aspect-ratio: 1.65; }
+.videoGrid > .videoTile:first-child, .photoTile:first-child { grid-column: 1 / -1; aspect-ratio: 1.65; }
 .photoTile { aspect-ratio: 1.15; }
 .photoTile:first-child { background-position: center 30%; }
 
@@ -40,7 +40,52 @@
   line-height: 1.3;
   text-wrap: pretty;
 }
-.videoTile:first-child .videoTitle { font-size: clamp(1.1rem, 2.2vw, 1.6rem); }
+.videoGrid > .videoTile:first-child .videoTitle { font-size: clamp(1.1rem, 2.2vw, 1.6rem); }
+
+.videoCarousel { display: flex; flex-direction: column; gap: .75rem; }
+.videoCarouselTrack {
+  --video-gap: clamp(.65rem, 1.5vw, 1.1rem);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 85%;
+  gap: var(--video-gap);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: #876370 transparent;
+  scrollbar-width: thin;
+}
+.videoCarouselTrack > .videoTile {
+  aspect-ratio: 1.6;
+  scroll-snap-align: start;
+}
+.videoCarouselTrack > .videoTile:focus-visible { outline-color: var(--sb-accent); outline-offset: -4px; }
+.videoCarouselControls {
+  display: flex;
+  align-self: flex-end;
+  order: 1;
+  gap: .35rem;
+}
+.videoCarouselControls button {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid #fff8f04d;
+  border-radius: 50%;
+  color: var(--sb-on-dark);
+  cursor: pointer;
+}
+.videoCarouselControls button:hover { border-color: var(--sb-accent); color: var(--sb-accent); }
+.videoCarouselControls button:focus-visible { outline-color: var(--sb-accent); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .videoCarouselTrack { scroll-behavior: smooth; }
+}
+
+@media (min-width: 620px) {
+  .videoCarouselTrack { grid-auto-columns: calc((100% - var(--video-gap)) / 2); }
+}
 
 .play, .photoAction {
   position: absolute;
@@ -113,12 +158,13 @@
 }
 
 @media (min-width: 900px) {
+  .videoCarouselTrack { grid-auto-columns: calc((100% - 2 * var(--video-gap)) / 3); }
   .videoGrid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-auto-rows: clamp(150px, 17vw, 215px);
   }
-  .videoTile { height: 100%; min-height: 0; aspect-ratio: auto; }
-  .videoTile:first-child { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+  .videoGrid > .videoTile { height: 100%; min-height: 0; aspect-ratio: auto; }
+  .videoGrid > .videoTile:first-child { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
   .galleryGrid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-auto-rows: clamp(180px, 22vw, 265px);

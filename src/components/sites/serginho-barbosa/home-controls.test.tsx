@@ -1,7 +1,8 @@
-import { render, screen, within } from "@testing-library/react";
+import { act, fireEvent, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
-import { HeroCarousel, SiteHeader } from "./home-controls";
+import { HeroCarousel } from "./hero-carousel";
+import { SiteHeader } from "./home-controls";
 
 const routing = vi.hoisted(() => ({ pathname: "/" }));
 vi.mock("next/navigation", () => ({ usePathname: () => routing.pathname }));
@@ -40,12 +41,45 @@ describe("navegação da página inicial", () => {
 });
 
 describe("carrossel de destaques", () => {
+  it("avança automaticamente quando visível e permite pausar e retomar", async () => {
+    vi.useFakeTimers();
+    vi.stubGlobal("IntersectionObserver", class {
+      constructor(private readonly callback: IntersectionObserverCallback) {}
+
+      observe() {
+        this.callback([{ isIntersecting: true } as IntersectionObserverEntry], this as unknown as IntersectionObserver);
+      }
+
+      disconnect() {}
+    });
+
+    const { unmount } = render(<HeroCarousel />);
+    try {
+      await act(() => vi.advanceTimersByTimeAsync(8500));
+      expect(screen.getByRole("heading", { level: 2, name: "Brilho Novo" })).toBeVisible();
+
+      fireEvent.click(screen.getByRole("button", { name: "Pausar destaques" }));
+      await act(() => vi.advanceTimersByTimeAsync(8500));
+      expect(screen.getByRole("heading", { level: 2, name: "Brilho Novo" })).toBeVisible();
+
+      fireEvent.click(screen.getByRole("button", { name: "Reproduzir destaques" }));
+      await act(() => vi.advanceTimersByTimeAsync(8500));
+      expect(screen.getByRole("heading", { level: 2, name: "Serginho no YouTube" })).toBeVisible();
+    } finally {
+      unmount();
+      vi.unstubAllGlobals();
+      vi.useRealTimers();
+    }
+  });
+
   it("navega pelas setas e indicadores e volta ao início ao avançar do último", async () => {
     const user = userEvent.setup();
     render(<HeroCarousel />);
 
-    const first = screen.getByRole("button", { name: "Mostrar Brilho Novo" });
+    const first = screen.getByRole("button", { name: "Mostrar Serginho Barbosa" });
     expect(first).toHaveAttribute("aria-current", "true");
+    expect(screen.getByRole("heading", { level: 1, name: "Serginho Barbosa" })).toBeVisible();
+    expect(screen.getByRole("img", { name: "Serginho Barbosa cantando no palco sob luz roxa" })).toBeVisible();
 
     await user.click(screen.getByRole("button", { name: "Destaque anterior" }));
     expect(screen.getByRole("button", { name: "Mostrar Circo dos Amores" })).toHaveAttribute(
@@ -57,9 +91,10 @@ describe("carrossel de destaques", () => {
     expect(first).toHaveAttribute("aria-current", "true");
 
     await user.click(screen.getByRole("button", { name: "Mostrar Voz Companheira" }));
-    expect(screen.getByRole("link", { name: "Voz Companheira" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Ouvir a rádio" })).toHaveAttribute(
       "href",
       "https://www.radiovozcompanheira.com.br/",
     );
+    expect(screen.getByRole("button", { name: "Reproduzir destaques" })).toBeVisible();
   });
 });

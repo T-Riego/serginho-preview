@@ -4,37 +4,11 @@ import Link from "next/link";
 import { AlbumCard } from "./album-card";
 import { albums, assetRoot, spotify, telephone, whatsapp } from "./site-content";
 
-export function ArtistHero() {
-  return (
-    <section className="sb-home-hero" aria-labelledby="artist-name">
-      <div className="sb-home-hero-photo">
-        <Image
-          src={`${assetRoot}/editorial/biografia-show.webp`}
-          alt="Serginho Barbosa cantando no palco sob luz roxa"
-          fill
-          sizes="(max-width: 720px) 100vw, 72vw"
-          loading="eager"
-          fetchPriority="high"
-        />
-      </div>
-      <div className="sb-container sb-home-hero-content">
-        <p className="sb-artist-role">Cantor, compositor e ator</p>
-        <h1 id="artist-name">Serginho <em>Barbosa</em></h1>
-        <p className="sb-hero-description">Da MPB aos boleros e ao carnaval, uma trajetória que começa em Itabirito, Minas Gerais.</p>
-        <div className="sb-actions">
-          <Link href="/discografias" className="sb-button">Explorar discografias <ArrowRight size={17} aria-hidden="true" /></Link>
-          <Link href="/biografia" className="sb-button sb-button-outline">Conhecer a trajetória</Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function Discographies() {
   return (
     <section className="sb-section sb-discographies" aria-labelledby="discografias">
       <div className="sb-container">
-        <div className="sb-section-heading">
+        <div className="sb-section-heading sb-section-heading-accent">
           <h2 className="sb-heading" id="discografias">Discografias</h2>
           <Link href="/discografias" className="sb-button sb-button-outline">Ver todos <ArrowRight size={17} aria-hidden="true" /></Link>
         </div>

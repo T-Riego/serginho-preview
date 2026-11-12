@@ -2,6 +2,7 @@ import { GalleryAlbum } from "./gallery-album";
 import { BannerLinks, InnerBanner } from "./inner-banner";
 import data from "./media-pages-data.json";
 import styles from "./media-pages.module.css";
+import { assetRoot } from "./site-content";
 import { VideoGrid } from "./video-grid";
 
 type Album = (typeof data.albums)[number];
@@ -21,10 +22,19 @@ export function getAlbum(slug: string, id: string) {
 
 export function GalleryPage({ album, activeHref }: { album?: Album; activeHref?: string }) {
   const current = album ?? data.albums[0];
+  const bannerPhoto = album?.photos.find(({ width, height }) => width >= height) ?? album?.photos[0];
 
   return (
     <main>
-      <InnerBanner title={album?.label ?? "Galeria de Fotos"} page="galeria-de-fotos">
+      <InnerBanner
+        title={album?.label ?? "Galeria de Fotos"}
+        page="galeria-de-fotos"
+        media={album && bannerPhoto && {
+          src: `${assetRoot}/${bannerPhoto.src}`,
+          alt: bannerPhoto.caption || `Foto do álbum ${album.label}`,
+          position: "center 35%",
+        }}
+      >
         <BannerLinks items={albumLinks} activeHref={activeHref} />
       </InnerBanner>
       <section className={styles.galleryContent} aria-label={current.label}>

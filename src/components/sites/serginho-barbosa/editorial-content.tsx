@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetRoot } from "./site-content";
 import styles from "./editorial.module.css";
 
 const editorialImages = {
@@ -14,7 +15,7 @@ const editorialImages = {
 function EditorialPhoto({ name }: { name: keyof typeof editorialImages }) {
   const { file, alt, width, height } = editorialImages[name];
 
-  return <Image className={styles[name]} src={`/sites/serginho-barbosa/editorial/${file}`} alt={alt} width={width} height={height} sizes="(max-width: 650px) 92vw, 50vw" />;
+  return <Image className={styles[name]} src={`${assetRoot}/editorial/${file}`} alt={alt} width={width} height={height} sizes="(max-width: 650px) 92vw, 50vw" />;
 }
 
 export function BiographyContent() {

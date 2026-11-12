@@ -1,12 +1,12 @@
 "use client";
 
 import { Dialog } from "@base-ui/react/dialog";
-import { ChevronDown, ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { type CSSProperties, useEffect, useRef, useState } from "react";
-import { assetRoot, currentNavigation, heroSlides, navigation } from "./site-content";
+import { useState } from "react";
+import { assetRoot, currentNavigation, navigation } from "./site-content";
 
 function Brand({ onClick }: { onClick?: () => void }) {
   return (
@@ -76,112 +76,5 @@ export function SiteHeader() {
         </Dialog.Root>
       </div>
     </header>
-  );
-}
-
-type CarouselView = { index: number; previous: number | null; direction: 1 | -1 };
-const slideCount = heroSlides.length;
-
-export function HeroCarousel() {
-  const carousel = useRef<HTMLElement>(null);
-  const [view, setView] = useState<CarouselView>({ index: 0, previous: null, direction: 1 });
-  const [inView, setInView] = useState(false);
-  const [paused, setPaused] = useState(false);
-  const [manual, setManual] = useState(false);
-  const touchStart = useRef<{ x: number; y: number } | null>(null);
-  const suppressClick = useRef(false);
-
-  useEffect(() => {
-    const region = carousel.current;
-    if (!region || typeof IntersectionObserver === "undefined") return;
-    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold: .25 });
-    observer.observe(region);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!inView || manual || paused || window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
-    const timer = window.setInterval(() => {
-      if (document.hidden) return;
-      setView(({ index }) => ({ index: (index + 1) % slideCount, previous: index, direction: 1 }));
-    }, 3000);
-
-    return () => window.clearInterval(timer);
-  }, [inView, manual, paused]);
-
-  function show(index: number, direction: 1 | -1) {
-    setManual(true);
-    if (index !== view.index) setView({ index, direction, previous: view.index });
-  }
-
-  function step(direction: 1 | -1) {
-    show((view.index + direction + slideCount) % slideCount, direction);
-  }
-
-  const slide = heroSlides[view.index];
-
-  return (
-    <section
-      ref={carousel}
-      className="sb-hero"
-      aria-label="Destaques"
-      data-direction={view.direction}
-      style={{ "--sb-slide-ratio": `${slide.width} / ${slide.height}` } as CSSProperties}
-      onPointerEnter={(event) => { if (event.pointerType === "mouse") setPaused(true); }}
-      onPointerLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false); }}
-      onKeyDown={(event) => {
-        if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
-          event.preventDefault();
-          step(event.key === "ArrowLeft" ? -1 : 1);
-        }
-      }}
-      onTouchStart={(event) => {
-        const touch = event.touches[0];
-        suppressClick.current = false;
-        touchStart.current = { x: touch.clientX, y: touch.clientY };
-      }}
-      onTouchEnd={(event) => {
-        const start = touchStart.current;
-        touchStart.current = null;
-        if (!start) return;
-        const touch = event.changedTouches[0];
-        const dx = touch.clientX - start.x;
-        const dy = touch.clientY - start.y;
-        if (Math.abs(dx) > 42 && Math.abs(dx) > Math.abs(dy)) {
-          suppressClick.current = true;
-          step(dx < 0 ? 1 : -1);
-        }
-      }}
-      onClickCapture={(event) => {
-        if (suppressClick.current) {
-          event.preventDefault();
-          suppressClick.current = false;
-        }
-      }}
-    >
-      {view.previous !== null && (
-        <div key={`leaving-${view.previous}-${view.index}`} className="sb-slide sb-slide-leaving" aria-hidden="true">
-          <Image src={`${assetRoot}/${heroSlides[view.previous].image}`} alt="" fill unoptimized loading="eager" />
-        </div>
-      )}
-      <div key={view.index} className={`sb-slide${view.previous === null ? "" : " sb-slide-entering"}`}>
-        {slide.href ? (
-          <Link href={slide.href}>
-            <Image src={`${assetRoot}/${slide.image}`} alt={slide.label} fill unoptimized />
-          </Link>
-        ) : (
-          <Image src={`${assetRoot}/${slide.image}`} alt={slide.label} fill unoptimized />
-        )}
-      </div>
-      <button className="sb-hero-arrow sb-hero-prev" type="button" aria-label="Destaque anterior" onClick={() => step(-1)}><ChevronLeft size={24} /></button>
-      <button className="sb-hero-arrow sb-hero-next" type="button" aria-label="Próximo destaque" onClick={() => step(1)}><ChevronRight size={24} /></button>
-      <div className="sb-hero-dots">
-        {heroSlides.map(({ label }, index) => (
-          <button key={label} type="button" aria-label={`Mostrar ${label}`} aria-current={index === view.index} onClick={() => show(index, index > view.index ? 1 : -1)} />
-        ))}
-      </div>
-    </section>
   );
 }

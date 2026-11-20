@@ -153,6 +153,16 @@ describe("atualização da galeria em novembro de 2026", () => {
     expect(totalBytes).toBeLessThanOrEqual(6 * 1024 * 1024);
   });
 
+  it("mantém o recorte editorial do banner do DVD", () => {
+    const banner = readFileSync(assetPath(
+      "gallery-albums/banners/dvd-vander-lima-2025.webp",
+    ));
+
+    expect(createHash("sha256").update(banner).digest("hex")).toBe(
+      "91e1909093face4d28eb173298fd3b30caea27e755e822e76c44a2bb0247107a",
+    );
+  });
+
   it("mantém o submenu global sincronizado com os dados", () => {
     const links = navigation.find(({ label }) => label === "Galeria de Fotos")?.children ?? [];
     for (const { label, slug, id } of expectedAlbums) {

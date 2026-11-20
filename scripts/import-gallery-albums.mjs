@@ -49,6 +49,7 @@ const albumDefinitions = [
     slug: "dvd-vander-lima-2025",
     id: "15",
     bannerSource: "WhatsApp Image 2026-11-19 at 19.21.21.jpeg",
+    bannerExtract: { left: 0, top: 400, width: 914, height: 514 },
   },
   {
     label: "Feat - Venezuela, Cuba, Argentina",
@@ -296,9 +297,13 @@ async function writePhotoAssets(definition, source, index, outputRoot) {
 async function writeBannerAsset(definition, source, outputRoot) {
   const relativePath = `gallery-albums/banners/${definition.slug}.webp`;
   const bannerPath = resolveInside(outputRoot, relativePath);
+  const bannerPipeline = sharp(source.contents).rotate();
 
-  await sharp(source.contents)
-    .rotate()
+  if (definition.bannerExtract) {
+    bannerPipeline.extract(definition.bannerExtract);
+  }
+
+  await bannerPipeline
     .resize({
       width: 1280,
       height: 720,

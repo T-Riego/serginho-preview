@@ -42,20 +42,35 @@ export function getAlbum(slug: string, id: string) {
   return albums.find((album) => album.slug === slug && album.id === id);
 }
 
+function albumBanner(album: Album) {
+  if (album.banner) {
+    return {
+      src: assetRoot + "/" + album.banner.src,
+      alt: "Foto de destaque do álbum " + album.label,
+      position: album.banner.position ?? "center",
+      mobilePosition: album.banner.mobilePosition,
+    };
+  }
+
+  const photo = album.photos.find(({ width, height }) => width >= height) ?? album.photos[0];
+  if (!photo) return undefined;
+  return {
+    src: assetRoot + "/" + photo.src,
+    alt: photo.caption || "Foto do álbum " + album.label,
+    position: "center 35%",
+  };
+}
+
 export function GalleryPage({ album, activeHref }: { album?: Album; activeHref?: string }) {
   const current = album ?? albums[0];
-  const bannerPhoto = album?.photos.find(({ width, height }) => width >= height) ?? album?.photos[0];
+  const bannerMedia = album ? albumBanner(album) : undefined;
 
   return (
     <main>
       <InnerBanner
         title={album?.label ?? "Galeria de Fotos"}
         page="galeria-de-fotos"
-        media={album && bannerPhoto && {
-          src: `${assetRoot}/${bannerPhoto.src}`,
-          alt: bannerPhoto.caption || `Foto do álbum ${album.label}`,
-          position: "center 35%",
-        }}
+        media={bannerMedia}
       >
         <BannerLinks items={albumLinks} activeHref={activeHref} />
       </InnerBanner>

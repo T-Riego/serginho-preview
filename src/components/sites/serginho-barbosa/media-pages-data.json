@@ -812,6 +812,321 @@
           "height": 600
         }
       ]
+    },
+    {
+      "label": "Carnaval 2026",
+      "slug": "carnaval-2026",
+      "id": "13",
+      "photos": [
+        {
+          "src": "gallery-albums/full/carnaval-2026-01.webp",
+          "thumbnail": "gallery-albums/thumbs/carnaval-2026-01_400.webp",
+          "width": 720,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/carnaval-2026-02.webp",
+          "thumbnail": "gallery-albums/thumbs/carnaval-2026-02_400.webp",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "src": "gallery-albums/full/carnaval-2026-03.webp",
+          "thumbnail": "gallery-albums/thumbs/carnaval-2026-03_400.webp",
+          "width": 719,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/carnaval-2026-04.webp",
+          "thumbnail": "gallery-albums/thumbs/carnaval-2026-04_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/carnaval-2026-05.webp",
+          "thumbnail": "gallery-albums/thumbs/carnaval-2026-05_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/carnaval-2026-06.webp",
+          "thumbnail": "gallery-albums/thumbs/carnaval-2026-06_400.webp",
+          "width": 720,
+          "height": 1280
+        }
+      ]
+    },
+    {
+      "label": "Conserto Natal 2025",
+      "slug": "conserto-natal-2025",
+      "id": "14",
+      "photos": [
+        {
+          "src": "gallery-albums/full/conserto-natal-2025-01.webp",
+          "thumbnail": "gallery-albums/thumbs/conserto-natal-2025-01_400.webp",
+          "width": 1280,
+          "height": 850
+        },
+        {
+          "src": "gallery-albums/full/conserto-natal-2025-02.webp",
+          "thumbnail": "gallery-albums/thumbs/conserto-natal-2025-02_400.webp",
+          "width": 850,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/conserto-natal-2025-03.webp",
+          "thumbnail": "gallery-albums/thumbs/conserto-natal-2025-03_400.webp",
+          "width": 1024,
+          "height": 1280
+        }
+      ]
+    },
+    {
+      "label": "DVD Vander LIma - 2025",
+      "slug": "dvd-vander-lima-2025",
+      "id": "15",
+      "banner": {
+        "src": "gallery-albums/banners/dvd-vander-lima-2025.webp",
+        "position": "center"
+      },
+      "photos": [
+        {
+          "src": "gallery-albums/full/dvd-vander-lima-2025-01.webp",
+          "thumbnail": "gallery-albums/thumbs/dvd-vander-lima-2025-01_400.webp",
+          "width": 731,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/dvd-vander-lima-2025-02.webp",
+          "thumbnail": "gallery-albums/thumbs/dvd-vander-lima-2025-02_400.webp",
+          "width": 723,
+          "height": 1280
+        }
+      ]
+    },
+    {
+      "label": "Feat - Venezuela, Cuba, Argentina",
+      "slug": "feat-venezuela-cuba-argentina",
+      "id": "16",
+      "banner": {
+        "src": "gallery-albums/banners/feat-venezuela-cuba-argentina.webp",
+        "position": "center"
+      },
+      "photos": [
+        {
+          "src": "gallery-albums/full/feat-venezuela-cuba-argentina-01.webp",
+          "thumbnail": "gallery-albums/thumbs/feat-venezuela-cuba-argentina-01_400.webp",
+          "width": 1280,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/feat-venezuela-cuba-argentina-02.webp",
+          "thumbnail": "gallery-albums/thumbs/feat-venezuela-cuba-argentina-02_400.webp",
+          "width": 1280,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/feat-venezuela-cuba-argentina-03.webp",
+          "thumbnail": "gallery-albums/thumbs/feat-venezuela-cuba-argentina-03_400.webp",
+          "width": 1024,
+          "height": 1280
+        }
+      ]
+    },
+    {
+      "label": "Festival Gastronómico 2024",
+      "slug": "festival-gastronomico-2024",
+      "id": "17",
+      "photos": [
+        {
+          "src": "gallery-albums/full/festival-gastronomico-2024-01.webp",
+          "thumbnail": "gallery-albums/thumbs/festival-gastronomico-2024-01_400.webp",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "src": "gallery-albums/full/festival-gastronomico-2024-02.webp",
+          "thumbnail": "gallery-albums/thumbs/festival-gastronomico-2024-02_400.webp",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/festival-gastronomico-2024-03.webp",
+          "thumbnail": "gallery-albums/thumbs/festival-gastronomico-2024-03_400.webp",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "src": "gallery-albums/full/festival-gastronomico-2024-04.webp",
+          "thumbnail": "gallery-albums/thumbs/festival-gastronomico-2024-04_400.webp",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/festival-gastronomico-2024-05.webp",
+          "thumbnail": "gallery-albums/thumbs/festival-gastronomico-2024-05_400.webp",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "src": "gallery-albums/full/festival-gastronomico-2024-06.webp",
+          "thumbnail": "gallery-albums/thumbs/festival-gastronomico-2024-06_400.webp",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/festival-gastronomico-2024-07.webp",
+          "thumbnail": "gallery-albums/thumbs/festival-gastronomico-2024-07_400.webp",
+          "width": 1280,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "label": "Julifet 2026",
+      "slug": "julifet-2026",
+      "id": "18",
+      "photos": [
+        {
+          "src": "gallery-albums/full/julifet-2026-01.webp",
+          "thumbnail": "gallery-albums/thumbs/julifet-2026-01_400.webp",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "src": "gallery-albums/full/julifet-2026-02.webp",
+          "thumbnail": "gallery-albums/thumbs/julifet-2026-02_400.webp",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "src": "gallery-albums/full/julifet-2026-03.webp",
+          "thumbnail": "gallery-albums/thumbs/julifet-2026-03_400.webp",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "src": "gallery-albums/full/julifet-2026-04.webp",
+          "thumbnail": "gallery-albums/thumbs/julifet-2026-04_400.webp",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "src": "gallery-albums/full/julifet-2026-05.webp",
+          "thumbnail": "gallery-albums/thumbs/julifet-2026-05_400.webp",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "src": "gallery-albums/full/julifet-2026-06.webp",
+          "thumbnail": "gallery-albums/thumbs/julifet-2026-06_400.webp",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "src": "gallery-albums/full/julifet-2026-07.webp",
+          "thumbnail": "gallery-albums/thumbs/julifet-2026-07_400.webp",
+          "width": 894,
+          "height": 1280
+        }
+      ]
+    },
+    {
+      "label": "Show Cenico Voz Companheira 2025",
+      "slug": "show-cenico-voz-companheira-2025",
+      "id": "19",
+      "photos": [
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-01.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-01_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-02.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-02_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-03.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-03_400.webp",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-04.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-04_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-05.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-05_400.webp",
+          "width": 1040,
+          "height": 694
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-06.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-06_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-07.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-07_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-08.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-08_400.webp",
+          "width": 1010,
+          "height": 584
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-09.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-09_400.webp",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-10.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-10_400.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-11.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-11_400.webp",
+          "width": 1040,
+          "height": 694
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-12.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-12_400.webp",
+          "width": 1280,
+          "height": 854
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-13.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-13_400.webp",
+          "width": 1280,
+          "height": 854
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-14.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-14_400.webp",
+          "width": 1280,
+          "height": 854
+        },
+        {
+          "src": "gallery-albums/full/show-cenico-voz-companheira-2025-15.webp",
+          "thumbnail": "gallery-albums/thumbs/show-cenico-voz-companheira-2025-15_400.webp",
+          "width": 1280,
+          "height": 854
+        }
+      ]
     }
   ],
   "videos": [

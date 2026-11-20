@@ -5,23 +5,45 @@ import styles from "./media-pages.module.css";
 import { assetRoot } from "./site-content";
 import { VideoGrid } from "./video-grid";
 
-type Album = (typeof data.albums)[number];
+type BannerRecord = {
+  src: string;
+  position?: string;
+  mobilePosition?: string;
+};
 
-const albumLinks = data.albums.map(({ label, slug, id }) => ({
+type PhotoRecord = {
+  src: string;
+  thumbnail: string;
+  caption?: string;
+  width: number;
+  height: number;
+};
+
+type Album = {
+  label: string;
+  slug: string;
+  id: string;
+  banner?: BannerRecord;
+  photos: PhotoRecord[];
+};
+
+const albums = data.albums as Album[];
+
+const albumLinks = albums.map(({ label, slug, id }) => ({
   label,
   href: `/galeria-de-fotos/${slug}/${id}`,
 }));
 
 export function getAlbumParams() {
-  return data.albums.map(({ slug, id }) => ({ slug, id }));
+  return albums.map(({ slug, id }) => ({ slug, id }));
 }
 
 export function getAlbum(slug: string, id: string) {
-  return data.albums.find((album) => album.slug === slug && album.id === id);
+  return albums.find((album) => album.slug === slug && album.id === id);
 }
 
 export function GalleryPage({ album, activeHref }: { album?: Album; activeHref?: string }) {
-  const current = album ?? data.albums[0];
+  const current = album ?? albums[0];
   const bannerPhoto = album?.photos.find(({ width, height }) => width >= height) ?? album?.photos[0];
 
   return (

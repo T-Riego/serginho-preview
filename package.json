@@ -34,6 +34,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "import:gallery": "node scripts/import-gallery-albums.mjs",
     "check": "npm run lint && npm run typecheck && npm run build"
   },
   "dependencies": {
@@ -59,6 +60,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
     "jsdom": "^31.0.0",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^5.1.0"

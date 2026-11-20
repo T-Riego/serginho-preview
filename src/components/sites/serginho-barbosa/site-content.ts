@@ -24,6 +24,13 @@ const galleries = [
   ["Carnaval", "carnaval/4"],
   ["Circuito VDL - Lançamento Voz Companheira", "circuito-vdl-lancamento-voz-companheira/9"],
   ["Julifest 2018", "julifest-2018/8"],
+  ["Carnaval 2026", "carnaval-2026/13"],
+  ["Conserto Natal 2025", "conserto-natal-2025/14"],
+  ["DVD Vander LIma - 2025", "dvd-vander-lima-2025/15"],
+  ["Feat - Venezuela, Cuba, Argentina", "feat-venezuela-cuba-argentina/16"],
+  ["Festival Gastronómico 2024", "festival-gastronomico-2024/17"],
+  ["Julifet 2026", "julifet-2026/18"],
+  ["Show Cenico Voz Companheira 2025", "show-cenico-voz-companheira-2025/19"],
 ];
 
 export const navigation = [

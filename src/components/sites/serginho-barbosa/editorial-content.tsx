@@ -22,41 +22,44 @@ export function BiographyContent() {
   return (
     <section className={`sb-section ${styles.biography}`}>
       <article className="sb-container">
-        <p><EditorialPhoto name="bioShow" />Serginho Barbosa, <strong>cantor, ator, compositor e produtor cultural,</strong> nasceu em Itabirito (MG) e reside em Contagem-MG. Desde adolescente, envolve-se com a música. Inicialmente, em corais, como os Canarinhos de Itabirito, do qual participou nos períodos de 1973 a 1976 e de 1993 a 1999.</p>
-        <p>A partir de 1982, participou de vários Festivais da Canção, onde <strong>ganhou prêmios de Melhor Intérprete, Melhor Arranjo e dois primeiros lugares.</strong> Nos anos seguintes, atuou nos grupos Cenários do Sol, Imagem do Som e como cantor solista. <strong>Foi puxador de Samba de várias escolas de Samba do carnaval Itabiritense, nos anos de 1980 a 1990.</strong></p>
+        <p><EditorialPhoto name="bioShow" />Serginho Barbosa, <strong>Cantor, Ator, Compositor, Empreendedor Cultural, Apresentador de Programa de Rádio,</strong> nasceu em Itabirito (MG) e reside em Contagem-MG desde 1993. Desde adolescente, envolve-se com a música. Inicialmente, em corais, como o Canarinhos de Itabirito, do qual participou nos períodos de 1973 a 1976 e de 1993 a 1999.</p>
+        <p>A partir de 1982, participou de vários Festivais da Canção, onde <strong>ganhou prêmios de Melhor Intérprete, Melhor Arranjo e dois primeiros lugares.</strong> Nos anos seguintes, atuou nos grupos Cenários do Sol, Imagem do Som e como cantor solista. <strong>Foi puxador de samba de várias escolas de samba do carnaval itabiritense, nos anos de 1980 a 1990.</strong> Hoje, é puxador de samba oficial da Escola de Samba Unidos de Cachoeira do Campo - URCA, em Ouro Preto.</p>
         <p>Em 1997, criou com o irmão Daniel Barbosa a dupla Serginho Barbosa&amp;Daniel, extinta em 2003. Durante o período, a dupla realizou dezenas de apresentações no formato voz e violão e banda. Fez shows em várias cidades do interior de Minas Gerais, como Ouro Preto, Urucânia, Paraopeba, Rio Acima e Contagem, além de Itabirito e Belo Horizonte.</p>
         <p>A partir de agosto de 2003 assumiu a carreira solo, concentrando-se no planejamento e <strong>produção do seu primeiro CD solo</strong>.</p>
-        <p>Em 2005 lançou seu Primeiro CD Solo - &quot;Trajetória&quot;, de onde vem divulgando e fazendo Shows. Em setembro de 2005, <strong>recebeu o título de &quot;TALENTO ITABIRITENSE&quot;, em seção solene na Câmara Municipal de Itabirito</strong>, pelos relevantes serviços prestados à Arte e Cultura do município.</p>
-        <p><EditorialPhoto name="bioCarnaval" />Também recebeu a <strong>Medalha de Honra ao Mérito</strong> do Clube da Terceira Idade, por Incentivar a Dança. Em 2006 <strong>recebeu o Troféu - Jornal O GRITO, como Destaque Musical de 2005</strong>, por votação Popular. Em maio de 2006, inicia seu Novo Projeto - &quot;Carnaval é Aqui&quot;.</p>
-        <p><strong>Em 2007 apresentou o Show &quot;Carnaval é Aqui&quot;</strong>, selecionado na Mostra de Música de Itabirito. O show resgata a música carnavalesca local, e desdobrou-se em lançamentos de dois CDs Singles: Serginho Barbosa Canta os Hinos de Itabirito(2008) e Serginho Barbosa Canta Sambas (2009). Presente no carnaval de Itabirito e Ouro Preto todos os anos.</p>
-        <p>Em dezembro 2010, lançamento do CD coletâneas, comemoração os 05 anos de discografia do cantor. Em outubro 2012, lançamento do CD &quot;Voz Companheira&quot; pelo circuito VDL de Arte e Cultura.</p>
-        <p>Atualmente vem divulgando seus trabalhos em todos os formatos discográficos.</p>
-        <p>Integrante do Projeto - Sertanejo universitário - Paulo Sérgio (Serginho Barbosa &amp; Eduardo) de Belo Horizonte, apresentando nas casas noturnas da grande Belo Horizonte e Interior mineiro.</p>
-        <p>Realizou Lançamento do CD, Boleros, Uma História de Amor e circulação de Shows na Unidade Industrial, Funec Inconfidentes na Unidade Sede e no Lar Maria Clara em 2017 e 2018.</p>
-        <p><EditorialPhoto name="bioPortrait" /><strong>Em 2019:</strong></p>
+        <p>Em 2005 lançou seu primeiro CD solo - &quot;Trajetória&quot;, que vem divulgando e fazendo shows.</p>
+        <p><EditorialPhoto name="bioCarnaval" /><span className={styles.bioLabel}><strong>Teatro:</strong></span></p>
         <ul>
-          <li>Lançamento do Bloquinho - ESMU Kids, pré-carnaval no Quinto Contagem na Unidade Eldorado. Carnaval das Marchinhas.</li>
-          <li>Abertura do Projeto - Quinta Cultural Contagem e apresentação do show - Boleros e MPB, na unidade sede.</li>
-          <li>Participação do Show - Tributo ao Samba, atuação como Ator e Cantor, na unidade Sede.</li>
-          <li>Conclusão do Curso Técnico em Artes Cênicas, em cartaz com a Peça - Ensaio Sobre a Cegueira.</li>
+          <li><strong>2024</strong> - Teatro no projeto: Valorização das Pessoas Idosas por meio da Inclusão Digital, Educação Financeira e Empreendedora, democratização do acesso à cultura e promoção da saúde - Programa Habilidades.</li>
+          <li><strong>2020</strong> - Gestão de Produção - &quot;O Avesso da Cena&quot;, ministrado por Rômulo Avelar, do Grupo Galpão, e realizado pelo Festival Trama de Teatro de Contagem.</li>
+          <li><strong>2019</strong> - Curso de Capacitação Profissional em Artes Cênicas - Secretaria de Cultura, Esporte e Juventude de Contagem e SATED/MG.</li>
+          <li><strong>2018</strong> - Fórum de Debate - Método Stanislavski.</li>
+          <li><strong>2018</strong> - Fórum de Debate e Workshop - &quot;O Teatro físico de Grotowski&quot;.</li>
+          <li><strong>2018</strong> - Participação no Fórum de Debate - Pedagogia do ator.</li>
+          <li><strong>2018</strong> - Prática Teatral - Oficina - Teatro Galpão.</li>
+          <li><strong>2017</strong> - Introdução ao Teatro - FUNDAC Contagem.</li>
+          <li><strong>2017</strong> - Iniciação Teatral - FUNDAC Contagem.</li>
+          <li><strong>2016</strong> - Iniciação Teatral - FUNDAC Contagem.</li>
         </ul>
-        <p>Em 2020 foi Apresentador do Programa de Rádio na Rádio Cidade FM de Itabirito-MG - Programa Voz Companheira, a Voz na MPB, de onde vem divulgando os artistas novos da MPB Independente.</p>
-        <p>Em 2021 recebeu o Troféu Jornal o Grito - &quot;Personalidade Musical e Teatral 2019&quot;. Em 2022 concluir o curso - Desenvolvimento Territorial e Sustentável - promovido pela Vale do Rio Doce. <br /><br /><br />Em 2023 fez o lançamento da Web Rádio ? Voz Companheira, totalmente voltada para a Música Popular Brasileira.</p>
-        <p><span className={styles.bioLabel}><strong>Discografia:</strong></span></p>
+        <p><EditorialPhoto name="bioPortrait" /><span className={styles.bioLabel}><strong>Discografia e Produção:</strong></span></p>
         <ul>
           <li><strong>2005</strong> - CD Trajetória</li>
           <li><strong>2008</strong> - Branco, verde, vermelho e preto - Serginho Barbosa canta hinos dos clubes</li>
-          <li><strong>2009</strong> - Verde, Rosa, branco e Alegria - Serginho Barbosa Canta Sambas</li>
+          <li><strong>2009</strong> - Verde Rosa branco e alegria - Serginho Barbosa canta sambas</li>
           <li><strong>2010</strong> - Lançamento do CD Coletâneas - Disco comemorativo</li>
-          <li><strong>2011</strong> - Música Voz Companheira, inserção do CD - &quot;Feminino em Canto&quot;</li>
-          <li><strong>2012</strong> - CD &quot;Voz Companheira&quot; CD Autoral</li>
-          <li><strong>2013</strong>- Inserção música - &quot;Querer Imaginário&quot; Coletânea Cata Branca</li>
-          <li><strong>2017</strong> - Lançamento - CD &quot;Uma História de Amor&quot; - Boleros em espanhol</li>
-          <li><strong>2019</strong> - Lançamento do CD &quot;Circo dos Amores&quot; Carnaval</li>
-          <li><strong>2020/2021</strong> - Em produção novo projeto - &quot;Brilho novo&quot;</li>
-          <li><strong>2022</strong> - Lançamento do DVD - &quot;Caminhos Brilho Novo&quot; - disponível no YouTube</li>
-          <li><strong>2022</strong> - Lançamento de 04 Clipes - Prêmio Serginho Barbosa Brilho Novo, disponível no Youtube</li>
-          <li><strong>2023</strong> - Lançamento do Clipe - &quot;Itabirito em seu Centenário&quot;, homenagem aos 100 anos de emancipação politica do município de Itabirito</li>
+          <li><strong>2011</strong> - Música Voz Companheira, inserção do CD - &quot;Feminino em Canto&quot;.</li>
+          <li><strong>2012</strong> - CD &quot;Voz Companheira&quot; - CD autoral.</li>
+          <li><strong>2013</strong> - Inserção da música &quot;Querer Imaginário&quot; na Coletânea Cata Branca.</li>
+          <li><strong>2017</strong> - Lançamento do CD &quot;Uma História de Amor&quot; - Boleros em Espanhol.</li>
+          <li><strong>2019</strong> - Lançamento do CD &quot;Circo dos Amores&quot; - Carnaval.</li>
+          <li><strong>2022</strong> - Lançamento do disco &quot;Brilho Novo&quot;.</li>
+          <li><strong>2022</strong> - Lançamento do DVD &quot;Caminhos Brilho Novo&quot; - YouTube.</li>
+          <li><strong>2022</strong> - Lançamento de quatro clipes - Prêmio Serginho Barbosa Brilho Novo - YouTube.</li>
+          <li><strong>2023</strong> - Lançamento do single &quot;Itabirito em seu Centenário&quot; em todas as plataformas digitais.</li>
+          <li><strong>2024</strong> - Ator convidado no projeto As 10 Mais - DVD de Vander Lima.</li>
+          <li><strong>2024</strong> - Figurante e ator no filme Banzo.</li>
+          <li><strong>2025</strong> - Show Cênico - Voz Companheira 20 anos.</li>
+          <li><strong>2025</strong> - Lançamento do single &quot;Por um Bolero&quot; em todas as plataformas digitais, feat. com o cantor Richard Saooco, da Venezuela.</li>
+          <li><strong>2026</strong> - Lançamento de &quot;Show Cênico - Voz Companheira 20 anos&quot; em todas as plataformas digitais e no YouTube.</li>
         </ul>
         <figure className={styles.bioFigure}><EditorialPhoto name="bioFinal" /></figure>
         <p><span className={styles.bioLabel}><strong>Contatos:</strong></span><br />(31) 99378 9787<br />E-mail: <a href="mailto:barbosavozcompanheira@gmail.com">barbosavozcompanheira@gmail.com</a></p>

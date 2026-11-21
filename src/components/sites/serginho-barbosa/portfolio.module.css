@@ -1,3 +1,27 @@
+.page {
+  padding-block: clamp(3.25rem, 7vw, 6.25rem);
+}
+
+.intro {
+  max-width: 49rem;
+  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+}
+
+.introTitle {
+  margin: 0;
+  color: var(--sb-ink);
+  font: 400 clamp(2.35rem, 5vw, 4.25rem) / 1 var(--sb-display);
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+
+.introText {
+  max-width: 68ch;
+  margin: clamp(1rem, 2vw, 1.35rem) 0 0;
+  color: var(--sb-muted);
+  font: 400 clamp(1rem, 1.5vw, 1.1rem) / 1.75 var(--sb-font);
+}
+
 .viewer {
   display: grid;
   width: 100%;

@@ -23,6 +23,7 @@ const manifestPath = path.join(
   "portfolio-pages-data.ts",
 );
 const publicRoot = path.join(projectRoot, "public");
+const expectedAssetRoot = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/sites/serginho-barbosa`;
 const pagesRoot = path.join(
   publicRoot,
   "sites",
@@ -57,15 +58,21 @@ describe("assets do portfólio", () => {
     ]);
     expect(new Set(paths).size).toBe(140);
 
+    const alts = portfolioPages.map(({ alt }) => alt);
+    expect(new Set(alts).size).toBe(70);
+
     for (const { number, compactSrc, desktopSrc, alt } of portfolioPages) {
       const padded = String(number).padStart(3, "0");
       expect(compactSrc).toBe(
-        `/sites/serginho-barbosa/portfolio/pages/page-${padded}-960.webp`,
+        `${expectedAssetRoot}/portfolio/pages/page-${padded}-960.webp`,
       );
       expect(desktopSrc).toBe(
-        `/sites/serginho-barbosa/portfolio/pages/page-${padded}-1600.webp`,
+        `${expectedAssetRoot}/portfolio/pages/page-${padded}-1600.webp`,
       );
       expect(alt.trim().length).toBeGreaterThanOrEqual(12);
+      expect(alt).not.toMatch(
+        /^(primeiro|segundo|terceiro|quarto|quinto|sexto) certificado profissional apresentado/i,
+      );
     }
   });
 

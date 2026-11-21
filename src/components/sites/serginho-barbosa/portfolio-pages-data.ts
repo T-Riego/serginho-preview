@@ -71,12 +71,12 @@ const portfolioPageAlts = [
   "Participações de Serginho Barbosa na televisão",
   "Vídeo de participação de Serginho Barbosa",
   "Abertura da seção Certificados",
-  "Primeiro certificado profissional apresentado no portfólio",
-  "Segundo certificado profissional apresentado no portfólio",
-  "Terceiro certificado profissional apresentado no portfólio",
-  "Quarto certificado profissional apresentado no portfólio",
-  "Quinto certificado profissional apresentado no portfólio",
-  "Sexto certificado profissional apresentado no portfólio",
+  "Registro profissional de ator de Serginho Barbosa no SATED Minas",
+  "Certificados de teatro do Programa Hábil Idade e da oficina Produção e Gestão: O Caminho do Coletivo",
+  "Certificados do Curso de Capacitação Profissional em Artes Cênicas e do fórum Pedagogia do Ator",
+  "Certificados dos fóruns Método Stanislavski e O Teatro Físico de Grotowski",
+  "Certificados de prática teatral com Lydia Del Picchia e do curso Introdução ao Teatro",
+  "Certificados do curso de Iniciação Teatral ministrado por Maria de Fátima Silveira",
   "Página de contato de Serginho Barbosa",
 ] as const;
 

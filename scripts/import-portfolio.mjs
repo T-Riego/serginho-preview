@@ -1,17 +1,24 @@
-import { createHash } from "node:crypto";
-import { spawnSync } from "node:child_process";
+import { createHash, randomUUID } from "node:crypto";
 import { existsSync } from "node:fs";
 import {
   mkdir,
   mkdtemp,
   readFile,
   readdir,
-  rename,
   rm,
   stat,
 } from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import sharp from "sharp";
+import {
+  acquireImportLock,
+  assertFileSha256,
+  assertInside,
+  promoteStagedPages,
+  runCommand,
+  validateRenderedPng,
+} from "./import-portfolio-lib.mjs";
 
 sharp.cache({ files: 0 });
 
@@ -24,7 +31,7 @@ if (
   throw new Error('Uso: npm run import:portfolio -- "caminho/Portfolio.pdf"');
 }
 
-const projectRoot = process.cwd();
+const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const portfolioRoot = path.join(
   projectRoot,
   "public",
@@ -35,42 +42,11 @@ const portfolioRoot = path.join(
 const destination = path.join(portfolioRoot, "pages");
 const stagingPrefix = ".portfolio-import-stage-";
 const backupPrefix = ".portfolio-pages-backup-";
+const canonicalPdfSha256 =
+  "b461ef7635a3c2e64e613b9c9f159013cb7243da7faba8b79f3c98576f3b08ff";
+const pdfInfoTimeoutMs = 30_000;
+const renderTimeoutMs = 120_000;
 const maxBytes = { "960": 250 * 1024, "1600": 400 * 1024 };
-
-function run(command, args) {
-  const result = spawnSync(command, args, {
-    encoding: "utf8",
-    maxBuffer: 32 * 1024 * 1024,
-    windowsHide: true,
-  });
-
-  if (result.error) {
-    throw result.error;
-  }
-
-  if (result.status !== 0) {
-    throw new Error(result.stderr.trim() || `${command} falhou`);
-  }
-
-  return result.stdout;
-}
-
-function assertInside(root, targetPath) {
-  const resolvedRoot = path.resolve(root);
-  const resolvedTarget = path.resolve(targetPath);
-  const relative = path.relative(resolvedRoot, resolvedTarget);
-
-  if (
-    !relative ||
-    path.isAbsolute(relative) ||
-    relative === ".." ||
-    relative.startsWith(`..${path.sep}`)
-  ) {
-    throw new Error(`Caminho fora do diretório permitido: ${resolvedTarget}`);
-  }
-
-  return resolvedTarget;
-}
 
 function assertDirectChild(targetPath, parentPath, requiredPrefix) {
   const resolvedParent = path.resolve(parentPath);
@@ -169,62 +145,13 @@ async function validateStagedBatch(stagingPages) {
   }
 }
 
-async function promoteStagedPages(stagingPages, backupPath) {
-  const hadDestination = existsSync(destination);
-
-  if (hadDestination) {
-    if (existsSync(backupPath)) {
-      throw new Error("O caminho temporário de backup já existe.");
-    }
-    await rename(destination, backupPath);
-  }
-
-  try {
-    await rename(stagingPages, destination);
-  } catch (replacementError) {
-    if (!hadDestination) {
-      throw replacementError;
-    }
-
-    try {
-      await rename(backupPath, destination);
-    } catch (restoreError) {
-      throw new AggregateError(
-        [replacementError, restoreError],
-        "Falha ao promover o lote e restaurar o backup.",
-      );
-    }
-
-    throw replacementError;
-  }
-}
-
-async function cleanupRunArtifacts(stagingRoot, backupPath) {
+async function cleanupRunArtifacts(stagingRoot) {
   const cleanupErrors = [];
 
   if (stagingRoot && existsSync(stagingRoot)) {
     try {
       assertDirectChild(stagingRoot, portfolioRoot, stagingPrefix);
       await rm(stagingRoot, {
-        recursive: true,
-        force: true,
-        maxRetries: 10,
-        retryDelay: 100,
-      });
-    } catch (error) {
-      cleanupErrors.push(error);
-    }
-  }
-
-  if (backupPath && existsSync(backupPath)) {
-    try {
-      assertDirectChild(backupPath, portfolioRoot, backupPrefix);
-      if (!existsSync(destination)) {
-        throw new Error(
-          `Backup preservado porque o destino não existe: ${path.basename(backupPath)}`,
-        );
-      }
-      await rm(backupPath, {
         recursive: true,
         force: true,
         maxRetries: 10,
@@ -249,21 +176,27 @@ async function main() {
     throw new Error('Uso: npm run import:portfolio -- "caminho/Portfolio.pdf"');
   }
 
-  assertPdf(run("pdfinfo", [sourcePdf]));
   await mkdir(portfolioRoot, { recursive: true });
 
+  const ownerToken = randomUUID();
+  let importLock;
   let stagingRoot;
-  let backupPath;
   let operationError;
 
   try {
+    importLock = await acquireImportLock(portfolioRoot, ownerToken);
+    await assertFileSha256(sourcePdf, canonicalPdfSha256);
+    assertPdf(
+      runCommand("pdfinfo", [sourcePdf], { timeoutMs: pdfInfoTimeoutMs }),
+    );
+
     stagingRoot = await mkdtemp(path.join(portfolioRoot, stagingPrefix));
     assertDirectChild(stagingRoot, portfolioRoot, stagingPrefix);
 
     const runToken = path.basename(stagingRoot).slice(stagingPrefix.length);
     const stagingPages = assertInside(stagingRoot, path.join(stagingRoot, "pages"));
     const renderRoot = assertInside(stagingRoot, path.join(stagingRoot, "render"));
-    backupPath = path.join(portfolioRoot, `${backupPrefix}${runToken}`);
+    const backupPath = path.join(portfolioRoot, `${backupPrefix}${runToken}`);
     assertDirectChild(backupPath, portfolioRoot, backupPrefix);
 
     await Promise.all([
@@ -279,19 +212,24 @@ async function main() {
       );
       const pngPath = `${pngPrefix}.png`;
 
-      run("pdftoppm", [
-        "-f",
-        String(page),
-        "-l",
-        String(page),
-        "-singlefile",
-        "-png",
-        "-r",
-        "80",
-        sourcePdf,
-        pngPrefix,
-      ]);
+      runCommand(
+        "pdftoppm",
+        [
+          "-f",
+          String(page),
+          "-l",
+          String(page),
+          "-singlefile",
+          "-png",
+          "-r",
+          "80",
+          sourcePdf,
+          pngPrefix,
+        ],
+        { timeoutMs: renderTimeoutMs },
+      );
 
+      await validateRenderedPng(pngPath);
       await encode(
         pngPath,
         path.join(stagingPages, `page-${padded}-960.webp`),
@@ -315,29 +253,39 @@ async function main() {
     }
 
     await validateStagedBatch(stagingPages);
-    await promoteStagedPages(stagingPages, backupPath);
+    await promoteStagedPages({
+      portfolioRoot,
+      stagingPages,
+      destination,
+      backupPath,
+    });
   } catch (error) {
     operationError = error;
   }
 
   let cleanupError;
   try {
-    await cleanupRunArtifacts(stagingRoot, backupPath);
+    await cleanupRunArtifacts(stagingRoot);
   } catch (error) {
     cleanupError = error;
   }
 
-  if (operationError && cleanupError) {
+  let lockReleaseError;
+  try {
+    await importLock?.release();
+  } catch (error) {
+    lockReleaseError = error;
+  }
+
+  const errors = [operationError, cleanupError, lockReleaseError].filter(Boolean);
+  if (errors.length > 1) {
     throw new AggregateError(
-      [operationError, cleanupError],
-      "Falha na importação e na limpeza de temporários.",
+      errors,
+      "Falha na importação ou na limpeza dos recursos desta execução.",
     );
   }
-  if (operationError) {
-    throw operationError;
-  }
-  if (cleanupError) {
-    throw cleanupError;
+  if (errors.length === 1) {
+    throw errors[0];
   }
 
   console.log("Geradas 70 páginas do portfólio em 140 WebPs validados.");

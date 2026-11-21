@@ -12,6 +12,11 @@ type CssRule = {
   mediaConditions: string[];
 };
 
+type CssDeclaration = {
+  value: string;
+  important: boolean;
+};
+
 function escapeRegExp(value: string) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
@@ -127,8 +132,8 @@ const parsedCss = siteCss.replace(/\/\*[\s\S]*?\*\//g, (comment) =>
 );
 const cssRules = parseCssRules(parsedCss);
 
-function getExactRules(selector: string) {
-  return cssRules.filter((rule) => rule.selectors.includes(selector));
+function getExactRules(selector: string, rules = cssRules) {
+  return rules.filter((rule) => rule.selectors.includes(selector));
 }
 
 function getRulesAtMedia(selector: string, condition: string) {
@@ -139,14 +144,25 @@ function getRulesAtMedia(selector: string, condition: string) {
   );
 }
 
-function getDeclarationValues(declarations: string, property: string) {
+function getDeclarations(declarations: string, property: string) {
   const escapedProperty = escapeRegExp(property);
   const matches = declarations.matchAll(
     new RegExp(`(?:^|;)\\s*${escapedProperty}\\s*:\\s*([^;{}]+)(?:;|$)`, "g"),
   );
 
-  return Array.from(matches, (match) =>
-    match[1].trim().replace(/\s*!important\s*$/, ""),
+  return Array.from(matches, (match): CssDeclaration => {
+    const rawValue = match[1].trim();
+
+    return {
+      value: rawValue.replace(/\s*!important\s*$/i, "").trim(),
+      important: /\s*!important\s*$/i.test(rawValue),
+    };
+  });
+}
+
+function getDeclarationValues(declarations: string, property: string) {
+  return getDeclarations(declarations, property).map(
+    (declaration) => declaration.value,
   );
 }
 
@@ -193,21 +209,31 @@ function getEffectiveDeclaration(
   selector: string,
   property: string,
   width: number,
+  rules = cssRules,
 ) {
-  let effectiveValue: string | undefined;
+  let effectiveDeclaration: CssDeclaration | undefined;
 
-  for (const rule of getExactRules(selector)) {
+  for (const rule of getExactRules(selector, rules)) {
     const mediaApplies = rule.mediaConditions.every((condition) =>
       mediaMatchesWidth(condition, width),
     );
-    const values = getDeclarationValues(rule.declarations, property);
 
-    if (mediaApplies && values.length > 0) {
-      effectiveValue = values[values.length - 1];
+    if (!mediaApplies) {
+      continue;
+    }
+
+    for (const declaration of getDeclarations(rule.declarations, property)) {
+      if (
+        !effectiveDeclaration ||
+        !effectiveDeclaration.important ||
+        declaration.important
+      ) {
+        effectiveDeclaration = declaration;
+      }
     }
   }
 
-  return effectiveValue;
+  return effectiveDeclaration?.value;
 }
 
 it("mantém o submenu desktop contido e acima dos contatos", () => {
@@ -310,11 +336,31 @@ it("mantém a cascata móvel em 1100px e restaura o desktop em 1101px/1280px", (
   }
 });
 
+it("preserva !important ao simular a cascata responsiva", () => {
+  const importantRules = parseCssRules(`
+    .sb-menu-trigger { display: none !important; }
+    @media (max-width: 1100px) {
+      .sb-menu-trigger { display: inline-flex; }
+    }
+  `);
+
+  expect(
+    getEffectiveDeclaration(
+      ".sb-menu-trigger",
+      "display",
+      1100,
+      importantRules,
+    ),
+  ).toBe("none");
+});
+
 it("mantém as declarações essenciais do dropdown do banner em 960px", () => {
   const bannerCondition = "(max-width: 960px)";
+  const openBannerSelector =
+    '.sb-inner-banner:has(.sb-banner-links[data-open="true"])';
 
   const bannerSelectors = [
-    '.sb-inner-banner:has(.sb-banner-links[data-open="true"])',
+    openBannerSelector,
     ".sb-banner-links-trigger",
     ".sb-banner-links ul",
     '.sb-banner-links[data-open="false"] ul',
@@ -339,6 +385,10 @@ it("mantém as declarações essenciais do dropdown do banner em 960px", () => {
   );
   const [itemRule] = getRulesAtMedia(".sb-banner-links li", bannerCondition);
   const [linkRule] = getRulesAtMedia(".sb-banner-links a", bannerCondition);
+  const [openBannerRule] = getRulesAtMedia(
+    openBannerSelector,
+    bannerCondition,
+  );
 
   expect(getDeclarationValues(triggerRule.declarations, "display")).toEqual([
     "flex",
@@ -358,4 +408,27 @@ it("mantém as declarações essenciais do dropdown do banner em 960px", () => {
   expect(getDeclarationValues(linkRule.declarations, "width")).toEqual([
     "100%",
   ]);
+  expect(getDeclarationValues(openBannerRule.declarations, "z-index")).toEqual([
+    "3",
+  ]);
+
+  expect(
+    getEffectiveDeclaration(".sb-banner-links-trigger", "display", 960),
+  ).toBe("flex");
+  expect(getEffectiveDeclaration(openBannerSelector, "z-index", 960)).toBe(
+    "3",
+  );
+
+  for (const desktopWidth of [961, 1024, 1100]) {
+    expect(
+      getEffectiveDeclaration(
+        ".sb-banner-links-trigger",
+        "display",
+        desktopWidth,
+      ),
+    ).toBe("none");
+    expect(
+      getEffectiveDeclaration(openBannerSelector, "z-index", desktopWidth),
+    ).toBeUndefined();
+  }
 });

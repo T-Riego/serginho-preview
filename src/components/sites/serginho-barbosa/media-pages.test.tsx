@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { expect, it } from "vitest";
-import { GalleryPage, getAlbum } from "./media-pages";
+import { GalleryPage, getAlbum, VideoPage } from "./media-pages";
 
 function requiredAlbum(slug: string, id: string) {
   const album = getAlbum(slug, id);
@@ -38,4 +38,16 @@ it("mantém a primeira foto horizontal como fallback dos outros álbuns", () => 
   expect(imageSource(screen.getByRole("img", {
     name: "Foto do álbum Carnaval 2026",
   }))).toContain(expected.src);
+});
+
+it("apresenta o novo vídeo principal no início da biblioteca", () => {
+  render(<VideoPage />);
+
+  const firstVideo = screen.getAllByRole("button", { name: /Assistir vídeo:/ })[0];
+  expect(firstVideo).toHaveAccessibleName(
+    'Assistir vídeo: Serginho Barbosa -"Show Cênico- Voz Companheira" - 20 anos.',
+  );
+  expect(firstVideo.getAttribute("style")).toContain(
+    "/sites/serginho-barbosa/videos/P8RNoTjF6Kc.jpg",
+  );
 });

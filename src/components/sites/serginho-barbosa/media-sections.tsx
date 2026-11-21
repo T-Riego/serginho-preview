@@ -7,6 +7,7 @@ import styles from "./media-sections.module.css";
 const galleryUrl = "/galeria-de-fotos/julifest-2018/8";
 
 const featuredVideos = [
+  { id: "P8RNoTjF6Kc", title: 'Serginho Barbosa -"Show Cênico- Voz Companheira" - 20 anos.' },
   { id: "_Jou5h-7ndM", title: "CAMINHO" },
   { id: "dbpqoQoFrJE", title: 'JULIFEST 2022 - SHOW "CAMINHOS BRILHO NOVO", AO VIVO' },
   { id: "F5I2loKD-AE", title: 'DVD - SHOW "CAMINHOS BRILHO NOVO"' },

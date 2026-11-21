@@ -7,6 +7,10 @@ it("opens the selected video and restores focus after Escape", async () => {
   const user = userEvent.setup();
   render(<VideosSection />);
 
+  expect(screen.getAllByRole("button", { name: /Assistir vídeo:/ })[0]).toHaveAccessibleName(
+    'Assistir vídeo: Serginho Barbosa -"Show Cênico- Voz Companheira" - 20 anos.',
+  );
+
   const trigger = screen.getByRole("button", {
     name: "Assistir vídeo: CIRCO DOS AMORES",
   });

@@ -113,7 +113,11 @@ describe("carrossel de destaques", () => {
     const first = screen.getByRole("button", { name: "Mostrar Serginho Barbosa" });
     expect(first).toHaveAttribute("aria-current", "true");
     expect(screen.getByRole("heading", { level: 1, name: "Serginho Barbosa" })).toBeVisible();
-    expect(screen.getByRole("img", { name: "Serginho Barbosa cantando no palco sob luz roxa" })).toBeVisible();
+    const openingImage = screen.getByRole("img", { name: "Serginho Barbosa cantando no palco sob luz roxa" });
+    expect(openingImage).toBeVisible();
+    expect(decodeURIComponent(openingImage.getAttribute("src") ?? "")).toContain(
+      "editorial/hero-serginho-solo.webp",
+    );
 
     await user.click(screen.getByRole("button", { name: "Destaque anterior" }));
     expect(screen.getByRole("button", { name: "Mostrar Circo dos Amores" })).toHaveAttribute(

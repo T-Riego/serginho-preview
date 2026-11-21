@@ -13,7 +13,7 @@ const slides = [
     accent: "Barbosa",
     category: "Cantor, compositor e ator",
     description: "Da MPB aos boleros e ao carnaval, uma trajetória que começa em Itabirito, Minas Gerais.",
-    image: "editorial/biografia-show.webp",
+    image: "editorial/hero-serginho-solo.webp",
     thumb: "palco.webp",
     alt: "Serginho Barbosa cantando no palco sob luz roxa",
     visual: "opening",

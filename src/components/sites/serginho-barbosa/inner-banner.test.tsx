@@ -2,6 +2,21 @@ import { render, screen, within } from "@testing-library/react";
 import { expect, it } from "vitest";
 import { InnerBanner } from "./inner-banner";
 
+it("mostra o título, caminho e retrato do Portfólio", () => {
+  expect(() => render(<InnerBanner title="Portfólio" page="portfolio" />)).not.toThrow();
+
+  const trail = within(screen.getByRole("navigation", { name: "Caminho da página" }));
+  expect(trail.getByRole("link", { name: "Início" })).toHaveAttribute("href", "/");
+  expect(trail.getByText("Portfólio")).toHaveAttribute("aria-current", "page");
+  expect(screen.getByRole("heading", { level: 1, name: "Portfólio" })).toBeVisible();
+  const image = screen.getByRole("img", {
+    name: "Serginho Barbosa de terno branco em um palco iluminado de azul",
+  });
+  expect(decodeURIComponent(image.getAttribute("src") ?? "")).toContain(
+    "editorial/biografia-retrato.webp",
+  );
+});
+
 it("mostra o caminho local do álbum para o catálogo", () => {
   render(<InnerBanner title="Brilho Novo" page="discografias" />);
 

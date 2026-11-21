@@ -19,6 +19,12 @@ const bannerImages = {
     alt: "Serginho Barbosa de terno branco em um palco iluminado de azul",
     position: "center 35%",
   },
+  portfolio: {
+    src: `${assetRoot}/editorial/biografia-retrato.webp`,
+    alt: "Serginho Barbosa de terno branco em um palco iluminado de azul",
+    position: "center 35%",
+    mobilePosition: "center 35%",
+  },
   carnaval: {
     src: `${assetRoot}/editorial/biografia-carnaval.webp`,
     alt: "Serginho Barbosa caracterizado como Palhaço dos Amores, de braços abertos",

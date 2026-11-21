@@ -8,6 +8,37 @@ const routing = vi.hoisted(() => ({ pathname: "/" }));
 vi.mock("next/navigation", () => ({ usePathname: () => routing.pathname }));
 
 describe("navegação da página inicial", () => {
+  it("oferece Portfólio logo após Biografia no desktop e também no menu móvel", async () => {
+    routing.pathname = "/";
+    const user = userEvent.setup();
+    render(<SiteHeader />);
+
+    const desktop = within(screen.getByRole("navigation", { name: "Navegação principal" }));
+    const biography = desktop.getByRole("link", { name: "Biografia" });
+    const portfolio = desktop.getByRole("link", { name: "Portfólio" });
+    expect(portfolio).toHaveAttribute("href", "/portfolio");
+    expect(biography.closest("li")?.nextElementSibling).toBe(portfolio.closest("li"));
+
+    await user.click(screen.getByRole("button", { name: "Abrir menu" }));
+    const menu = screen.getByRole("dialog", { name: "Menu principal" });
+    const mobile = within(within(menu).getByRole("navigation", { name: "Navegação móvel" }));
+    expect(mobile.getByRole("link", { name: "Portfólio" })).toHaveAttribute("href", "/portfolio");
+  });
+
+  it("marca Portfólio como a página atual no desktop e no menu móvel", async () => {
+    routing.pathname = "/portfolio";
+    const user = userEvent.setup();
+    render(<SiteHeader />);
+
+    const desktop = within(screen.getByRole("navigation", { name: "Navegação principal" }));
+    expect(desktop.getByRole("link", { name: "Portfólio" })).toHaveAttribute("aria-current", "page");
+
+    await user.click(screen.getByRole("button", { name: "Abrir menu" }));
+    const menu = screen.getByRole("dialog", { name: "Menu principal" });
+    const mobile = within(within(menu).getByRole("navigation", { name: "Navegação móvel" }));
+    expect(mobile.getByRole("link", { name: "Portfólio" })).toHaveAttribute("aria-current", "page");
+  });
+
   it("abre o menu móvel, oferece links locais e devolve o foco ao fechar", async () => {
     routing.pathname = "/";
     const user = userEvent.setup();

@@ -36,6 +36,7 @@ const galleries = [
 export const navigation = [
   { label: "Home", href: "/" },
   { label: "Biografia", href: "/biografia" },
+  { label: "Portfólio", href: "/portfolio" },
   { label: "Carnaval", href: "/carnaval" },
   { label: "Discografias", href: "/discografias", children: discographies },
   { label: "Vídeos", href: "/videos" },

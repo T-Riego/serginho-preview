@@ -4,14 +4,16 @@ import { describe, expect, it } from "vitest";
 import { LowerSections, SiteFooter } from "./lower-sections";
 
 describe("seções de contato", () => {
-  it("inclui Portfólio no Acesso rápido do rodapé", () => {
+  it("inclui Portfólio logo após Biografia no Acesso rápido do rodapé", () => {
     render(<SiteFooter />);
 
-    const quickAccess = within(screen.getByRole("navigation", { name: "Acesso rápido" }));
-    expect(quickAccess.getByRole("link", { name: "Portfólio" })).toHaveAttribute(
-      "href",
-      "/portfolio",
-    );
+    const quickAccessNavigation = screen.getByRole("navigation", { name: "Acesso rápido" });
+    const quickAccess = within(quickAccessNavigation);
+    const biography = quickAccess.getByRole("link", { name: "Biografia" });
+    const portfolio = quickAccess.getByRole("link", { name: "Portfólio" });
+    const quickAccessLinks = Array.from(quickAccessNavigation.querySelectorAll(":scope > a"));
+    expect(portfolio).toHaveAttribute("href", "/portfolio");
+    expect(quickAccessLinks[quickAccessLinks.indexOf(biography) + 1]).toBe(portfolio);
   });
 
   it("exibe o crédito de desenvolvimento com o link no nome", () => {

@@ -15,6 +15,11 @@ it("mostra o título, caminho e retrato do Portfólio", () => {
   expect(decodeURIComponent(image.getAttribute("src") ?? "")).toContain(
     "editorial/biografia-retrato.webp",
   );
+  const media = image.closest(".sb-inner-banner-media");
+  expect(media).toHaveStyle({
+    "--sb-banner-position": "center 35%",
+    "--sb-banner-position-mobile": "center 35%",
+  });
 });
 
 it("mostra o caminho local do álbum para o catálogo", () => {

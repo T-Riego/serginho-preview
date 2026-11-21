@@ -21,8 +21,15 @@ describe("navegação da página inicial", () => {
 
     await user.click(screen.getByRole("button", { name: "Abrir menu" }));
     const menu = screen.getByRole("dialog", { name: "Menu principal" });
-    const mobile = within(within(menu).getByRole("navigation", { name: "Navegação móvel" }));
-    expect(mobile.getByRole("link", { name: "Portfólio" })).toHaveAttribute("href", "/portfolio");
+    const mobileNavigation = within(menu).getByRole("navigation", { name: "Navegação móvel" });
+    const mobile = within(mobileNavigation);
+    const mobileBiography = mobile.getByRole("link", { name: "Biografia" });
+    const mobilePortfolio = mobile.getByRole("link", { name: "Portfólio" });
+    const firstLevelLinks = Array.from(
+      mobileNavigation.querySelectorAll(":scope > ul > li > a"),
+    );
+    expect(mobilePortfolio).toHaveAttribute("href", "/portfolio");
+    expect(firstLevelLinks[firstLevelLinks.indexOf(mobileBiography) + 1]).toBe(mobilePortfolio);
   });
 
   it("marca Portfólio como a página atual no desktop e no menu móvel", async () => {

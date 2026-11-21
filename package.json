@@ -35,6 +35,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "import:gallery": "node scripts/import-gallery-albums.mjs",
+    "import:portfolio": "node scripts/import-portfolio.mjs",
     "check": "npm run lint && npm run typecheck && npm run build"
   },
   "dependencies": {

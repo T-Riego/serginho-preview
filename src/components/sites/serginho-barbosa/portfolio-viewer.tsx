@@ -5,24 +5,39 @@ import { useEffect, useRef, useState } from "react";
 import type { PortfolioPageAsset } from "./portfolio-pages-data";
 import styles from "./portfolio.module.css";
 
-type TouchPoint = Readonly<{ x: number; y: number }>;
+const compactMediaQuery = "(max-width: 720px)";
+
+type TouchPoint = Readonly<{ identifier: number; x: number; y: number }>;
 
 export function PortfolioViewer({ pages }: { pages: readonly PortfolioPageAsset[] }) {
   const [index, setIndex] = useState(0);
-  const [imageError, setImageError] = useState(false);
+  const [failedPage, setFailedPage] = useState<number | null>(null);
+  const [previousPageCount, setPreviousPageCount] = useState(pages.length);
   const touchStart = useRef<TouchPoint | null>(null);
   const prefetchedPages = useRef(new Set<string>());
   const current = pages[index];
+  const imageError = current?.number === failedPage;
+
+  if (pages.length !== previousPageCount) {
+    setPreviousPageCount(pages.length);
+    if (pages.length < previousPageCount && index >= pages.length) {
+      setIndex(Math.max(0, pages.length - 1));
+      setFailedPage(null);
+    }
+  }
 
   useEffect(() => {
     const next = pages[index + 1];
-    if (!next || prefetchedPages.current.has(next.desktopSrc)) return;
+    if (!next) return;
 
-    prefetchedPages.current.add(next.desktopSrc);
+    const source = window.matchMedia(compactMediaQuery).matches
+      ? next.compactSrc
+      : next.desktopSrc;
+    if (prefetchedPages.current.has(source)) return;
+
+    prefetchedPages.current.add(source);
     const image = new window.Image();
-    image.srcset = `${next.compactSrc} 960w, ${next.desktopSrc} 1600w`;
-    image.sizes = "(max-width: 720px) 100vw, 1600px";
-    image.src = next.desktopSrc;
+    image.src = source;
   }, [index, pages]);
 
   if (!current) return null;
@@ -30,7 +45,7 @@ export function PortfolioViewer({ pages }: { pages: readonly PortfolioPageAsset[
   function showPage(nextIndex: number) {
     const boundedIndex = Math.min(pages.length - 1, Math.max(0, nextIndex));
     if (boundedIndex === index) return;
-    setImageError(false);
+    setFailedPage(null);
     setIndex(boundedIndex);
   }
 
@@ -49,14 +64,33 @@ export function PortfolioViewer({ pages }: { pages: readonly PortfolioPageAsset[
           }
         }}
         onTouchStart={(event) => {
+          if (event.touches.length !== 1) {
+            touchStart.current = null;
+            return;
+          }
+
           const touch = event.touches[0];
-          touchStart.current = touch ? { x: touch.clientX, y: touch.clientY } : null;
+          touchStart.current = touch
+            ? { identifier: touch.identifier, x: touch.clientX, y: touch.clientY }
+            : null;
+        }}
+        onTouchMove={(event) => {
+          const start = touchStart.current;
+          const touch = event.touches[0];
+          if (!start) return;
+          if (event.touches.length !== 1 || touch?.identifier !== start.identifier) {
+            touchStart.current = null;
+          }
         }}
         onTouchEnd={(event) => {
           const start = touchStart.current;
-          const touch = event.changedTouches[0];
           touchStart.current = null;
-          if (!start || !touch) return;
+          if (!start || event.touches.length !== 0 || event.changedTouches.length !== 1) return;
+
+          const touch = Array.from(event.changedTouches).find(
+            ({ identifier }) => identifier === start.identifier,
+          );
+          if (!touch) return;
 
           const deltaX = touch.clientX - start.x;
           const deltaY = touch.clientY - start.y;
@@ -79,7 +113,7 @@ export function PortfolioViewer({ pages }: { pages: readonly PortfolioPageAsset[
             sizes="(max-width: 720px) 100vw, 1600px"
             fetchPriority={index === 0 ? "high" : undefined}
             unoptimized
-            onError={() => setImageError(true)}
+            onError={() => setFailedPage(current.number)}
           />
         </picture>
         {imageError && (

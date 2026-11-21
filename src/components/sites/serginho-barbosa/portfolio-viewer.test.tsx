@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { fireEvent, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { StrictMode } from "react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { PortfolioPageAsset } from "./portfolio-pages-data";
 import { PortfolioViewer } from "./portfolio-viewer";
@@ -26,17 +27,38 @@ const pages = [
   },
 ] as const satisfies readonly PortfolioPageAsset[];
 
+const compactMediaQuery = "(max-width: 720px)";
+const requestedSources: string[] = [];
+let compactViewport = false;
+
 class PrefetchImage {
-  src = "";
-  srcset = "";
-  sizes = "";
+  private source = "";
 
   constructor() {
     prefetchedImages.push(this);
   }
+
+  get src() {
+    return this.source;
+  }
+
+  set src(value: string) {
+    this.source = value;
+    requestedSources.push(value);
+  }
 }
 
 const prefetchedImages: PrefetchImage[] = [];
+const matchMedia = vi.fn((query: string) => ({
+  matches: query === compactMediaQuery && compactViewport,
+  media: query,
+  onchange: null,
+  addListener: vi.fn(),
+  removeListener: vi.fn(),
+  addEventListener: vi.fn(),
+  removeEventListener: vi.fn(),
+  dispatchEvent: vi.fn(),
+}) as unknown as MediaQueryList);
 const portfolioCss = readFileSync(
   "src/components/sites/serginho-barbosa/portfolio.module.css",
   "utf8",
@@ -44,12 +66,20 @@ const portfolioCss = readFileSync(
 
 beforeEach(() => {
   prefetchedImages.length = 0;
+  requestedSources.length = 0;
+  compactViewport = false;
+  matchMedia.mockClear();
   vi.stubGlobal("Image", PrefetchImage);
+  vi.stubGlobal("matchMedia", matchMedia);
 });
 
 afterEach(() => {
   vi.unstubAllGlobals();
 });
+
+function touch(identifier: number, clientX: number, clientY: number) {
+  return { identifier, clientX, clientY };
+}
 
 describe("visualizador do portfólio", () => {
   it("abre na primeira página com limites, imagem responsiva e só os controles essenciais", () => {
@@ -111,13 +141,19 @@ describe("visualizador do portfólio", () => {
     render(<PortfolioViewer pages={pages} />);
 
     const stage = screen.getByRole("group", { name: "Página atual do portfólio" });
-    fireEvent.touchStart(stage, { touches: [{ clientX: 200, clientY: 100 }] });
-    fireEvent.touchEnd(stage, { changedTouches: [{ clientX: 152, clientY: 108 }] });
+    fireEvent.touchStart(stage, { touches: [touch(1, 200, 100)] });
+    fireEvent.touchEnd(stage, {
+      touches: [],
+      changedTouches: [touch(1, 152, 108)],
+    });
 
     expect(screen.getByRole("status")).toHaveTextContent("Página 2 de 3");
 
-    fireEvent.touchStart(stage, { touches: [{ clientX: 152, clientY: 100 }] });
-    fireEvent.touchEnd(stage, { changedTouches: [{ clientX: 200, clientY: 108 }] });
+    fireEvent.touchStart(stage, { touches: [touch(2, 152, 100)] });
+    fireEvent.touchEnd(stage, {
+      touches: [],
+      changedTouches: [touch(2, 200, 108)],
+    });
     expect(screen.getByRole("status")).toHaveTextContent("Página 1 de 3");
   });
 
@@ -125,8 +161,11 @@ describe("visualizador do portfólio", () => {
     render(<PortfolioViewer pages={pages} />);
 
     const stage = screen.getByRole("group", { name: "Página atual do portfólio" });
-    fireEvent.touchStart(stage, { touches: [{ clientX: 200, clientY: 100 }] });
-    fireEvent.touchEnd(stage, { changedTouches: [{ clientX: 153, clientY: 100 }] });
+    fireEvent.touchStart(stage, { touches: [touch(3, 200, 100)] });
+    fireEvent.touchEnd(stage, {
+      touches: [],
+      changedTouches: [touch(3, 153, 100)],
+    });
 
     expect(screen.getByRole("status")).toHaveTextContent("Página 1 de 3");
   });
@@ -135,8 +174,11 @@ describe("visualizador do portfólio", () => {
     render(<PortfolioViewer pages={pages} />);
 
     const stage = screen.getByRole("group", { name: "Página atual do portfólio" });
-    fireEvent.touchStart(stage, { touches: [{ clientX: 200, clientY: 100 }] });
-    fireEvent.touchEnd(stage, { changedTouches: [{ clientX: 130, clientY: 200 }] });
+    fireEvent.touchStart(stage, { touches: [touch(4, 200, 100)] });
+    fireEvent.touchEnd(stage, {
+      touches: [],
+      changedTouches: [touch(4, 130, 200)],
+    });
 
     expect(screen.getByRole("status")).toHaveTextContent("Página 1 de 3");
   });
@@ -145,8 +187,75 @@ describe("visualizador do portfólio", () => {
     render(<PortfolioViewer pages={pages} />);
 
     const stage = screen.getByRole("group", { name: "Página atual do portfólio" });
-    fireEvent.touchStart(stage, { touches: [{ clientX: 200, clientY: 100 }] });
-    fireEvent.touchEnd(stage, { changedTouches: [{ clientX: 152, clientY: 148 }] });
+    fireEvent.touchStart(stage, { touches: [touch(5, 200, 100)] });
+    fireEvent.touchEnd(stage, {
+      touches: [],
+      changedTouches: [touch(5, 152, 148)],
+    });
+
+    expect(screen.getByRole("status")).toHaveTextContent("Página 1 de 3");
+  });
+
+  it("ignora gesto que começa com múltiplos toques", () => {
+    render(<PortfolioViewer pages={pages} />);
+
+    const stage = screen.getByRole("group", { name: "Página atual do portfólio" });
+    fireEvent.touchStart(stage, {
+      touches: [touch(6, 200, 100), touch(7, 210, 100)],
+    });
+    fireEvent.touchEnd(stage, {
+      touches: [],
+      changedTouches: [touch(6, 140, 100), touch(7, 150, 100)],
+    });
+
+    expect(screen.getByRole("status")).toHaveTextContent("Página 1 de 3");
+  });
+
+  it("cancela o swipe quando um segundo toque transforma o gesto em pinch", () => {
+    render(<PortfolioViewer pages={pages} />);
+
+    const stage = screen.getByRole("group", { name: "Página atual do portfólio" });
+    fireEvent.touchStart(stage, { touches: [touch(8, 200, 100)] });
+    fireEvent.touchMove(stage, {
+      touches: [touch(8, 180, 100), touch(9, 220, 100)],
+    });
+    fireEvent.touchEnd(stage, {
+      touches: [],
+      changedTouches: [touch(8, 140, 100), touch(9, 260, 100)],
+    });
+
+    expect(screen.getByRole("status")).toHaveTextContent("Página 1 de 3");
+  });
+
+  it("só conclui o swipe com o mesmo toque e sem outro toque restante", () => {
+    render(<PortfolioViewer pages={pages} />);
+
+    const stage = screen.getByRole("group", { name: "Página atual do portfólio" });
+    fireEvent.touchStart(stage, { touches: [touch(10, 200, 100)] });
+    fireEvent.touchEnd(stage, {
+      touches: [],
+      changedTouches: [touch(11, 140, 100)],
+    });
+    expect(screen.getByRole("status")).toHaveTextContent("Página 1 de 3");
+
+    fireEvent.touchStart(stage, { touches: [touch(12, 200, 100)] });
+    fireEvent.touchEnd(stage, {
+      touches: [touch(13, 220, 100)],
+      changedTouches: [touch(12, 140, 100)],
+    });
+    expect(screen.getByRole("status")).toHaveTextContent("Página 1 de 3");
+  });
+
+  it("limpa o gesto ao receber touchcancel", () => {
+    render(<PortfolioViewer pages={pages} />);
+
+    const stage = screen.getByRole("group", { name: "Página atual do portfólio" });
+    fireEvent.touchStart(stage, { touches: [touch(14, 200, 100)] });
+    fireEvent.touchCancel(stage, { touches: [] });
+    fireEvent.touchEnd(stage, {
+      touches: [],
+      changedTouches: [touch(14, 140, 100)],
+    });
 
     expect(screen.getByRole("status")).toHaveTextContent("Página 1 de 3");
   });
@@ -181,29 +290,77 @@ describe("visualizador do portfólio", () => {
     expect(screen.getByRole("img", { name: "Sumário do portfólio" })).toBeVisible();
   });
 
-  it("pré-carrega só a próxima página e não repete páginas já preparadas", async () => {
+  it("associa o erro à página que falhou quando a lista muda", () => {
+    const { rerender } = render(<PortfolioViewer pages={pages} />);
+
+    fireEvent.error(screen.getByRole("img", { name: "Capa do portfólio" }));
+    expect(screen.getByRole("alert")).toBeVisible();
+
+    rerender(<PortfolioViewer pages={[pages[1], pages[0], pages[2]]} />);
+    expect(screen.queryByRole("alert")).not.toBeInTheDocument();
+    expect(screen.getByRole("img", { name: "Sumário do portfólio" })).toBeVisible();
+  });
+
+  it("normaliza a página atual somente quando a lista fica menor", async () => {
+    const user = userEvent.setup();
+    const { rerender } = render(<PortfolioViewer pages={pages} />);
+    await user.click(screen.getByRole("button", { name: "Próxima" }));
+    await user.click(screen.getByRole("button", { name: "Próxima" }));
+
+    rerender(<PortfolioViewer pages={pages.slice(0, 2)} />);
+
+    expect(screen.getByRole("img", { name: "Sumário do portfólio" })).toBeVisible();
+    expect(screen.getByRole("status")).toHaveTextContent("Página 2 de 2");
+  });
+
+  it("pré-carrega no desktop somente a próxima variante exibida e sem repetir", async () => {
     const user = userEvent.setup();
     render(<PortfolioViewer pages={pages} />);
 
+    expect(matchMedia).toHaveBeenCalledWith(compactMediaQuery);
     expect(prefetchedImages).toHaveLength(1);
-    expect(prefetchedImages[0]).toMatchObject({
-      src: pages[1].desktopSrc,
-      srcset: `${pages[1].compactSrc} 960w, ${pages[1].desktopSrc} 1600w`,
-      sizes: "(max-width: 720px) 100vw, 1600px",
-    });
+    expect(prefetchedImages[0]).not.toHaveProperty("srcset");
+    expect(prefetchedImages[0]).not.toHaveProperty("sizes");
+    expect(requestedSources).toEqual([pages[1].desktopSrc]);
 
     await user.click(screen.getByRole("button", { name: "Próxima" }));
-    expect(prefetchedImages).toHaveLength(2);
-    expect(prefetchedImages[1]).toMatchObject({
-      src: pages[2].desktopSrc,
-      srcset: `${pages[2].compactSrc} 960w, ${pages[2].desktopSrc} 1600w`,
-      sizes: "(max-width: 720px) 100vw, 1600px",
-    });
+    expect(requestedSources).toEqual([pages[1].desktopSrc, pages[2].desktopSrc]);
 
     await user.click(screen.getByRole("button", { name: "Anterior" }));
     await user.click(screen.getByRole("button", { name: "Próxima" }));
     await user.click(screen.getByRole("button", { name: "Próxima" }));
+    expect(requestedSources).toEqual([pages[1].desktopSrc, pages[2].desktopSrc]);
+  });
+
+  it("pré-carrega no mobile somente a variante compacta da próxima página", async () => {
+    compactViewport = true;
+    const user = userEvent.setup();
+    render(<PortfolioViewer pages={pages} />);
+
+    expect(requestedSources).toEqual([pages[1].compactSrc]);
+    await user.click(screen.getByRole("button", { name: "Próxima" }));
+    expect(requestedSources).toEqual([pages[1].compactSrc, pages[2].compactSrc]);
+  });
+
+  it("não duplica o prefetch desktop ou mobile no StrictMode", () => {
+    const desktop = render(
+      <StrictMode>
+        <PortfolioViewer pages={pages} />
+      </StrictMode>,
+    );
+
+    expect(prefetchedImages).toHaveLength(1);
+    expect(requestedSources).toEqual([pages[1].desktopSrc]);
+
+    desktop.unmount();
+    compactViewport = true;
+    render(
+      <StrictMode>
+        <PortfolioViewer pages={pages} />
+      </StrictMode>,
+    );
     expect(prefetchedImages).toHaveLength(2);
+    expect(requestedSources).toEqual([pages[1].desktopSrc, pages[1].compactSrc]);
   });
 
   it("preserva no CSS os contratos visuais, táteis e de movimento", () => {

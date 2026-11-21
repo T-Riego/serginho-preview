@@ -59,7 +59,9 @@ export function BiographyContent() {
           <li><strong>2024</strong> - Figurante e ator no filme Banzo.</li>
           <li><strong>2025</strong> - Show Cênico - Voz Companheira 20 anos.</li>
           <li><strong>2025</strong> - Lançamento do single &quot;Por um Bolero&quot; em todas as plataformas digitais, feat. com o cantor Richard Saooco, da Venezuela.</li>
+          <li><strong>2025</strong> - Festa Yuan - Cuba.</li>
           <li><strong>2026</strong> - Lançamento de &quot;Show Cênico - Voz Companheira 20 anos&quot; em todas as plataformas digitais e no YouTube.</li>
+          <li><strong>2026</strong> - Lea Câmarom Argentina.</li>
         </ul>
         <figure className={styles.bioFigure}><EditorialPhoto name="bioFinal" /></figure>
         <p><span className={styles.bioLabel}><strong>Contatos:</strong></span><br />(31) 99378 9787<br />E-mail: <a href="mailto:barbosavozcompanheira@gmail.com">barbosavozcompanheira@gmail.com</a></p>

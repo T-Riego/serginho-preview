@@ -12,7 +12,17 @@ describe("conteúdo da biografia", () => {
     expect(container).toHaveTextContent("divulgando e fazendo shows");
     expect(container).toHaveTextContent("cantor Richard Saooco");
     expect(container).toHaveTextContent(/2025.*Por um Bolero.*Richard Saooco/);
+    expect(container).toHaveTextContent(/2025.*Festa Yuan - Cuba/);
     expect(container).toHaveTextContent(/2026.*Show Cênico.*Voz Companheira 20 anos/);
+    expect(container).toHaveTextContent(/2026.*Lea Câmarom Argentina/);
+
+    const timeline = container.textContent ?? "";
+    expect(timeline.indexOf("2025 - Festa Yuan - Cuba.")).toBeLessThan(
+      timeline.indexOf("2026 - Lançamento"),
+    );
+    expect(timeline.indexOf("2026 - Lançamento")).toBeLessThan(
+      timeline.indexOf("2026 - Lea Câmarom Argentina."),
+    );
     expect(container).not.toHaveTextContent("TALENTO ITABIRITENSE");
     expect(container).not.toHaveTextContent("Medalha de Honra ao Mérito");
     expect(container).not.toHaveTextContent("Web Rádio");

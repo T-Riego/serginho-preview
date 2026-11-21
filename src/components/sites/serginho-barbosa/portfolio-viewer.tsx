@@ -145,6 +145,15 @@ export function PortfolioViewer({ pages }: { pages: readonly PortfolioPageAsset[
           Próxima
         </button>
       </div>
+      {index > 0 && (
+        <button
+          type="button"
+          className={styles.firstPageButton}
+          onClick={() => showPage(0)}
+        >
+          Voltar à primeira página
+        </button>
+      )}
     </section>
   );
 }

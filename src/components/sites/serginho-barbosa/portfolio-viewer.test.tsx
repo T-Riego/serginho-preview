@@ -114,14 +114,20 @@ describe("visualizador do portfólio", () => {
     const user = userEvent.setup();
     render(<PortfolioViewer pages={pages} />);
 
+    expect(screen.queryByRole("button", { name: "Voltar à primeira página" })).not.toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Próxima" }));
     const secondImage = screen.getByRole("img", { name: "Sumário do portfólio" });
     expect(secondImage).toBeVisible();
     expect(secondImage).not.toHaveAttribute("fetchpriority");
     expect(screen.getByRole("status")).toHaveTextContent("Página 2 de 3");
 
-    await user.click(screen.getByRole("button", { name: "Anterior" }));
+    await user.click(screen.getByRole("button", { name: "Voltar à primeira página" }));
     expect(screen.getByRole("img", { name: "Capa do portfólio" })).toBeVisible();
+    expect(screen.getByRole("status")).toHaveTextContent("Página 1 de 3");
+    expect(screen.queryByRole("button", { name: "Voltar à primeira página" })).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Próxima" }));
+    await user.click(screen.getByRole("button", { name: "Anterior" }));
     expect(screen.getByRole("status")).toHaveTextContent("Página 1 de 3");
   });
 

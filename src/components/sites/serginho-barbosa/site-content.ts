@@ -17,19 +17,19 @@ const discographies = [
 
 const galleries = [
   ["Banda Circo dos Amores - Carnaval", "banda-circo-dos-amores-carnaval/12"],
-  ["Semi Final Concurso Marchinhas Mestre Jonas 2019", "semi-final-concurso-marchinhas-mestre-jonas-2019/11"],
   ["Bloquinho ESMUKids - Contagem", "bloquinho-esmukids-contagem/10"],
-  ["Lançamento CD Circo dos Amores 2019", "lancamento-cd-circo-dos-amores-2019/5"],
-  ["Ensaio Fotográfico - Palhaço dos Amores.", "ensaio-fotografico-palhaco-dos-amores/7"],
   ["Carnaval", "carnaval/4"],
-  ["Circuito VDL - Lançamento Voz Companheira", "circuito-vdl-lancamento-voz-companheira/9"],
-  ["Julifest 2018", "julifest-2018/8"],
   ["Carnaval 2026", "carnaval-2026/13"],
+  ["Circuito VDL - Lançamento Voz Companheira", "circuito-vdl-lancamento-voz-companheira/9"],
   ["Conserto Natal 2025", "conserto-natal-2025/14"],
   ["DVD Vander LIma - 2025", "dvd-vander-lima-2025/15"],
+  ["Ensaio Fotográfico - Palhaço dos Amores.", "ensaio-fotografico-palhaco-dos-amores/7"],
   ["Feat - Venezuela, Cuba, Argentina", "feat-venezuela-cuba-argentina/16"],
   ["Festival Gastronómico 2024", "festival-gastronomico-2024/17"],
+  ["Julifest 2018", "julifest-2018/8"],
   ["Julifet 2026", "julifet-2026/18"],
+  ["Lançamento CD Circo dos Amores 2019", "lancamento-cd-circo-dos-amores-2019/5"],
+  ["Semi Final Concurso Marchinhas Mestre Jonas 2019", "semi-final-concurso-marchinhas-mestre-jonas-2019/11"],
   ["Show Cenico Voz Companheira 2025", "show-cenico-voz-companheira-2025/19"],
 ];
 

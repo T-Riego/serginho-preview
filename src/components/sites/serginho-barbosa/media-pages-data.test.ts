@@ -168,5 +168,11 @@ describe("atualização da galeria em novembro de 2026", () => {
     for (const { label, slug, id } of expectedAlbums) {
       expect(links).toContainEqual([label, slug + "/" + id]);
     }
+
+    const labels = links.map(([label]) => label);
+    const alphabeticLabels = [...labels].sort(
+      new Intl.Collator("pt-BR", { sensitivity: "base" }).compare,
+    );
+    expect(labels).toEqual(alphabeticLabels);
   });
 });

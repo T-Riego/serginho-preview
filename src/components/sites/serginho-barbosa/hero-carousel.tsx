@@ -11,7 +11,7 @@ const slides = [
     label: "Serginho Barbosa",
     heading: "Serginho",
     accent: "Barbosa",
-    category: "Cantor, compositor e ator",
+    category: "Cantor, Compositor, Ator e Produtor",
     description: "Da MPB aos boleros e ao carnaval, uma trajetória que começa em Itabirito, Minas Gerais.",
     image: "editorial/hero-serginho-solo.webp",
     thumb: "palco.webp",

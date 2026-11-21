@@ -96,6 +96,7 @@ describe("visualizador do portfólio", () => {
     );
     expect(image).toHaveAttribute("width", "1600");
     expect(image).toHaveAttribute("height", "900");
+    expect(image).toHaveAttribute("loading", "eager");
     expect(image).toHaveAttribute("fetchpriority", "high");
     expect(source).toHaveAttribute("media", "(max-width: 720px)");
     expect(source).toHaveAttribute("srcset", pages[0].compactSrc);

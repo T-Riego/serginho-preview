@@ -111,6 +111,7 @@ export function PortfolioViewer({ pages }: { pages: readonly PortfolioPageAsset[
             width={1600}
             height={900}
             sizes="(max-width: 720px) 100vw, 1600px"
+            loading={index === 0 ? "eager" : "lazy"}
             fetchPriority={index === 0 ? "high" : undefined}
             unoptimized
             onError={() => setFailedPage(current.number)}

@@ -687,7 +687,7 @@ body {
 .sb-float-whatsapp { gap: .45rem; padding-inline: .9rem; background: #126148; font-size: .875rem; font-weight: 600; }
 .sb-float-whatsapp:hover { background: #0c4d38; }
 
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   .sb-header-inner { min-height: 66px; }
   .sb-desktop-nav { display: none; }
   .sb-menu-trigger {
@@ -704,6 +704,9 @@ body {
     cursor: pointer;
   }
   .sb-menu-trigger:hover { background: var(--sb-surface); }
+}
+
+@media (max-width: 960px) {
   /* Raise the isolated banner so the open menu paints above the catalog. */
   .sb-inner-banner:has(.sb-banner-links[data-open="true"]) { z-index: 3; }
   .sb-banner-links-trigger {

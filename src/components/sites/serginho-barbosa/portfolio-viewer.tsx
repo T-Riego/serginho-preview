@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ChevronsLeft } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import type { PortfolioPageAsset } from "./portfolio-pages-data";
 import styles from "./portfolio.module.css";
@@ -151,6 +152,7 @@ export function PortfolioViewer({ pages }: { pages: readonly PortfolioPageAsset[
           className={styles.firstPageButton}
           onClick={() => showPage(0)}
         >
+          <ChevronsLeft size={18} aria-hidden="true" />
           Voltar à primeira página
         </button>
       )}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { discographyAlbums } from "@/components/sites/serginho-barbosa/discography-data";
 import { DiscographyDetail } from "@/components/sites/serginho-barbosa/discography-pages";
+import { createPageMetadata } from "@/lib/seo";
 
 type AlbumPageProps = {
   params: Promise<{ slug: string; id: string }>;
@@ -21,7 +22,12 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: AlbumPageProps): Promise<Metadata> {
-  return { title: (await getAlbum(params)).title };
+  const album = await getAlbum(params);
+  return createPageMetadata({
+    title: album.title,
+    description: `Conheça ${album.title} na discografia de Serginho Barbosa.`,
+    path: album.href,
+  });
 }
 
 export default async function AlbumPage({ params }: AlbumPageProps) {

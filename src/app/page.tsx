@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import { HeroCarousel } from "@/components/sites/serginho-barbosa/hero-carousel";
 import { ArtistStory, Discographies } from "@/components/sites/serginho-barbosa/home-sections";
 import { LowerSections } from "@/components/sites/serginho-barbosa/lower-sections";
 import { GallerySection, VideosSection } from "@/components/sites/serginho-barbosa/media-sections";
+import { createPageMetadata, defaultDescription, defaultTitle } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: defaultTitle,
+  description: defaultDescription,
+  path: "/",
+  home: true,
+});
 
 export default function Home() {
   return (

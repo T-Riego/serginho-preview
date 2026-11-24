@@ -18,7 +18,8 @@ jobs:
     timeout-minutes: 15
     env:
       NEXT_STATIC_EXPORT: "1"
-      NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+      NEXT_PUBLIC_BASE_PATH: ""
+      NEXT_PUBLIC_SITE_URL: https://www.serginhobarbosa.com.br
 
     steps:
       - name: Checkout

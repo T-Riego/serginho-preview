@@ -4,6 +4,7 @@ import {
   discographyCategories,
   DiscographyListing,
 } from "@/components/sites/serginho-barbosa/discography-pages";
+import { createPageMetadata } from "@/lib/seo";
 
 type CategoryPageProps = {
   params: Promise<{ slug: string; id: string }>;
@@ -23,7 +24,12 @@ async function getCategory(params: CategoryPageProps["params"]) {
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  return { title: (await getCategory(params)).label };
+  const category = await getCategory(params);
+  return createPageMetadata({
+    title: category.label,
+    description: `Explore os trabalhos de ${category.label} na discografia de Serginho Barbosa.`,
+    path: category.href,
+  });
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {

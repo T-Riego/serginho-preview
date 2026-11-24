@@ -5,8 +5,14 @@ import styles from "@/components/sites/serginho-barbosa/editorial.module.css";
 import { InnerBanner } from "@/components/sites/serginho-barbosa/inner-banner";
 import { SiteSocialLinks, WhatsappIcon } from "@/components/sites/serginho-barbosa/lower-sections";
 import { contactEmail, telephone, whatsapp } from "@/components/sites/serginho-barbosa/site-content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Contatos" };
+export const metadata: Metadata = createPageMetadata({
+  title: "Contatos",
+  description:
+    "Entre em contato com Serginho Barbosa para shows, apresentações, projetos culturais e outras informações.",
+  path: "/contatos",
+});
 
 export default function ContactsPage() {
   return (

@@ -15,8 +15,12 @@ describe("conteúdo da biografia", () => {
     expect(container).toHaveTextContent(/2025.*No Necesito.*Juan Yole.*Cuba/);
     expect(container).toHaveTextContent(/2026.*Show Cênico.*Voz Companheira 20 anos/);
     expect(container).toHaveTextContent(/2026.*Caminos.*Lèa Camarón.*Argentina/);
+    expect(container).toHaveTextContent(/2024.*Baile Brilho Novo - Maio 2024/);
 
     const timeline = container.textContent ?? "";
+    expect(timeline.indexOf("2024 - Baile Brilho Novo - Maio 2024")).toBeLessThan(
+      timeline.indexOf("2025 - Show Cênico - Voz Companheira 20 anos"),
+    );
     expect(timeline.indexOf('2025 - Lançamento do single "No Necesito"')).toBeLessThan(
       timeline.indexOf('2026 - Lançamento do single "Caminos"'),
     );

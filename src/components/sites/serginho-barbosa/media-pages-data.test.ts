@@ -39,6 +39,12 @@ type ExpectedAlbum = {
 };
 
 const expectedAlbums: readonly ExpectedAlbum[] = [
+  {
+    label: "Baile Brilho Novo - Maio 2024",
+    slug: "baile-brilho-novo-maio-2024",
+    id: "20",
+    photoCount: 17,
+  },
   { label: "Carnaval 2026", slug: "carnaval-2026", id: "13", photoCount: 6 },
   { label: "Conserto Natal 2025", slug: "conserto-natal-2025", id: "14", photoCount: 3 },
   {
@@ -75,7 +81,7 @@ const assetRoot = path.join(process.cwd(), "public", "sites", "serginho-barbosa"
 const assetPath = (relativePath: string) => path.join(assetRoot, ...relativePath.split("/"));
 
 describe("atualização da galeria em novembro de 2026", () => {
-  it("publica os sete álbuns e as 43 fotos únicas", () => {
+  it("publica os oito álbuns e as 60 fotos únicas", () => {
     const imported = expectedAlbums.map((expected) => {
       const album = albums.find(({ slug, id }) => slug === expected.slug && id === expected.id);
       expect(album, expected.label).toBeDefined();
@@ -94,7 +100,7 @@ describe("atualização da galeria em novembro de 2026", () => {
     const bannerPaths = imported.flatMap((album) => album.banner ? [album.banner.src] : []);
     const photoPaths = new Set(photos.flatMap(({ src, thumbnail }) => [src, thumbnail]));
 
-    expect(photos).toHaveLength(43);
+    expect(photos).toHaveLength(60);
     expect(bannerPaths).toHaveLength(2);
     expect(new Set(bannerPaths).size).toBe(2);
     for (const bannerPath of bannerPaths) {
@@ -115,7 +121,7 @@ describe("atualização da galeria em novembro de 2026", () => {
   });
 
   it("referencia apenas WebPs existentes e leves", () => {
-    const imported = albums.filter(({ id }) => Number(id) >= 13 && Number(id) <= 19);
+    const imported = albums.filter(({ id }) => Number(id) >= 13 && Number(id) <= 20);
     const files = imported.flatMap((album) => [
       ...album.photos.flatMap(({ src, thumbnail, width, height }) => {
         expect(width).toBeGreaterThan(0);
@@ -148,9 +154,9 @@ describe("atualização da galeria em novembro de 2026", () => {
         fullHashes.push(createHash("sha256").update(contents).digest("hex"));
       }
     }
-    expect(fullHashes).toHaveLength(43);
-    expect(new Set(fullHashes).size).toBe(43);
-    expect(totalBytes).toBeLessThanOrEqual(6 * 1024 * 1024);
+    expect(fullHashes).toHaveLength(60);
+    expect(new Set(fullHashes).size).toBe(60);
+    expect(totalBytes).toBeLessThanOrEqual(7 * 1024 * 1024);
   });
 
   it("mantém o recorte editorial do banner do DVD", () => {

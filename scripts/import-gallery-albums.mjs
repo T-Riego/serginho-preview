@@ -15,11 +15,13 @@ import sharp from "sharp";
 sharp.cache({ files: 0 });
 
 const projectRoot = process.cwd();
-const sourceRoot = path.join(
-  projectRoot,
-  "Atualizacoes",
-  "drive-download-20261120T133846Z-1-001",
-);
+const sourceRoot = process.env.GALLERY_SOURCE_ROOT
+  ? path.resolve(process.env.GALLERY_SOURCE_ROOT)
+  : path.join(
+      projectRoot,
+      "Atualizacoes",
+      "drive-download-20261120T133846Z-1-001",
+    );
 const dataPath = path.join(
   projectRoot,
   "src",
@@ -75,6 +77,12 @@ const albumDefinitions = [
     folder: "Show Cenico Voz Companheira 2025",
     slug: "show-cenico-voz-companheira-2025",
     id: "19",
+  },
+  {
+    label: "Baile Brilho Novo - Maio 2024",
+    folder: "Baile Brilho Novo - Maio 2024",
+    slug: "baile-brilho-novo-maio-2024",
+    id: "20",
   },
 ];
 
@@ -355,11 +363,11 @@ async function validateStagedBatch(generatedAlbums, stagingAssetsRoot) {
   const assetPaths = [...fullPaths, ...thumbnailPaths, ...bannerPaths];
 
   if (
-    fullPaths.length !== 43 ||
-    thumbnailPaths.length !== 43 ||
+    fullPaths.length !== 60 ||
+    thumbnailPaths.length !== 60 ||
     bannerPaths.length !== 2 ||
-    assetPaths.length !== 88 ||
-    new Set(assetPaths).size !== 88
+    assetPaths.length !== 122 ||
+    new Set(assetPaths).size !== 122
   ) {
     throw new Error(
       `Lote incompleto: ${fullPaths.length} fulls, ${thumbnailPaths.length} thumbs e ` +
@@ -389,12 +397,12 @@ async function validateStagedBatch(generatedAlbums, stagingAssetsRoot) {
     }
   }
 
-  if (fullHashes.size !== 43) {
-    throw new Error(`Fulls binariamente distintos: esperado 43, recebido ${fullHashes.size}.`);
+  if (fullHashes.size !== 60) {
+    throw new Error(`Fulls binariamente distintos: esperado 60, recebido ${fullHashes.size}.`);
   }
 
-  if (totalBytes > 6 * 1024 * 1024) {
-    throw new Error(`Lote acima de 6 MiB: ${totalBytes} bytes.`);
+  if (totalBytes > 7 * 1024 * 1024) {
+    throw new Error(`Lote acima de 7 MiB: ${totalBytes} bytes.`);
   }
 
   return assetPaths;
@@ -467,8 +475,8 @@ async function main() {
     const plannedBannerCount = plans.filter(({ bannerSource }) => bannerSource).length;
 
     if (
-      plans.length !== 7 ||
-      plannedPhotoCount !== 43 ||
+      plans.length !== 8 ||
+      plannedPhotoCount !== 60 ||
       plannedBannerCount !== 2 ||
       duplicateCount !== 9
     ) {
@@ -506,8 +514,8 @@ async function main() {
     const generatedBannerCount = generatedAlbums.filter(({ banner }) => banner).length;
 
     if (
-      generatedAlbums.length !== 7 ||
-      generatedPhotoCount !== 43 ||
+      generatedAlbums.length !== 8 ||
+      generatedPhotoCount !== 60 ||
       generatedBannerCount !== 2 ||
       duplicateCount !== 9
     ) {
@@ -569,7 +577,7 @@ async function main() {
   }
 
   console.log(
-    "Gerados 7 álbuns, 43 fotos únicas e 2 banners; 9 duplicatas ignoradas.",
+    "Gerados 8 álbuns, 60 fotos únicas e 2 banners; 9 duplicatas ignoradas.",
   );
 }
 

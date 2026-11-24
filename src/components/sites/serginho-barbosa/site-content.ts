@@ -16,6 +16,7 @@ const discographies = [
 ];
 
 const galleries = [
+  ["Baile Brilho Novo - Maio 2024", "baile-brilho-novo-maio-2024/20"],
   ["Banda Circo dos Amores - Carnaval", "banda-circo-dos-amores-carnaval/12"],
   ["Bloquinho ESMUKids - Contagem", "bloquinho-esmukids-contagem/10"],
   ["Carnaval", "carnaval/4"],

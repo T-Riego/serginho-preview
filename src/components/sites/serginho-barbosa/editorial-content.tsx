@@ -57,6 +57,7 @@ export function BiographyContent() {
           <li><strong>2023</strong> - Lançamento do single &quot;Itabirito em seu Centenário&quot; em todas as plataformas digitais.</li>
           <li><strong>2024</strong> - Ator convidado no projeto As 10 Mais - DVD de Vander Lima.</li>
           <li><strong>2024</strong> - Figurante e ator no filme Banzo.</li>
+          <li><strong>2024</strong> - Baile Brilho Novo - Maio 2024.</li>
           <li><strong>2025</strong> - Show Cênico - Voz Companheira 20 anos.</li>
           <li><strong>2025</strong> - Lançamento do single &quot;Por um Bolero&quot; em todas as plataformas digitais, feat. com o cantor Richard Saooco, da Venezuela.</li>
           <li><strong>2025</strong> - Lançamento do single &quot;No Necesito&quot;, feat. com Juan Yole, de Cuba.</li>

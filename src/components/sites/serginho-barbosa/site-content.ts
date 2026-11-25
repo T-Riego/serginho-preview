@@ -16,6 +16,7 @@ const discographies = [
 ];
 
 export const galleryNavigation = [
+  ["Ator", "ator/21"],
   ["Baile Brilho Novo - Maio 2024", "baile-brilho-novo-maio-2024/20"],
   ["Banda Circo dos Amores - Carnaval", "banda-circo-dos-amores-carnaval/12"],
   ["Bloquinho ESMUKids - Contagem", "bloquinho-esmukids-contagem/10"],
@@ -38,6 +39,7 @@ export const navigation = [
   { label: "Home", href: "/" },
   { label: "Biografia", href: "/biografia" },
   { label: "Portfólio", href: "/portfolio" },
+  { label: "Ator", href: "/ator" },
   { label: "Carnaval", href: "/carnaval" },
   { label: "Discografias", href: "/discografias", children: discographies },
   { label: "Vídeos", href: "/videos" },

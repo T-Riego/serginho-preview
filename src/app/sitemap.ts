@@ -16,6 +16,7 @@ const staticRoutes = [
   { path: "/", changeFrequency: "weekly" as const, priority: 1 },
   { path: "/biografia", changeFrequency: "yearly" as const, priority: 0.8 },
   { path: "/portfolio", changeFrequency: "yearly" as const, priority: 0.8 },
+  { path: "/ator", changeFrequency: "yearly" as const, priority: 0.8 },
   { path: "/carnaval", changeFrequency: "yearly" as const, priority: 0.8 },
   { path: "/discografias", changeFrequency: "monthly" as const, priority: 0.9 },
   { path: "/videos", changeFrequency: "monthly" as const, priority: 0.8 },

@@ -1,4 +1,5 @@
 .biography article,
+.actor article,
 .carnival article {
   display: flow-root;
   max-width: 1050px;
@@ -7,15 +8,15 @@
   line-height: 1.72;
   overflow-wrap: anywhere;
 }
-.biography p, .carnival p { margin-bottom: 1rem; }
-.biography p:last-child, .carnival p:last-child { margin-bottom: 0; }
-.biography ul, .carnival ul {
+.biography p, .actor p, .carnival p { margin-bottom: 1rem; }
+.biography p:last-child, .actor p:last-child, .carnival p:last-child { margin-bottom: 0; }
+.biography ul, .actor ul, .carnival ul {
   margin: .35rem 0 1.3rem;
   padding-left: 1.5rem;
   list-style: disc;
 }
-.biography li, .carnival li { margin-bottom: .36rem; }
-.biography a, .carnival a {
+.biography li, .actor li, .carnival li { margin-bottom: .36rem; }
+.biography a, .actor p a, .carnival a {
   color: var(--sb-red);
   font-weight: 600;
   text-decoration: underline;
@@ -26,6 +27,26 @@
   margin-bottom: 1.45rem;
   font: 400 clamp(2.4rem, 5vw, 4rem) / 1 var(--sb-display);
 }
+.actorBlock + .actorBlock { margin-top: clamp(2rem, 5vw, 3.5rem); }
+.actorWork + .actorWork { margin-top: clamp(1.75rem, 4vw, 3rem); }
+.actorWorkTitle {
+  margin-bottom: .55rem;
+  font: 400 clamp(1.85rem, 3.5vw, 2.65rem) / 1.1 var(--sb-display);
+}
+.actorPhotos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(.8rem, 2vw, 1.35rem);
+}
+.actorPhoto {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--sb-radius-lg);
+}
+.actorPortrait { max-width: min(100%, 340px); }
+.actorGalleryLink { margin-top: 1.7rem; }
 .bioShow,
 .bioPortrait,
 .carnavalStage,
@@ -119,6 +140,7 @@
   .contactLayout { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 650px) {
+  .actorPhotos { grid-template-columns: minmax(0, 1fr); }
   .bioShow, .bioPortrait, .carnavalStage, .bioCarnaval, .carnavalBand {
     float: none;
     width: 100%;

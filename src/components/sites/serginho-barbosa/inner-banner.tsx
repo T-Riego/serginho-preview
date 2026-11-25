@@ -25,6 +25,12 @@ const bannerImages = {
     position: "center 35%",
     mobilePosition: "center 35%",
   },
+  ator: {
+    src: `${assetRoot}/editorial/ator/voz-companheira-20-anos.webp`,
+    alt: "Serginho Barbosa de braços abertos no palco do Show Cênico Voz Companheira",
+    position: "center 56%",
+    mobilePosition: "center 57%",
+  },
   carnaval: {
     src: `${assetRoot}/editorial/biografia-carnaval.webp`,
     alt: "Serginho Barbosa caracterizado como Palhaço dos Amores, de braços abertos",

@@ -1236,6 +1236,66 @@
           "height": 853
         }
       ]
+    },
+    {
+      "label": "Ator",
+      "slug": "ator",
+      "id": "21",
+      "banner": {
+        "src": "gallery-albums/full/ator-01.webp",
+        "position": "center 38%",
+        "mobilePosition": "center 40%"
+      },
+      "photos": [
+        {
+          "src": "gallery-albums/full/ator-01.webp",
+          "thumbnail": "gallery-albums/thumbs/ator-01_400.webp",
+          "width": 731,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/ator-02.webp",
+          "thumbnail": "gallery-albums/thumbs/ator-02_400.webp",
+          "width": 552,
+          "height": 552
+        },
+        {
+          "src": "gallery-albums/full/ator-03.webp",
+          "thumbnail": "gallery-albums/thumbs/ator-03_400.webp",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/ator-04.webp",
+          "thumbnail": "gallery-albums/thumbs/ator-04_400.webp",
+          "width": 382,
+          "height": 382
+        },
+        {
+          "src": "gallery-albums/full/ator-05.webp",
+          "thumbnail": "gallery-albums/thumbs/ator-05_400.webp",
+          "width": 853,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/ator-06.webp",
+          "thumbnail": "gallery-albums/thumbs/ator-06_400.webp",
+          "width": 466,
+          "height": 699
+        },
+        {
+          "src": "gallery-albums/full/ator-07.webp",
+          "thumbnail": "gallery-albums/thumbs/ator-07_400.webp",
+          "width": 730,
+          "height": 1280
+        },
+        {
+          "src": "gallery-albums/full/ator-08.webp",
+          "thumbnail": "gallery-albums/thumbs/ator-08_400.webp",
+          "width": 723,
+          "height": 1280
+        }
+      ]
     }
   ],
   "videos": [

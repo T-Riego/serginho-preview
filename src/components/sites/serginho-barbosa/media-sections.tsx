@@ -6,7 +6,7 @@ import { assetRoot } from "./site-content";
 import styles from "./media-sections.module.css";
 
 const featuredAlbum = getAlbum("festival-gastronomico-2024", "17");
-const galleryPhotoOrder = [3, 0, 2, 4, 6]; // Portrait first, then the four landscape photos.
+const galleryPhotoOrder = [0, 3, 2, 4, 6];
 
 const featuredVideos = [
   { id: "P8RNoTjF6Kc", title: 'Serginho Barbosa -"Show Cênico- Voz Companheira" - 20 anos.' },

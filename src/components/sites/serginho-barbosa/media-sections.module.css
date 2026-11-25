@@ -25,7 +25,7 @@
 }
 .videoGrid > .videoTile:first-child, .photoTile:first-child { grid-column: 1 / -1; aspect-ratio: 1.65; }
 .photoTile { aspect-ratio: 1.15; }
-.photoTile:first-child { background-position: center 30%; }
+.photoTile:first-child { background-position: center 80%; }
 
 .videoCaption {
   position: absolute;
@@ -170,5 +170,10 @@
     grid-auto-rows: clamp(180px, 22vw, 265px);
   }
   .photoTile { aspect-ratio: auto; }
-  .photoTile:first-child { grid-column: auto; grid-row: span 2; aspect-ratio: auto; }
+  .photoTile:first-child {
+    grid-column: auto;
+    grid-row: span 2;
+    aspect-ratio: auto;
+    background-position: 52% center;
+  }
 }

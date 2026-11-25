@@ -1,10 +1,12 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { getAlbum } from "./media-pages";
 import { VideoGrid } from "./video-grid";
 import { assetRoot } from "./site-content";
 import styles from "./media-sections.module.css";
 
-const galleryUrl = "/galeria-de-fotos/julifest-2018/8";
+const featuredAlbum = getAlbum("festival-gastronomico-2024", "17");
+const galleryPhotoOrder = [3, 0, 2, 4, 6]; // Portrait first, then the four landscape photos.
 
 const featuredVideos = [
   { id: "P8RNoTjF6Kc", title: 'Serginho Barbosa -"Show Cênico- Voz Companheira" - 20 anos.' },
@@ -13,14 +15,6 @@ const featuredVideos = [
   { id: "F5I2loKD-AE", title: 'DVD - SHOW "CAMINHOS BRILHO NOVO"' },
   { id: "EM-mMv1MDEk", title: "CIRCO DOS AMORES" },
   { id: "JsnJ4BEOISs", title: "AS ROSAS NÃO FALAM" },
-];
-
-const galleryPhotos = [
-  "Julifest-2018-20190206225457.webp",
-  "Julifest-2018-20190206225801.webp",
-  "Julifest-2018-20190206225542.webp",
-  "Julifest-2018-20190206225859.webp",
-  "Julifest-2018-20190206225909.webp",
 ];
 
 export function VideosSection() {
@@ -38,6 +32,12 @@ export function VideosSection() {
 }
 
 export function GallerySection() {
+  if (!featuredAlbum) return null;
+
+  const { label, slug, id, photos } = featuredAlbum;
+  const galleryUrl = `/galeria-de-fotos/${slug}/${id}`;
+  const galleryPhotos = galleryPhotoOrder.flatMap((index) => photos[index] ?? []);
+
   return (
     <section className="sb-section" aria-labelledby="gallery-heading">
       <div className="sb-container">
@@ -46,13 +46,13 @@ export function GallerySection() {
           <Link className="sb-button sb-button-outline" href="/galeria-de-fotos">Ver galeria <ArrowRight size={17} aria-hidden="true" /></Link>
         </div>
         <div className={styles.galleryGrid}>
-          {galleryPhotos.map((photo, index) => (
+          {galleryPhotos.map(({ thumbnail }, index) => (
             <Link
-              key={photo}
+              key={thumbnail}
               className={styles.photoTile}
               href={galleryUrl}
-              aria-label={`Veja as fotos do Julifest 2018, foto ${index + 1}`}
-              style={{ backgroundImage: `url(${assetRoot}/gallery/${photo})` }}
+              aria-label={`Veja as fotos do ${label}, foto ${index + 1}`}
+              style={{ backgroundImage: `url(${assetRoot}/${thumbnail})` }}
             >
               <span className={styles.photoAction}><ArrowUpRight size={20} aria-hidden="true" /></span>
             </Link>

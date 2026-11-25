@@ -61,7 +61,7 @@ const albumDefinitions = [
     bannerSource: "WhatsApp Image 2026-11-19 at 19.51.12.jpeg",
   },
   {
-    label: "Festival Gastronómico 2024",
+    label: "Festival Gastronômico",
     folder: "Festival Gastronómico 2024",
     slug: "festival-gastronomico-2024",
     id: "17",

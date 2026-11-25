@@ -2,7 +2,7 @@ import { GalleryAlbum } from "./gallery-album";
 import { BannerLinks, InnerBanner } from "./inner-banner";
 import data from "./media-pages-data.json";
 import styles from "./media-pages.module.css";
-import { assetRoot } from "./site-content";
+import { assetRoot, galleryNavigation } from "./site-content";
 import { VideoGrid } from "./video-grid";
 
 type BannerRecord = {
@@ -29,9 +29,9 @@ type Album = {
 
 const albums = data.albums as Album[];
 
-const albumLinks = albums.map(({ label, slug, id }) => ({
+const albumLinks = galleryNavigation.map(([label, path]) => ({
   label,
-  href: `/galeria-de-fotos/${slug}/${id}`,
+  href: `/galeria-de-fotos/${path}`,
 }));
 
 export function getAlbumParams() {

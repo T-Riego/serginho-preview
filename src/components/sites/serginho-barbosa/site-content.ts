@@ -15,7 +15,7 @@ const discographies = [
   ["Hinos", "hinos/8/c"],
 ];
 
-const galleries = [
+export const galleryNavigation = [
   ["Baile Brilho Novo - Maio 2024", "baile-brilho-novo-maio-2024/20"],
   ["Banda Circo dos Amores - Carnaval", "banda-circo-dos-amores-carnaval/12"],
   ["Bloquinho ESMUKids - Contagem", "bloquinho-esmukids-contagem/10"],
@@ -26,13 +26,13 @@ const galleries = [
   ["DVD Vander LIma - 2025", "dvd-vander-lima-2025/15"],
   ["Ensaio Fotográfico - Palhaço dos Amores.", "ensaio-fotografico-palhaco-dos-amores/7"],
   ["Feat - Venezuela, Cuba, Argentina", "feat-venezuela-cuba-argentina/16"],
-  ["Festival Gastronómico 2024", "festival-gastronomico-2024/17"],
+  ["Festival Gastronômico", "festival-gastronomico-2024/17"],
   ["Julifest 2018", "julifest-2018/8"],
   ["Julifet 2026", "julifet-2026/18"],
   ["Lançamento CD Circo dos Amores 2019", "lancamento-cd-circo-dos-amores-2019/5"],
   ["Semi Final Concurso Marchinhas Mestre Jonas 2019", "semi-final-concurso-marchinhas-mestre-jonas-2019/11"],
   ["Show Cenico Voz Companheira 2025", "show-cenico-voz-companheira-2025/19"],
-];
+].sort(([left], [right]) => left.localeCompare(right, "pt-BR", { sensitivity: "base" }));
 
 export const navigation = [
   { label: "Home", href: "/" },
@@ -41,7 +41,7 @@ export const navigation = [
   { label: "Carnaval", href: "/carnaval" },
   { label: "Discografias", href: "/discografias", children: discographies },
   { label: "Vídeos", href: "/videos" },
-  { label: "Galeria de Fotos", href: "/galeria-de-fotos", children: galleries },
+  { label: "Galeria de Fotos", href: "/galeria-de-fotos", children: galleryNavigation },
   { label: "Contatos", href: "/contatos" },
 ];
 

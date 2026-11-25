@@ -62,7 +62,7 @@ const expectedAlbums: readonly ExpectedAlbum[] = [
     banner: "gallery-albums/banners/feat-venezuela-cuba-argentina.webp",
   },
   {
-    label: "Festival Gastronómico 2024",
+    label: "Festival Gastronômico",
     slug: "festival-gastronomico-2024",
     id: "17",
     photoCount: 7,
@@ -171,7 +171,8 @@ describe("atualização da galeria em novembro de 2026", () => {
 
   it("mantém o submenu global sincronizado com os dados", () => {
     const links = navigation.find(({ label }) => label === "Galeria de Fotos")?.children ?? [];
-    for (const { label, slug, id } of expectedAlbums) {
+    expect(links).toHaveLength(albums.length);
+    for (const { label, slug, id } of albums) {
       expect(links).toContainEqual([label, slug + "/" + id]);
     }
 
